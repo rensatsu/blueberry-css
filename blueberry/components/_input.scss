@@ -27,7 +27,8 @@ input[type="number"],
 input[type="password"],
 input[type="tel"],
 input[type="url"],
-input[type="text"] {
+input[type="text"],
+textarea {
     height: 2.25rem;
     padding: .5rem 1rem;
     color: $color-text;

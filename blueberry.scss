@@ -1,4 +1,4 @@
-// Required
+// Blueberry CSS Core
 @import
     'blueberry/core/variables',
     'blueberry/override',
@@ -6,8 +6,11 @@
 
     'fonts/scada',
     'blueberry/core/core',
-    'blueberry/core/utils',
+    'blueberry/core/utils'
+;
 
+// Additional Components
+@import
     'blueberry/components/alert',
     'blueberry/components/awesomebar',
     'blueberry/components/btn',

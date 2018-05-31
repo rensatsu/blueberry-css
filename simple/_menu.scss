@@ -1,0 +1,78 @@
+/* Menu Blocks */
+/*
+	ul.menu {
+		li {
+			a {
+				h3
+				div
+			}
+		}
+	}
+*/
+
+ul.menu {
+	list-style: none;
+    padding: 0;
+
+	margin: 0 -$menu-margin;
+
+	@media screen and (max-width: $viewport-width-tablet) {
+		margin: 0;
+	}
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&>li {
+		flex: 0 1 50%;
+		display: flex;
+
+		@media screen and (max-width: $viewport-width-tablet) {
+			flex: 1 1 100%;
+		}
+
+		&:hover a {
+			background: $menu-background-hover;
+			border-color: rgba($menu-background-hover, .9);
+			box-shadow: 0 0 4px 1px rgba($menu-background-hover, .7);
+			transform: scale(1.025);
+			transition: .25s background-color cubic-bezier(.3, .2, .5, 1.2),
+			            .25s border,
+						.25s box-shadow,
+						.25s transform cubic-bezier(.3, .2, .5, 4);
+			z-index: 1;
+		}
+
+		&>a {
+			display: block;
+			text-decoration: none;
+
+			flex: 1 1 100%;
+			padding: .7em;
+
+			background: $menu-background-normal;
+			border: 1px solid rgba($menu-background-hover, .6);
+			box-shadow: 2px 2px 2px rgba($menu-background-hover, .2);
+			transform: none;
+			transition: .25s background-color,
+			            .25s border,
+						.25s box-shadow,
+						.25s transform cubic-bezier(.3, .2, .5, 2);
+
+			margin: $menu-margin;
+
+			@media screen and (max-width: $viewport-width-tablet) {
+				margin: $menu-margin 0;
+			}
+
+			&>h3 {
+				margin: 0 0 .3em 0;
+				font-weight: bold;
+			}
+
+			&>div {
+				color: $color-text;
+			}
+		}
+	}
+}

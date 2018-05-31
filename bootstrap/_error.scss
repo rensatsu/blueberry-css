@@ -1,0 +1,28 @@
+/* Error Page */
+.error-page {
+	.container {
+		margin-top: 30px;
+	}
+	
+	.jumbotron {
+		box-shadow: 0 0 25px 0 #333;
+	}
+	
+	footer {
+		text-shadow: 1px 1px 1px #000;
+		text-align: center;
+		
+		&, a{
+			color:#fff;
+		}
+		
+		a {
+			text-decoration:underline;
+			
+			&:hover {
+				color:#fff;
+			}
+		}
+	}
+}
+/* -- */

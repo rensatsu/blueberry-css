@@ -1,0 +1,36 @@
+/* Icomoon font */
+.icm {
+	display: inline-flex;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+	
+	&>svg {
+		width: 100%;
+		height: 100%;
+	}
+	
+	&.icm-fw {
+		width: 1em;
+		height: 1em;
+	}
+	
+	&.icm-lg {
+		width: 1.3em;
+		height: 1.3em;
+		line-height: 1em;
+		vertical-align: -.2em;
+	}
+	
+	&.icm-dark {
+		stroke: $color-text;
+		fill: $color-text;
+	}
+	
+	&.icm-light {
+		stroke: #ccc;
+		fill: #ccc;
+	}
+}

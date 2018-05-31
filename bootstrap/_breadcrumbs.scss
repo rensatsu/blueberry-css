@@ -1,0 +1,65 @@
+.bread {
+	background-color: #fff;
+	border: 1px solid #ddd;
+	list-style: none; 
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0;
+	border-radius: 4px;
+	display: flex;
+	
+	li {
+		a {
+			color: white;
+			text-decoration: none;
+			padding: 5px 0 5px 40px;
+			background: $themePrimary;
+			position: relative;
+			display: block;
+			white-space: nowrap;
+		}
+		
+		&:first-child a {
+			padding-left: 10px;
+		}
+	}
+	
+	li a::after { 
+		content: " "; 
+		display: block; 
+		width: 0; 
+		height: 0;
+		border-top: 50px solid transparent;
+		border-bottom: 50px solid transparent;
+		border-left: 20px solid $themePrimary;
+		position: absolute;
+		top: 50%;
+		margin-top: -50px; 
+		left: 100%;
+		z-index: 2; 
+	}
+	
+	li:hover a, li.active a {
+		background: lighten($themePrimary, 20%);
+	}
+	
+	li:hover a::after, li.active a::after {
+		border-left: 20px solid lighten($themePrimary, 20%);
+	}
+	
+	li a::before { 
+		content: " "; 
+		display: block; 
+		width: 0; 
+		height: 0;
+		border-top: 50px solid transparent;       
+		border-bottom: 50px solid transparent;
+		border-left: 20px solid lighten($themePrimary, 20%);
+		position: absolute;
+		top: 50%;
+		margin-top: -50px; 
+		margin-left: 1px;
+		left: 100%;
+		z-index: 1; 
+	}
+}

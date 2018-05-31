@@ -1,0 +1,126 @@
+/* Landing page styles */
+
+$theme-alt-landing: #642b73;
+$theme-text-main: #fff;
+$theme-text-alt: darken($theme-text-main, 20%);
+
+@include keyframes(landing-fadein) {
+    0% {
+        opacity: 0;
+		transform: scale3d(1.1, 1.3, 1);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@include keyframes(landing-background) {
+    0% {
+        background-size: 150% 150%;
+    }
+
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+body {
+	// background: $theme-main no-repeat linear-gradient(135deg, $theme-main, $theme-alt-landing) 50% 50%;
+	background-color: $theme-main;
+	color: $theme-text-main;
+	font-size: 18pt;
+	@include animation('landing-background linear 3s forwards');
+	@include css3('animation-iteration-count', '1');
+	
+	& > main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		
+		@media screen and (max-width: $viewport-width-tablet) {
+			align-items: flex-start;
+		}
+		
+		&::before {
+			content: " ";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: transparent url('#{$static}/img/bg-dots.svg') no-repeat 50% 50%;
+			pointer-events: none;
+			user-select: none;
+			background-size: cover;
+		}
+		
+		& > section {
+			text-align: center;
+			max-width: $viewport-width-tablet;
+			margin: 1rem;
+			padding: 1rem;
+			
+			@include animation('landing-fadein .5s forwards');
+			@include css3('animation-iteration-count', '1');
+			transform-origin: 50% 50%;
+			
+			& > .avatar, & > h1, & > p {
+				margin: 0 0 1.5rem 0;
+			}
+			
+			& > h1, & > p, & > .landing-contacts > a {
+				text-shadow: 1px 1px 3px rgba(#000, .5);
+			}
+			
+			& > .avatar {
+				display: inline-block;
+
+				& > img {
+					$size: 128px;
+					width: $size;
+					height: $size;
+					border-radius: 50%;
+					background-color: $theme-alt-landing;
+				}
+			}
+			
+			& > h1 {
+				color: $theme-text-main;
+			}
+			
+			& > p {
+				color: $theme-text-alt;
+				letter-spacing: -0.3px;
+			}
+			
+			& > .landing-contacts {
+				padding-top: 1rem;
+				
+				& > a {
+					$animation-duration: .25s;
+					
+					text-decoration: none;
+					padding: .5rem 3rem;
+					border: 1px solid $theme-text-alt;
+					border-radius: 3rem;
+					color: $theme-text-alt;
+					font-size: 1rem;
+					margin: 0 .5rem;
+					transition: $animation-duration ($animation-duration / 2) all;
+					box-shadow: 1px 1px 3px rgba(#000, .5);
+					
+					&:hover {
+						color: $theme-main;
+						border-color: lighten($theme-text-alt, 30%);
+						background-color: lighten($theme-text-alt, 30%);
+						transition: $animation-duration 0s all;
+						text-shadow: none;
+						box-shadow: 0 5px 3px rgba(#fff, .2);
+					}
+				}
+			}
+		}
+	}
+}

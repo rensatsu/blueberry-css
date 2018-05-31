@@ -1,0 +1,24 @@
+// Main colors
+$color-primary      : #352c58 !default;
+$color-alternative  : lighten($color-primary, 15%) !default;
+$color-danger       : #e91e63 !default;
+$color-success      : #009688 !default;
+$color-warning      : #ff9800 !default;
+$color-text         : #171717 !default;
+$color-muted        : lighten($color-text, 20%) !default;
+
+// Static URI path
+$uri-static         : 'https://static.rencloud.win' !default;
+
+// Breakpoints
+$breakpoint-mobile  : 980px !default;
+$breakpoint-desktop : 1170px !default;
+$breakpoint-narrow  : 560px !default;
+
+// Navbar
+$navbar-height      : 42px !default;
+$navbar-text-color  : #ffffff !default;
+
+// Fonts
+$font-family-sans   : false !default;
+$font-family-mono   : monospace !default;

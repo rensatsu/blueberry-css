@@ -1,0 +1,138 @@
+/* Header */
+/*
+	Big block on top with page metadata (title, description, block background)
+*/
+
+@include keyframes(topbar-fadein) {
+	100% {
+		opacity: 1;
+	}
+}
+
+@include keyframes(topbar-text-unblur) {
+	0% {
+		transform: scale(1.1);
+		filter: blur(10px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: none;
+		filter: none;
+		opacity: 1;
+	}
+}
+
+header {
+	background: $theme-main url('#{$static}/img/gradient.svg') no-repeat 50% 50%;
+	background-size: cover;
+	box-shadow: 0 0 .5em .1em rgba($color-shadow, .7);
+	padding: 0;
+	margin: 0;
+
+	opacity: .5;
+
+	@include animation('topbar-fadein linear .7s forwards');
+	@include css3('animation-iteration-count', '1');
+
+	.container-header {
+		padding: 5rem 1rem;
+
+		.app & {
+			padding: 2rem 1rem;
+		}
+
+		.profile {
+			display: flex;
+			flex-direction: column;
+			animation-iteration-count: 1;
+			justify-content: center;
+			align-items: center;
+
+			@include animation('topbar-text-unblur ease-in-out .3s forwards');
+			@include css3('animation-iteration-count', '1');
+
+			.avatar {
+				width: 125px;
+				height: 125px;
+				margin: 0 0 2em 0;
+
+				&>div, &>img {
+					width: 125px;
+					height: 125px;
+					border-radius: 50%;
+					background-color: darken($color-link, 20%);
+					background-size: contain;
+					display: inline-block;
+				}
+			}
+
+			h2 {
+				margin-top: 0;
+				margin-bottom: 0;
+				color: $color-profile-text;
+				font-size: 2.4em;
+			}
+
+			p {
+				margin: .5em 0 0 0;
+				color: darken($color-profile-text, 20%);
+			}
+
+			.profile-data {
+				text-align: center;
+				text-shadow: 1px 1px 1px $color-profile-shadow;
+			}
+
+			@media screen and (max-width: $viewport-width-mobile) {
+				padding: 1em;
+				display: block;
+				text-align: center;
+
+				.profile-data {
+					text-align: center;
+				}
+
+				.avatar {
+					width: 100px;
+					height: 100px;
+					margin: 0 0 1em 0;
+
+					&>img {
+						width: 100px;
+						height: 100px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Navbar */
+.navbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: .25rem;
+
+	a {
+		text-decoration: none;
+		color: $color-profile-text;
+		transition: .2s background-color, .2s color;
+		padding: .5rem .75em;
+		display: inline-flex;
+		border-radius: 2px;
+		text-align: center;
+		font-size: .9rem;
+		text-transform: uppercase;
+		text-shadow: 1px 1px 1px rgba($color-profile-shadow, .3);
+
+		&:hover {
+			text-decoration: none;
+			color: $color-text;
+			background-color: $color-profile-text;
+			text-shadow: 1px 1px 1px rgba(#000, 0);
+		}
+	}
+}
+/* END: Navbar */

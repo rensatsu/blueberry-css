@@ -1,0 +1,74 @@
+/* Error Page */
+@include keyframes(error-message-fadein) {
+    0% {
+        opacity: 0;
+		transform: translateY(-5%);
+		filter: blur(10px);
+    }
+
+    100% {
+        opacity: 1;
+		transform: none;
+		filter: none;
+    }
+}
+
+body.error-page {
+	padding: $content-margin;
+    background: $theme-main url('#{$static}/img/bg-dots.svg') no-repeat 50% 50%;
+    background-size: cover;
+
+	h1 {
+		padding: 0;
+		
+		&::before {
+			content: "";
+			display: none;
+		}
+	}
+
+	.post {
+		padding: 2rem;
+		background: #fff;
+		border: 1px solid $theme-main;
+		box-shadow: 0 0 10px 2px rgba(#000, .2);
+		background: #fff linear-gradient(lighten($theme-main, 30%), rgba(#fff, 0));
+		
+		@include animation('error-message-fadein linear .5s forwards');
+		@include css3('animation-iteration-count', '1');
+		transform-origin: 50% 50%;
+		will-change: transform, filter;
+			
+		.error-page-flex {
+			display: flex;
+
+			&>.error-page-image {
+				padding-right: 30px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				&>svg {
+					width: 100%;
+				}
+			}
+		}
+		
+		.btn {
+			background-color: #fff;
+			
+			&:hover {
+				background-color: $color-link;
+			}
+		}
+	}
+
+    footer {
+        margin-top: 0;
+
+        a, p {
+            color: darken(#fff, 40%);
+        }
+    }
+}
+/* -- */

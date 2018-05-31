@@ -1,0 +1,244 @@
+$navbarZIndex: 1000;
+
+nav.awesome-bar {
+    background-color: $color-primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navbar-height;
+	display: flex;
+	justify-content: center;
+	z-index: $navbarZIndex;
+	box-shadow: 3px 2px 2px 0 rgba(#000, .2);
+	will-change: transform;
+	color: $navbar-text-color;
+	
+	.awesome-bar-class-menu {
+		&.open .awesome-bar-icon-close {
+			display: none;
+		}
+		
+		&:not(.open) .awesome-bar-icon-open {
+			display: none;
+		}
+	}
+	
+	.awesome-bar-startup-hide {
+		visibility: collapse;
+	}
+	
+	& > .awesome-bar-wrapper {
+		max-width: $breakpoint-desktop;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		
+		& > .awesome-bar-left, & > .awesome-bar-right {
+			position: relative;
+		}
+		
+		& > .awesome-bar-left {
+			display: flex;
+			
+			& > .awesome-bar-menu-wrapper {
+				transition: .1s background-color;
+				
+				& > button, & > .awesome-bar-home {
+					background: transparent;
+					border: 0;
+					color: $navbar-text-color;
+					line-height: $navbar-height;
+					padding: 0 1rem;
+					transition: .1s background-color;
+					display: block;
+					outline: 0;
+					cursor: pointer;
+				}
+				
+				&.open, &:hover {
+					background-color: $color-alternative;
+				}
+					
+				&.open {
+					& > .awesome-bar-menu {
+						display: block;
+					}
+				}
+				
+				& > .awesome-bar-menu {
+					position: fixed;
+					top: $navbar-height;
+					display: none;
+					list-style-type: none;
+					padding: 0;
+					background-color: $color-alternative;
+					border: 1px solid $color-alternative;
+					box-shadow: 1px 3px 1px 0px rgba(#000, .3);
+					min-width: 200px;
+					z-index: ($navbarZIndex + 1);
+					
+					& > li {
+						& > a {
+							color: $navbar-text-color;
+							display: block;
+							padding: .5em 3em .5em 1em;
+							text-decoration: none;
+							transition: .1s color, .1s background-color;
+						}
+						
+						&:hover > a, &.active:hover > a {
+							background-color: $navbar-text-color;
+							color: $color-alternative;
+						}
+						
+						&.active > a {
+							background-color: rgba($navbar-text-color, .8);
+							color: rgba($color-alternative, .9);
+						}
+					}
+				}
+			}
+			
+			& > .awesome-bar-title {
+				text-align: center;
+				color: $navbar-text-color;
+				line-height: $navbar-height;
+				font-weight: bold;
+				font-size: 1.2rem;
+				text-decoration: none;
+				padding: 0 1rem;
+				transition: .1s background-color;
+				
+				&:hover {
+					background-color: $color-alternative;
+				}
+			}
+		}
+		
+		& > .awesome-bar-right {
+			display: flex;
+			justify-content: flex-end;
+			
+			&.open > .awesome-bar-profile {
+				background-color: $color-alternative;
+			}
+			
+			.awesome-bar-profile {
+				display: block;
+				height: $navbar-height;
+				text-decoration: none;
+				padding: 0 1rem;
+				transition: .1s background-color;
+
+				&:hover {
+					background-color: $color-alternative;
+				}
+				
+				&>img {
+					$padding: 3px;
+					$size: ($navbar-height - 2 * $padding);
+
+					width: $size;
+					height: $size;
+					border-radius: 50%;
+					margin: 0 $padding $padding $padding;
+					vertical-align: middle;
+				}
+				
+				&>span {
+					color: $navbar-text-color;
+					line-height: $navbar-height;
+					text-align: right;
+					padding: 0 1rem;
+					
+					&.awesome-bar-signin {
+						grid-area: 1/1/1/3;
+					}
+				}
+			}
+		}
+	}
+	
+	&.awesome-bar-fluid > .awesome-bar-wrapper {
+		max-width: 100%;
+	}
+}
+
+/* Profile panel */
+.popup-profile {
+    position: fixed;
+    background-color: $color-alternative;
+    color: #fff;
+    display: none;
+    top: $navbar-height;
+    box-shadow: 1px 3px 1px 0px rgba(#000, .3);
+	z-index: ($navbarZIndex + 1);
+	will-change: transform, filter, opacity;
+	
+	@media screen and (max-width: $breakpoint-mobile) {
+		width: 100%;
+	}
+
+    grid: auto / 128px 1fr;
+    grid-column-gap: 1.5em;
+	
+	.open > & {
+		display: grid;
+	}
+	
+	> .popup-profile-avatar {
+		flex: 1;
+		overflow: hidden;
+		width: 128px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: .5em;
+		
+		> img {
+			width: 100%;
+			border-radius: 50%;
+		}
+	}
+	
+	> .popup-profile-data {
+		margin: .5em;
+		min-width: 20em;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		
+		> h3 {
+			margin: 0 0 .5em 0;
+			padding: 0 5px;
+		}
+		
+		> .popup-profile-actions > a {
+			display: block;
+			color: $navbar-text-color;
+			padding: 5px;
+			text-decoration: none;
+			transition: .1s color, .1s background-color;
+			
+			&:hover {
+				background-color: #fff;
+				color: $color-alternative;
+			}
+		}
+	}
+}
+
+.awesome-bar-popup-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: ($navbarZIndex - 1);
+	display: none;
+	
+	&.open {
+		display: block;
+	}
+}

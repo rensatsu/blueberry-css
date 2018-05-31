@@ -1,0 +1,85 @@
+h1, h2, h3, h4, p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5, h6 {
+    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+h4, h5, h6 {
+    font-weight: normal;
+}
+
+h5, h6 {
+    color: $color-muted;
+}
+
+.text-muted {
+    color: $color-muted;
+    opacity: .75;
+}
+
+.text-warning {
+    color: $color-warning;
+}
+
+.text-danger {
+    color: $color-danger;
+}
+
+.text-success {
+    color: $color-success;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-warning {
+    background-color: lighten($color-warning, 40%);
+}
+
+.bg-danger {
+    background-color: lighten($color-danger, 40%);
+}
+
+.bg-success {
+    background-color: lighten($color-success, 40%);
+}
+
+pre, code {
+    font-family: $font-family-mono;
+}
+
+pre {
+    margin: 0;
+}
+
+.label {
+	padding: .25rem .5rem;
+    font-size: .75rem;
+    background: r-lighten($color-primary, 75%);
+    border: 1px solid r-lighten($color-primary, 50%);
+    color: $color-text;
+}

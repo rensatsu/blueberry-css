@@ -1,0 +1,51 @@
+input, textarea, select, button {
+    font-size: 1rem;
+}
+
+label[for] {
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+
+    label {
+        display: block;
+        margin-bottom: .25rem;
+        font-weight: bold;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+    }
+}
+
+input:not([type]),
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"] {
+    height: 2.25rem;
+    padding: .5rem 1rem;
+    color: $color-text;
+    background-color: #fff;
+    border: 1px solid r-lighten($color-muted, 25%);
+    transition: border-color .3s, box-shadow .3s;
+    box-shadow: 0 1px 2px rgba(#000, .1);
+
+    &:hover {
+        border-color: r-lighten($color-primary, 25%);
+        box-shadow: inset 0 1px 1px rgba(#000, .1),
+                    0 0 4px rgba($color-primary, .25);
+    }
+
+    &:focus {
+        border-color: $color-primary;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(#000, .1),
+                    0 0 8px rgba($color-primary, .5);
+    }
+}

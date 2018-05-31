@@ -1,0 +1,52 @@
+ul {
+    margin: 0;
+}
+
+dl {
+    margin: 0;
+
+    dt {
+        font-weight: bold;
+    }
+
+    dd {
+        margin: 0;
+    }
+}
+
+.list-group {
+    overflow: hidden;
+
+    & > .list-group-item {
+        display: block;
+        text-decoration: none;
+        padding: 1rem;
+        border: 1px solid r-lighten($color-primary, .5);
+
+        margin: -1px 0 0 0;
+
+        &:first-child {
+            margin: 0;
+        }
+
+        .panel > & {
+            margin: -1px;
+        }
+        
+        &:hover, &:focus {
+            background: r-lighten($color-primary, .75);
+        }
+        
+        & > h4 {
+            margin: 0 0 .5rem 0;
+        }
+        
+        & > p {
+            margin: 0;
+        }
+
+        &, & > h4, & > p {
+            color: $color-primary;
+        }
+    }
+}

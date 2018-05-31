@@ -1,0 +1,80 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+
+/* -------------------------------------------------------------
+  QUICK FIX: SASS MIXINS FOR CSS KEYFRAME ANIMATIONS
+  JOSH BROTON
+  http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+
+------------------------------------------------------------- */
+
+@mixin css3($property, $value) {
+  -webkit-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+
+@mixin box-sizing($type: border-box) {
+  @include css3('box-sizing', $type);
+}
+
+@mixin columns($count: 3, $gap: 10) {
+  @include css3('column-count', $count);
+  @include css3('column-gap', $gap);
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+	
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+	
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+/*
+Using the mixins looks like this:
+
+@include keyframes(move-the-object) {
+  0%   { left: 100px; }
+  100% { left: 200px; }
+}
+
+.object-to-animate {
+  @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+} 
+*/

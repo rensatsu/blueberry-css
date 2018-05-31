@@ -1,0 +1,50 @@
+html {
+    -webkit-tap-highlight-color: rgba(#000, 0);
+    text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.5;
+    background-color: #f5f5f5;
+    color: $color-text;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body, input, textarea, button, select {
+	font-family: r-font-family-sans($font-family-sans);
+}
+
+a {
+    text-decoration: none;
+
+	&, &:visited {
+		color: $color-primary;
+	}
+
+	&:hover, &:focus, &:active {
+        color: $color-alternative;
+        text-decoration: underline;
+	}
+}
+
+a, input[type="button"], input[type="submit"], button {
+    outline: 0;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}

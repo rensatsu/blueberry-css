@@ -1,0 +1,55 @@
+.panel {
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 3px 2px 2px 0 rgba(#000, .2);
+
+    & > .panel-heading {
+        padding: .75rem 1.25rem;
+    }
+
+    & > .panel-body {
+        padding: 1.25rem;
+    }
+
+    & > .panel-footer {
+        padding: .75rem 1.25rem;
+        background-color: r-lighten($color-primary, 90%);
+    }
+
+    &.panel-primary {
+        border-color: $color-primary;
+
+        & > .panel-heading {
+            color: $color-primary;
+            background-color: r-lighten($color-primary, 90%);
+        }
+    }
+	
+	&.panel-danger {
+		border-color: $color-danger;
+
+		& > .panel-heading {
+			background-color: r-lighten($color-danger, 90%);
+			color: $color-danger;
+		}
+	}
+	
+	&.panel-success {
+		border-color: $color-success;
+
+		&>.panel-heading {
+			background-color: r-lighten($color-success, 90%);
+			color: $color-success;
+		}
+	}
+	
+	&.panel-warning {
+		border-color: $color-warning;
+
+		&>.panel-heading {
+			background-color: r-lighten($color-warning, 90%);
+			color: $color-warning;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+/*
+    Adjust color lightness. `$safe` adds safe interval to prevent black or white colors
+*/
+@function r-lightness($color, $adjust, $safe:10) {
+    $adjust: $adjust / 100%;
+
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+    $coefficient: 100 / $lightness;
+
+    $lightness: $lightness * $adjust * $coefficient;
+
+    $lightness: if($lightness < $safe, $safe, if($lightness > (100 - $safe), (100 - $safe), $lightness));
+
+    @return hsl($hue, $saturation, $lightness);
+}
+
+/*
+    Make color darker, improved variant of darken()
+*/
+@function r-darken($color, $adjust) {
+    $adjust: if(unitless($adjust), percentage($adjust), $adjust);
+
+    @return mix(#000, $color, $adjust);
+}
+
+/*
+    Make color lighter, improved variant of lighten()
+*/
+@function r-lighten($color, $adjust) {
+    $adjust: if(unitless($adjust), percentage($adjust), $adjust);
+
+    @return mix(#fff, $color, $adjust);
+}
+
+/*
+
+*/
+@function r-font-family-sans($custom-font: false) {
+    $system-list: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol";
+    
+    $new-list: if($custom-font == false, $system-list, ($custom-font, $system-list));
+
+    @return $new-list;
+}

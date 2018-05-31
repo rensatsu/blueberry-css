@@ -1,0 +1,31 @@
+/* Variables */
+$theme-main                : #352c58;
+$theme-alt                 : #1e182c;
+
+$color-text                : #262626;
+$color-link                : saturate($theme-main, 30%);
+$color-background-page     : #fcfcfc;
+$color-background-alt      : $color-background-page;
+$color-shadow              : #999;
+
+$color-profile-text        : #fff;
+$color-profile-shadow      : grayscale(invert($color-profile-text));
+
+$content-margin            : 3rem;
+
+$viewport-width-tablet     : 60rem; // ~820px
+$viewport-width-mobile     : 42rem; // ~680px
+
+$menu-background-normal    : lighten(saturate($theme-main, 20%), 70%);
+$menu-background-hover     : darken($menu-background-normal, 10%);
+$menu-margin               : 8px;
+
+$header-arrow-color        : $theme-main;
+
+$header-bg-gradient-back   : rgba($theme-main, .4);
+$header-bg-gradient-from   : lighten($theme-main, 15%);
+$header-bg-gradient-to     : $theme-alt;
+
+$static                    : 'https://static.rencloud.win';
+
+$custom-font               : 'Segoe UI' !default;

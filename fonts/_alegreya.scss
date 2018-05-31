@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Alegreya Sans';
+    src: url('../fonts/alegreya/AlegreyaSans-Regular.woff2') format('woff2'),
+         url('../fonts/alegreya/AlegreyaSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$custom-font: 'Alegreya Sans';
+$font-family-sans: 'Alegreya Sans';

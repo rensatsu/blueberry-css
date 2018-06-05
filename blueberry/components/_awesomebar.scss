@@ -1,4 +1,4 @@
-$navbarZIndex: 1000;
+$navbar-z-index: 1000;
 
 nav.awesome-bar {
     background-color: $color-primary;
@@ -9,7 +9,7 @@ nav.awesome-bar {
     height: $navbar-height;
 	display: flex;
 	justify-content: center;
-	z-index: $navbarZIndex;
+	z-index: $navbar-z-index;
 	box-shadow: 3px 2px 2px 0 rgba(#000, .2);
 	will-change: transform;
 	color: $navbar-text-color;
@@ -76,7 +76,7 @@ nav.awesome-bar {
 					border: 1px solid $color-alternative;
 					box-shadow: 1px 3px 1px 0px rgba(#000, .3);
 					min-width: 200px;
-					z-index: ($navbarZIndex + 1);
+					z-index: ($navbar-z-index + 1);
 					
 					& > li {
 						& > a {
@@ -173,7 +173,7 @@ nav.awesome-bar {
     display: none;
     top: $navbar-height;
     box-shadow: 1px 3px 1px 0px rgba(#000, .3);
-	z-index: ($navbarZIndex + 1);
+	z-index: ($navbar-z-index + 1);
 	will-change: transform, filter, opacity;
 	
 	@media screen and (max-width: $breakpoint-mobile) {
@@ -235,7 +235,7 @@ nav.awesome-bar {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: ($navbarZIndex - 1);
+	z-index: ($navbar-z-index - 1);
 	display: none;
 	
 	&.open {

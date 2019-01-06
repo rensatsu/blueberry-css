@@ -46,8 +46,16 @@
         grid-template-columns: 1fr 2fr;
     }
 
+    &.grid-mobile--1-2-1 {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
     &.grid-mobile--1-3 {
         grid-template-columns: 1fr 3fr;
+    }
+
+    &.grid-mobile--1-3-1 {
+        grid-template-columns: 1fr 2fr 1fr;
     }
 
     &.grid-mobile--2-1 {
@@ -79,8 +87,16 @@
             grid-template-columns: 1fr 2fr;
         }
 
+        &.grid-tablet--1-2-1 {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+
         &.grid-tablet--1-3 {
             grid-template-columns: 1fr 3fr;
+        }
+        
+        &.grid-tablet--1-3-1 {
+            grid-template-columns: 1fr 3fr 1fr;
         }
 
         &.grid-tablet--2-1 {
@@ -113,8 +129,16 @@
             grid-template-columns: 1fr 2fr;
         }
 
+        &.grid--1-2-1 {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+
         &.grid--1-3 {
             grid-template-columns: 1fr 3fr;
+        }
+
+        &.grid--1-3-1 {
+            grid-template-columns: 1fr 3fr 1fr;
         }
 
         &.grid--2-1 {

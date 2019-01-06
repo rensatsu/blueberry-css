@@ -25,14 +25,26 @@
 		background: #fff;
 		border-radius: 5px;
 		box-shadow: 0 0 10px rgba(#000, .1);
-		padding: 2rem;
+		padding: 1rem;
+
+		@media screen and (min-width: $breakpoint-mobile) {
+			padding: 2rem;
+		}
 
 		h1 {
-			margin: 0 0 2rem 0;
+			margin: 0 0 1rem 0;
+
+			@media screen and (min-width: $breakpoint-mobile) {
+				padding: 0 0 2rem 0;
+			}
 		}
 
 		div {
-			margin: 0 0 1rem 0;
+			margin: 0 0 .5rem 0;
+
+			@media screen and (min-width: $breakpoint-mobile) {
+				padding: 0 0 1rem 0;
+			}
 		}
 
 		.modal-buttons, .modal-entries {
@@ -47,7 +59,14 @@
 				color: $color-primary;
 				outline: none;
 				transition: .1s background-color;
-				min-width: 10rem;
+
+				@media screen and (min-width: $breakpoint-narrow) {
+					min-width: 5rem;
+				}
+
+				@media screen and (min-width: $breakpoint-mobile) {
+					min-width: 10rem;
+				}
 
 				&:hover, &:active, &:focus {
 					background: rgba($color-primary, .1);

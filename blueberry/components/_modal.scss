@@ -28,14 +28,14 @@
 		padding: 1rem;
 
 		@media screen and (min-width: $breakpoint-mobile) {
-			padding: 2rem;
+			padding: 1.5rem;
 		}
 
 		h1 {
-			margin: 0 0 1rem 0;
+			margin: 0 0 .5rem 0;
 
 			@media screen and (min-width: $breakpoint-mobile) {
-				padding: 0 0 2rem 0;
+				padding: 0 0 1rem 0;
 			}
 		}
 
@@ -50,6 +50,7 @@
 		.modal-buttons, .modal-entries {
 			display: flex;
 			justify-content: flex-end;
+			padding: 0;
 
 			button {
 				padding: .5rem 2rem;

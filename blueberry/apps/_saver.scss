@@ -13,7 +13,7 @@
 		margin: 15px 25px;
 		
 		@media all and (max-width: $breakpoint-mobile) {
-			margin: 10px auto;
+			margin: 5px auto;
 		}
 
 		& > .title {
@@ -48,6 +48,10 @@
 			opacity: 0;
 			transform: translate(0, 100%);
 			transition: .1s .25s;
+
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 			
 			@media all and (max-width: $breakpoint-mobile) {
 				transform: none;
@@ -125,7 +129,7 @@
 		margin: 0 50px;
 		
 		@media all and (max-width: $breakpoint-mobile) {
-			margin: 0 10px;
+			margin: 0;
 		}
 		
 		.viewer-photo-standalone img {
@@ -246,7 +250,8 @@
             grid-area: 2 / 1 / 2 / 3;
             display: flex;
             justify-content: center;
-            align-items: center;
+			align-items: center;
+			user-select: none;
 
             img {
                 max-height: 100%;

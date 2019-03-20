@@ -130,6 +130,7 @@
 			.tweet-media {
 				display: flex;
 				flex-wrap: wrap;
+				overflow: hidden;
 				
 				& > a.tweet-media-link {
 					flex: 1 1 50%;
@@ -144,18 +145,23 @@
 					}
 					
 					&.tweet-type-video::after {
-						content: "Video";
+						content: "▶";
 						display: block;
 						position: absolute;
-						top: 0;
-						right: 0;
 						z-index: 1;
-						background: rgba($themePrimary, .9);
+						background: $themePrimary;
 						color: #fff;
-						padding: .5rem 2rem;
-						margin: 1rem;
-						border: 1px solid rgba(lighten($themePrimary, 10%), .9);
-						border-radius: 3px;
+						border: 3px solid lighten($themePrimary, 10%);
+						border-radius: 50%;
+						top: 50%;
+						left: 50%;
+						width: 70px;
+						height: 70px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						transform: translate(-50%, -50%);
+						box-shadow: 0 0 5px 1px rgba(#000, .5);
 					}
 				}
 			}

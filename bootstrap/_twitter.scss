@@ -1,25 +1,6 @@
 .twitter {
 	$colorTweetText: #234;
 
-	.progress-bar {
-		$pbHeight: 8px;
-
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: $pbHeight;
-		background: #fff;
-
-		& > .progress-bar-fill {
-			width: 0;
-			height: $pbHeight;
-			background-color: $themePrimary;
-			background-image: repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(#fff, .1) 20px, rgba(#fff, .1) 40px);
-			transition: 1s width;
-		}
-	}
-
 	main {
 		span[data-icon] {
 			display: inline-block;

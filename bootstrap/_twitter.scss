@@ -1,5 +1,21 @@
 .twitter {
+	@mixin maximize {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
 	$colorTweetText: #234;
+
+	&.no-scroll {
+		overflow: hidden;
+	}
+
+	[hidden] {
+		display: none !important;
+	}
 
 	main {
 		span[data-icon] {
@@ -206,79 +222,93 @@
 		}
 	}
 	
-	dialog {
+	.dialog-wrapper {
 		$dialog-padding: .75rem;
+		z-index: 1001;
 
-		background: #fff;
-		border: 0;
-		box-shadow: 0 10px 40px rgba(#000, .3);
-		animation: fadeIn .25s forwards 1;
-		will-change: opacity;
-		width: 80%;
-		max-width: 600px;
-		padding: 0;
-		
-		& > header {
-			display: flex;
-			justify-content: space-between;
-			background: $themePrimary;
-			color: #fff;
-			
-			& > h1 {
-				margin: 0;
-				font-size: 1.5rem;
-				line-height: 1.5rem;
-				padding: $dialog-padding;
-			}
-			
-			& > button {
-				background: #e91e63;
-				color: #fff;
-				border: 0;
-				padding: $dialog-padding (2 * $dialog-padding);
-			}
-		}
-		
-		& > .dialog-body {
-			font-size: 1.25rem;
-			padding: $dialog-padding;
+		@include maximize();
 
-			div {
-				margin: 1rem 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 
-				display: grid;
-				grid-template-columns: 1fr 2fr;
-				grid-auto-rows: auto;
-			}
-			
-			label {
-				display: block;
-			}
-			
-			input, select, textarea {
-				display: block;
-				width: 100%;
-			}
-		}
-		
-		& > footer {
-			font-size: 1.25rem;
-			display: flex;
-			justify-content: flex-end;
-			background: rgba($themePrimary, .1);
-			padding: $dialog-padding;
-			
-			& > button {
-				padding: .25rem 1rem;
-			}
-		}
-		
-		&::backdrop {
-			opacity: 0;
+		will-change: opacity, transform;
+
+		background: radial-gradient(circle at center, rgba(#444, .5), rgba(#000, .5));
+
+		.dialog-inner {
+			background: #fff;
+			border: 0;
+			box-shadow: 0 10px 40px rgba(#000, .3);
+			animation: fadeIn .25s forwards 1;
 			will-change: opacity;
-			background: radial-gradient(circle at center, rgba(#444, .5), rgba(#000, .5));
-			animation: fadeIn .5s ease forwards 1;
+			width: 80%;
+			max-width: 600px;
+			padding: 0;
+			
+			& > header {
+				display: flex;
+				justify-content: space-between;
+				background: $themePrimary;
+				color: #fff;
+				
+				& > h1 {
+					margin: 0;
+					font-size: 1.5rem;
+					line-height: 1.5rem;
+					padding: $dialog-padding;
+				}
+				
+				& > button {
+					background: #e91e63;
+					color: #fff;
+					border: 0;
+					padding: $dialog-padding (2 * $dialog-padding);
+				}
+			}
+			
+			& > .dialog-body {
+				font-size: 1.25rem;
+				padding: $dialog-padding;
+
+				div {
+					margin: 1rem 0;
+
+					display: grid;
+					grid-template-columns: 1fr 2fr;
+					grid-auto-rows: auto;
+				}
+				
+				label {
+					display: block;
+				}
+				
+				input, select, textarea {
+					display: block;
+					width: 100%;
+				}
+			}
+			
+			& > footer {
+				font-size: 1.25rem;
+				display: flex;
+				justify-content: flex-end;
+				background: rgba($themePrimary, .1);
+				padding: $dialog-padding;
+				
+				& > button {
+					padding: .25rem 1rem;
+				}
+			}
 		}
+	}
+
+	.dialog-backdrop {
+		@include maximize();
+
+		z-index: 1000;
+		will-change: opacity, transform;
+		background: radial-gradient(circle at center, rgba(#444, .5), rgba(#000, .5));
 	}
 
 	@keyframes fadeIn {

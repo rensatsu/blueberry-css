@@ -34,7 +34,7 @@
 		.tweet {
 			margin: 1.5rem 0;
 			background: #fff;
-			box-shadow: 0 0 5px 1px rgba($themePrimary, .25);
+			border: 1px solid lighten($themePrimary, 65%);
 
 			.tweet-retweet {
 				border-bottom: 1px solid rgba($themePrimary, .1);

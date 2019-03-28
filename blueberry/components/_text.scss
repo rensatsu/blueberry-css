@@ -75,6 +75,31 @@ pre, code {
 pre {
     margin: 0;
     overflow: auto;
+
+    &.with-wrap {
+        white-space: pre-wrap;
+    }
+
+    &.line-numbers {
+        counter-reset: line;
+        white-space: pre-wrap;
+
+        & > code {
+            display: block;
+
+            &::before {
+                counter-increment: line;
+                content: counter(line);
+                display: inline-block;
+                border-right: 1px solid r-lighten($color-primary, 90%);
+                padding: 0 .5em;
+                margin-right: .5em;
+                color: r-lighten($color-primary, 50%);
+                width: 2rem;
+                text-align: right;
+            }
+        }
+    }
 }
 
 .label {

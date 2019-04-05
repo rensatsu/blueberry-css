@@ -4,7 +4,7 @@
 }
 
 .pull-right {
-    float: right;
+	float: right;
 }
 
 .hide {
@@ -13,4 +13,8 @@
 
 .img-circle {
 	border-radius: 50%;
+}
+
+[hidden] {
+	display: none;
 }

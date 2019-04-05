@@ -36,14 +36,10 @@
 		.reddit-post-footer {
 			padding: 1rem;
 			display: flex;
+			justify-content: space-between;
 			
 			.reddit-post-footer-date {
-				flex: 1;
 				color: r-lighten($themePrimary, 50%);
-			}
-			
-			a {
-				float: right;
 			}
 		}
 		

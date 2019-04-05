@@ -158,6 +158,19 @@
 					background: rgba($themePrimary, .4);
 					position: relative;
 
+					&.tweet-media-loading {
+						&::after {
+							content: '';
+							display: block;
+							width: 100%;
+							padding-top: calc(9 / 16 * 100%);
+						}
+
+						& > img {
+							display: none;
+						}
+					}
+
 					& > img {
 						width: 100%;
 					}

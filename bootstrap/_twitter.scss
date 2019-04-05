@@ -175,6 +175,19 @@
 						@include play-button;
 					}
 				}
+
+				.tweet-video-wrapper {
+					padding-bottom: calc(9 / 16 * 100%);
+					position: relative;
+					width: 100%;
+
+					& > .tweet-video-frame {
+						border: 0;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+					}
+				}
 			}
 
 			.tweet-data {

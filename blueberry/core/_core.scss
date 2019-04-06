@@ -25,11 +25,11 @@ a {
     text-decoration: none;
 
     &, &:visited {
-        color: $color-primary;
+        color: $color-alternative;
     }
 
     &:hover, &:focus, &:active {
-        color: $color-alternative;
+        color: r-lighten($color-alternative, 20%);
         text-decoration: underline;
     }
 }

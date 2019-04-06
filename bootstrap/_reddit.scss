@@ -68,8 +68,13 @@
                 font-size: 1.1em;
 
                 max-height: 250px;
+                max-width: calc(100vw - 50px);
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                pre, code {
+                    word-break: break-all;
+                }
 
                 &.reddit-selftext-full {
                     max-height: 100%;
@@ -301,5 +306,6 @@
     .parsedown-link, .parsedown-url {
         text-decoration: underline;
         text-decoration-color: rgba($themePrimary, .4);
+        word-break: break-all;
     }
 }

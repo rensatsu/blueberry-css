@@ -25,12 +25,13 @@ a {
     text-decoration: none;
 
     &, &:visited {
-        color: $color-alternative;
+        color: $color-primary;
     }
 
     &:hover, &:focus, &:active {
-        color: r-lighten($color-alternative, 20%);
+        color: $color-alternative;
         text-decoration: underline;
+        text-decoration-color: rgba($color-primary, .5);
     }
 }
 

@@ -14,24 +14,24 @@ body {
 }
 
 html, body {
-	min-height: 100%;
+    min-height: 100%;
 }
 
 body, input, textarea, button, select {
-	font-family: r-font-family-sans($font-family-sans);
+    font-family: r-font-family-sans($font-family-sans);
 }
 
 a {
     text-decoration: none;
 
-	&, &:visited {
-		color: $color-primary;
-	}
+    &, &:visited {
+        color: $color-primary;
+    }
 
-	&:hover, &:focus, &:active {
+    &:hover, &:focus, &:active {
         color: $color-alternative;
         text-decoration: underline;
-	}
+    }
 }
 
 a, input[type="button"], input[type="submit"], button {

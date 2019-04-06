@@ -1,27 +1,27 @@
 .btn {
-	border: 1px solid $color-link;
-	text-decoration: none;
-	padding: .5em .75em;
-	display: inline-block;
-	margin: .05em;
-	color: $color-link;
-	background-color: transparent;
-	transition: .1s background-color, .1s color;
-	
-	&:hover {
-		background-color: $color-link;
-		color: #fff;
-	}
+    border: 1px solid $color-link;
+    text-decoration: none;
+    padding: .5em .75em;
+    display: inline-block;
+    margin: .05em;
+    color: $color-link;
+    background-color: transparent;
+    transition: .1s background-color, .1s color;
+
+    &:hover {
+        background-color: $color-link;
+        color: #fff;
+    }
 }
 
 .btn-toolbar {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	
-	@media all and (max-width: $viewport-width-tablet) {
-		&>.btn {
-			flex: 1 1 100%;
-		}
-	}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media all and (max-width: $viewport-width-tablet) {
+        &>.btn {
+            flex: 1 1 100%;
+        }
+    }
 }

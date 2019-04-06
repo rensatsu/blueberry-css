@@ -24,7 +24,7 @@
         background-color: r-lighten($color-warning, 80%);
         color: r-darken($color-warning, 40%);
     }
-    
+
     &.alert-danger {
         border-color: $color-danger;
         background-color: r-lighten($color-danger, 80%);

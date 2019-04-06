@@ -34,7 +34,7 @@ textarea {
     padding: .5rem 1rem;
     color: $color-text;
     background-color: #fff;
-    border: 1px solid r-lighten($color-muted, 25%);
+    border: 1px solid r-lighten($color-primary, 40%);
     transition: border-color .3s, box-shadow .3s;
     box-shadow: 0 1px 2px rgba(#000, .1);
 

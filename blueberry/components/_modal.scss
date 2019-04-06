@@ -1,92 +1,92 @@
 .modal-backdrop, .modal-container {
-	display: none;
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1000;
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .modal-backdrop.open {
-	display: block;
-	background: rgba(#000, .5);
+    display: block;
+    background: rgba(#000, .5);
 }
 
 .modal-container.open {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	.modal-window {
-		width: 90%;
-		max-width: 700px;
-		min-height: 100px;
-		background: #fff;
-		border-radius: 5px;
-		box-shadow: 0 0 10px rgba(#000, .1);
-		padding: 1rem;
+    .modal-window {
+        width: 90%;
+        max-width: 700px;
+        min-height: 100px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(#000, .1);
+        padding: 1rem;
 
-		@media screen and (min-width: $breakpoint-mobile) {
-			padding: 1.5rem;
-		}
+        @media screen and (min-width: $breakpoint-mobile) {
+            padding: 1.5rem;
+        }
 
-		h1 {
-			margin: 0 0 .5rem 0;
+        h1 {
+            margin: 0 0 .5rem 0;
 
-			@media screen and (min-width: $breakpoint-mobile) {
-				padding: 0 0 1rem 0;
-			}
-		}
+            @media screen and (min-width: $breakpoint-mobile) {
+                padding: 0 0 1rem 0;
+            }
+        }
 
-		div {
-			margin: 0 0 .5rem 0;
+        div {
+            margin: 0 0 .5rem 0;
 
-			@media screen and (min-width: $breakpoint-mobile) {
-				padding: 0 0 1rem 0;
-			}
-		}
+            @media screen and (min-width: $breakpoint-mobile) {
+                padding: 0 0 1rem 0;
+            }
+        }
 
-		.modal-buttons, .modal-entries {
-			display: flex;
-			justify-content: flex-end;
-			padding: 0;
+        .modal-buttons, .modal-entries {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
 
-			button {
-				padding: .5rem 2rem;
-				font-weight: bold;
-				border: 0;
-				background: none;
-				color: $color-primary;
-				outline: none;
-				transition: .1s background-color;
+            button {
+                padding: .5rem 2rem;
+                font-weight: bold;
+                border: 0;
+                background: none;
+                color: $color-primary;
+                outline: none;
+                transition: .1s background-color;
 
-				@media screen and (min-width: $breakpoint-narrow) {
-					min-width: 5rem;
-				}
+                @media screen and (min-width: $breakpoint-narrow) {
+                    min-width: 5rem;
+                }
 
-				@media screen and (min-width: $breakpoint-mobile) {
-					min-width: 10rem;
-				}
+                @media screen and (min-width: $breakpoint-mobile) {
+                    min-width: 10rem;
+                }
 
-				&:hover, &:active, &:focus {
-					background: rgba($color-primary, .1);
-				}
-				
-				&:active {
-					background: rgba($color-primary, .3);
-				}
-			}
-		}
-		
-		.modal-entries {
-			display: block;
-			
-			button {
-				padding: 1rem 2rem;
-				width: 100%;
-				text-align: left;
-			}
-		}
-	}
+                &:hover, &:active, &:focus {
+                    background: rgba($color-primary, .1);
+                }
+                
+                &:active {
+                    background: rgba($color-primary, .3);
+                }
+            }
+        }
+
+        .modal-entries {
+            display: block;
+
+            button {
+                padding: 1rem 2rem;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
 }

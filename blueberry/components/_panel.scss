@@ -25,31 +25,31 @@
             background-color: r-lighten($color-primary, 90%);
         }
     }
-	
-	&.panel-danger {
-		border-color: $color-danger;
 
-		& > .panel-heading {
-			background-color: r-lighten($color-danger, 90%);
-			color: $color-danger;
-		}
-	}
-	
-	&.panel-success {
-		border-color: $color-success;
+    &.panel-danger {
+        border-color: $color-danger;
 
-		&>.panel-heading {
-			background-color: r-lighten($color-success, 90%);
-			color: $color-success;
-		}
-	}
-	
-	&.panel-warning {
-		border-color: $color-warning;
+        & > .panel-heading {
+            background-color: r-lighten($color-danger, 90%);
+            color: $color-danger;
+        }
+    }
 
-		&>.panel-heading {
-			background-color: r-lighten($color-warning, 90%);
-			color: $color-warning;
-		}
-	}
+    &.panel-success {
+        border-color: $color-success;
+
+        &>.panel-heading {
+            background-color: r-lighten($color-success, 90%);
+            color: $color-success;
+        }
+    }
+
+    &.panel-warning {
+        border-color: $color-warning;
+
+        &>.panel-heading {
+            background-color: r-lighten($color-warning, 90%);
+            color: $color-warning;
+        }
+    }
 }

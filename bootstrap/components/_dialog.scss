@@ -27,28 +27,28 @@
         width: 80%;
         max-width: 600px;
         padding: 0;
-        
+
         & > header {
             display: flex;
             justify-content: space-between;
             background: $themePrimary;
             color: #fff;
-            
+
             & > h1 {
                 margin: 0;
                 font-size: 1.5rem;
                 line-height: 1.5rem;
                 padding: $dialog-padding;
             }
-            
+
             & > button {
-                background: #e91e63;
+                background: $themeDanger;
                 color: #fff;
                 border: 0;
                 padding: $dialog-padding (2 * $dialog-padding);
             }
         }
-        
+
         & > .dialog-body {
             font-size: 1.25rem;
             padding: $dialog-padding;
@@ -60,24 +60,24 @@
                 grid-template-columns: 1fr 2fr;
                 grid-auto-rows: auto;
             }
-            
+
             label {
                 display: block;
             }
-            
+
             input, select, textarea {
                 display: block;
                 width: 100%;
             }
         }
-        
+
         & > footer {
             font-size: 1.25rem;
             display: flex;
             justify-content: flex-end;
             background: rgba($themePrimary, .1);
             padding: $dialog-padding;
-            
+
             & > button {
                 padding: .25rem 1rem;
             }

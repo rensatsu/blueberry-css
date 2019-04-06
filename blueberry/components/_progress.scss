@@ -3,7 +3,7 @@
     height: 1.25rem;
     background-color: r-lighten($color-primary, 90%);
 
-	.progress-bar {
+    .progress-bar {
         float: left;
         width: 0%;
         height: 100%;
@@ -15,5 +15,5 @@
         transition: width .6s ease;
 
         background-color: $color-primary;
-	}
+    }
 }

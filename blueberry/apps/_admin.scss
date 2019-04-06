@@ -1,285 +1,284 @@
 /* Admin Panel */
 @keyframes admin-auth-panel-fadein {
-	0% {
-		opacity: 0;
-		transform: translateY(5%);
-	}
-	
-	100% {
-		opacity: 1;
-		transform: none;
-	}
+    0% {
+        opacity: 0;
+        transform: translateY(5%);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes admin-auth-generic-fadein {
-	100% {
-		opacity: 1;
-	}
+    100% {
+        opacity: 1;
+    }
 }
 
 .admin-auth {
-	font-size: 16px;
-	background-color: $color-primary;
+    font-size: 16px;
+    background-color: $color-primary;
 
-	.container-signin {
-		max-width: 40rem;
-	}
+    .container-signin {
+        max-width: 40rem;
+    }
 
-	.wallpaper {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		background: $color-primary url('../img/bg-dots.svg') no-repeat 50% 50%;
-		background-size: cover;
+    .wallpaper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: $color-primary url('../img/bg-dots.svg') no-repeat 50% 50%;
+        background-size: cover;
 
-		animation: .5s admin-auth-generic-fadein;
-		animation-fill-mode: forwards;
-		animation-iteration-count: 1;
-		opacity: 0;
-	}
+        animation: .5s admin-auth-generic-fadein;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        opacity: 0;
+    }
 
-	.logo-container {
-		margin: 15px auto 30px;
-		text-align: center;
-	}
+    .logo-container {
+        margin: 15px auto 30px;
+        text-align: center;
+    }
 
-	.panel {
-		animation: .4s admin-auth-panel-fadein ease-out;
-		animation-fill-mode: forwards;
-		animation-iteration-count: 1;
-		animation-delay: .25s;
-		opacity: 0;
+    .panel {
+        animation: .4s admin-auth-panel-fadein ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-delay: .25s;
+        opacity: 0;
 
-		&.panel-primary {
-			box-shadow: 0 0 10px 2px rgba(#000, .2);
-			margin-bottom: 30px;
-			background: #fff linear-gradient(r-lighten($color-primary, 30%), rgba(#fff, 0));
+        &.panel-primary {
+            box-shadow: 0 0 10px 2px rgba(#000, .2);
+            margin-bottom: 30px;
+            background: #fff linear-gradient(r-lighten($color-primary, 30%), rgba(#fff, 0));
 
-			&>.panel-heading {
-				background: transparent;
-				color: #fff;
-				text-shadow: 1px 1px 1px #000;
-			}
-		}
-	}
+            &>.panel-heading {
+                background: transparent;
+                color: #fff;
+                text-shadow: 1px 1px 1px #000;
+            }
+        }
+    }
 
-	.login-form .btn-primary {
-		font-weight: bold;
-	}
+    .login-form .btn-primary {
+        font-weight: bold;
+    }
 
-	.login-avatar-container {
-		text-align: center;
-		margin-bottom: 10px;
-	}
+    .login-avatar-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 
-	.login-avatar {
-		max-width: 100%;
-		height: 128px;
-	}
+    .login-avatar {
+        max-width: 100%;
+        height: 128px;
+    }
 }
 
 .admin {
-	.navlink {
-		margin-top: -100px;
-		position: absolute;
-	}
+    .navlink {
+        margin-top: -100px;
+        position: absolute;
+    }
 
-	#pma-upd, #srv-backup {
-		display: none;
-	}
+    #pma-upd, #srv-backup {
+        display: none;
+    }
 
-	.page {
-		will-change: opacity, display;
-		display: none;
-	}
+    .page {
+        will-change: opacity, display;
+        display: none;
+    }
 
-	.img-graph {
-		margin: 0 auto;
-	}
-	
-	.table-scripts {
-		margin: 0;
-		list-style-type: none;
-		padding: 0;
+    .img-graph {
+        margin: 0 auto;
+    }
+    
+    .table-scripts {
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
 
-		& > li {
-			display: grid;
-			grid-template-columns: 1fr 3fr;
-			grid-template-rows: 1fr;
-			grid-template-areas: "link description";
-			transition: all .25s;
+        & > li {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "link description";
+            transition: all .25s;
 
-			&.table-scripts-item-enter, &.table-scripts-item-leave-to {
-				opacity: 0;
-				transform: translateY(10px);
-			}
+            &.table-scripts-item-enter, &.table-scripts-item-leave-to {
+                opacity: 0;
+                transform: translateY(10px);
+            }
 
-			&.table-scripts-item-leave-active {
-				position: absolute;
-			}
+            &.table-scripts-item-leave-active {
+                position: absolute;
+            }
 
-			&:nth-child(2n) {
-				background: rgba($color-primary, .025);
-			}
-			
-			& > a, & > div {
-				padding: .75rem;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-			
-			@media screen and (max-width: $breakpoint-mobile) {
-				grid-template: auto auto / 1fr;
-				padding: .5rem 0;
-				
-				& > a, & > div {
-					padding: .25rem 1rem;
-				}
-			}
-			
-			.table-scripts-icon-fav {
-				text-align: center;
-			}
-		}
-		
-		&.table-scripts-full {
-			& > li {
-				grid-template-columns: auto 1fr 3fr;
-				grid-template-rows: 1fr;
-				grid-template-areas: "icon link description";
+            &:nth-child(2n) {
+                background: rgba($color-primary, .025);
+            }
+            
+            & > a, & > div {
+                padding: .75rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
 
-				@media screen and (max-width: $breakpoint-mobile) {
-					grid-template-columns: auto 1fr;
-					grid-template-rows: 1fr 1fr;
-					grid-template-areas: "icon link" "icon description";
-				}
-			}
-		}
-		
-		.icon-fav-empty  {
-			color: $color-primary;
-		}
+            @media screen and (max-width: $breakpoint-mobile) {
+                grid-template: auto auto / 1fr;
+                padding: .5rem 0;
 
-		.icon-fav-checked {
-			color: $color-warning;
-		}
+                & > a, & > div {
+                    padding: .25rem 1rem;
+                }
+            }
 
-		.table-scripts-icon-fav {
-			grid-area: icon;
-		}
+            .table-scripts-icon-fav {
+                text-align: center;
+            }
+        }
 
-		.table-scripts-link {
-			grid-area: link;
-		}
+        &.table-scripts-full {
+            & > li {
+                grid-template-columns: auto 1fr 3fr;
+                grid-template-rows: 1fr;
+                grid-template-areas: "icon link description";
 
-		.table-scripts-description {
-			grid-area: description;
-		}
-	}
+                @media screen and (max-width: $breakpoint-mobile) {
+                    grid-template-columns: auto 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-areas: "icon link" "icon description";
+                }
+            }
+        }
 
-	.text-block {
-		margin: 0;
-		padding: 15px;
-	}
+        .icon-fav-empty {
+            color: $color-primary;
+        }
 
-	.panel-system {
-		h4 {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
+        .icon-fav-checked {
+            color: $color-warning;
+        }
 
-		dl {
-			margin-bottom: 0;
-		}
-	}
+        .table-scripts-icon-fav {
+            grid-area: icon;
+        }
 
-	.panel-vpn {
-		.panel-user-vpn {
-			display: flex;
+        .table-scripts-link {
+            grid-area: link;
+        }
 
-			& > .panel-vpn-user-wrapper {
-				display: flex;
-				width: 100%;
-				border-bottom: 1px solid r-lighten($color-primary, 75%);
-				padding: 5px;
+        .table-scripts-description {
+            grid-area: description;
+        }
+    }
 
-				& > .panel-user-vpn-image {
-					display: flex;
-					justify-items: center;
-					align-items: center;
-					margin: 5px;
+    .text-block {
+        margin: 0;
+        padding: 15px;
+    }
 
-					& > img, & > svg {
-						border-radius: 50%;
-					}
+    .panel-system {
+        h4 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
 
-					&, & > img, & > svg {
-						width: 50px;
-					}
-				}
+        dl {
+            margin-bottom: 0;
+        }
+    }
 
-				& > .panel-user-vpn-data {
-					margin: 10px;
-					width: 100%;
-					display: grid;
-					grid-template: auto auto / 1fr 1fr;
+    .panel-vpn {
+        .panel-user-vpn {
+            display: flex;
 
-					@media screen and (max-width: $breakpoint-mobile) {
-						grid-template: auto auto auto auto / 1fr;
-					}
+            & > .panel-vpn-user-wrapper {
+                display: flex;
+                width: 100%;
+                border-bottom: 1px solid r-lighten($color-primary, 75%);
+                padding: 5px;
 
-					& > h4 {
-						margin-top: 0;
-						margin-bottom: 5px;
-						text-transform: capitalize;
-					}
+                & > .panel-user-vpn-image {
+                    display: flex;
+                    justify-items: center;
+                    align-items: center;
+                    margin: 5px;
 
-					& > div {
-						opacity: .8;
+                    & > img, & > svg {
+                        border-radius: 50%;
+                    }
+
+                    &, & > img, & > svg {
+                        width: 50px;
+                    }
+                }
+
+                & > .panel-user-vpn-data {
+                    margin: 10px;
+                    width: 100%;
+                    display: grid;
+                    grid-template: auto auto / 1fr 1fr;
+
+                    @media screen and (max-width: $breakpoint-mobile) {
+                        grid-template: auto auto auto auto / 1fr;
+                    }
+
+                    & > h4 {
+                        margin-top: 0;
+                        margin-bottom: 5px;
+                        text-transform: capitalize;
+                    }
+
+                    & > div {
+                        opacity: .8;
 
                         &.panel-user-vpn-traffic {
                             &>span:first-child {
                                 margin-right: 5px;
                             }
                         }
-					}
-				}
-			}
-		}
+                    }
+                }
+            }
+        }
 
-		&:last-child {
-			& > .panel-vpn-user-wrapper {
-				border-bottom: 0;
-			}
-		}
-	}
+        &:last-child {
+            & > .panel-vpn-user-wrapper {
+                border-bottom: 0;
+            }
+        }
+    }
 }
 
 .admin-auth, .admin {
-	footer {
-		color: r-lighten($color-text, 25%);
-		text-decoration: none;
-		text-align: center;
-	}
+    footer {
+        color: r-lighten($color-text, 25%);
+        text-decoration: none;
+        text-align: center;
+    }
 }
 
 .admin-auth footer {
-	color: $navbar-text-color;
-	text-shadow: 1px 1px 0 $color-text;
+    color: $navbar-text-color;
+    text-shadow: 1px 1px 0 $color-text;
 
-	animation: .4s admin-auth-generic-fadein;
-	animation-fill-mode: forwards;
-	animation-iteration-count: 1;
-	animation-delay: .4s;
-	opacity: 0;
+    animation: .4s admin-auth-generic-fadein;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: .4s;
+    opacity: 0;
 }
 
 .flex-right {
     display: flex;
     justify-content: flex-end;
 }
-/* -- */

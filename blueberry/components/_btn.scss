@@ -5,36 +5,34 @@
     text-align: center;
     padding: .5rem 1rem;
 
-    border: 1px solid r-lighten($color-text, 75%);
+    border: 1px solid r-lighten($color-primary, 75%);
     border-radius: 5px;
 
     display: inline-block;
 
     margin: .25rem .25rem .5rem .25rem;
 
-	&, &:hover, &:active, &.active, &:focus {
-		transition: $transition-speed all;
-		outline: 0;
+    &, &:hover, &:active, &.active, &:focus {
+        background-color: r-lighten($color-primary, 95%);
+
+        transition: $transition-speed all;
+        outline: 0;
         text-decoration: none;
 
-        color: $color-text;
+        color: $color-primary;
     }
 
-	&.btn-default {
-		background-color: #fff;
-
-		&:hover, &:focus, &:active, &.active {
-			background-color: #eee;
-		}
+    &:hover, &:focus, &:active, &.active {
+        background-color: r-lighten($color-primary, 90%);
     }
 
-	&.btn-primary {
-		background-color: $color-primary;
+    &.btn-primary {
+        background-color: $color-primary;
         color: #fff;
 
-		&:hover, &:focus, &:active, &.active {
+        &:hover, &:focus, &:active, &.active {
             background-color: $color-alternative;
-		}
+        }
     }
 
     &.btn-block {
@@ -58,7 +56,7 @@
         }
         
         &:focus, &:hover {
-            background-color: $color-primary;
+            background-color: r-lighten($color-primary, 20%);
             color: #fff;
         }
     }

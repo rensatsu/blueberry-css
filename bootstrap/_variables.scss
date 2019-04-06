@@ -1,11 +1,13 @@
-$themePrimary          : #352c58;
-// $themePrimary          : #4a5785;
-$themeDanger           : #e91e63;
-$themeSuccess          : #009688;
-$themeWarning          : #ff9800;
+@import '../blueberry/core/variables';
+@import '../blueberry/override';
+
+$themePrimary          : $color-primary;
+$themeDanger           : $color-danger;
+$themeSuccess          : $color-success;
+$themeWarning          : $color-warning;
 $themeAltAdjust        : 15%;
 $themeBorder           : #ddd;
-$navbarHeight          : 42px;
-$navbarColor           : #fff;
-$static                : 'https://kyrios.rencloud.xyz';
-$breakpointMobile      : 991px;
+$navbarHeight          : $navbar-height;
+$navbarColor           : $navbar-text-color;
+$static                : $uri-static;
+$breakpointMobile      : $breakpoint-mobile;

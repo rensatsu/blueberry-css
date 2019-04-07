@@ -85,11 +85,11 @@
                 a {
                     text-decoration: underline;
                     text-decoration-color: r-lighten($themePrimary, 70%);
-                    color: r-lighten($themePrimary, 30%);
+                    color: r-lighten($themePrimary, 20%);
 
                     &:hover, &:active {
-                        text-decoration-color: r-lighten($themePrimary, 60%);
-                        color: r-lighten($themePrimary, 20%);
+                        text-decoration: none;
+                        background: r-lighten($themePrimary, 90%);
                     }
                 }
             }

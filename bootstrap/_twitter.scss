@@ -88,8 +88,8 @@
                     color: r-lighten($themePrimary, 20%);
 
                     &:hover, &:active {
-                        text-decoration: none;
-                        background: r-lighten($themePrimary, 90%);
+                        color: r-darken($themePrimary, 20%);
+                        text-decoration-color: r-darken($themePrimary, 70%);
                     }
                 }
             }

@@ -33,22 +33,40 @@ textarea {
     height: 2.25rem;
     padding: .5rem 1rem;
     color: $color-text;
-    background-color: #fff;
-    border: 1px solid r-lighten($color-primary, 40%);
+    background-color: $control-color-background-normal;
+    border: 1px solid $control-color-border;
+    border-radius: $control-border-radius;
     transition: border-color .3s, box-shadow .3s;
-    box-shadow: 0 1px 2px rgba(#000, .1);
 
     &:hover {
-        border-color: r-lighten($color-primary, 25%);
+        border-color: r-lighten($color-primary, 30%);
         box-shadow: inset 0 1px 1px rgba(#000, .1),
-                    0 0 4px rgba($color-primary, .25);
+                    0 0 4px rgba($color-primary, .2);
     }
 
     &:focus {
         border-color: $color-primary;
         outline: 0;
         box-shadow: inset 0 1px 1px rgba(#000, .1),
-                    0 0 8px rgba($color-primary, .5);
+                    0 0 8px rgba($color-primary, .25);
+    }
+
+    &[disabled], &[readonly] {
+        background-color: $control-color-background-locked;
+    }
+}
+
+select {
+    cursor: pointer;
+    background-color: $control-color-background-locked;
+    color: $color-primary;
+    transition: $control-transition-time all;
+
+    &:hover, &:focus, &:active, &.active {
+        transition: $control-transition-time all;
+        border-color: $control-color-border;
+        background-color: $control-color-background-hover;
+        box-shadow: none;
     }
 }
 

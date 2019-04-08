@@ -1,0 +1,11 @@
+// Controls constants
+$control-color-border            : r-lighten($color-primary, 70%);
+$control-color-background-normal : #fff;
+$control-color-background-locked : r-lighten($color-primary, 95%);
+$control-color-background-hover  : r-lighten($color-primary, 90%);
+
+$control-border-radius           : 5px;
+$control-transition-time         : .2s;
+
+@import 'controls/btn';
+@import 'controls/input';

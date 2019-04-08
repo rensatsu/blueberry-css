@@ -1,21 +1,20 @@
 .btn {
     $shadow-size: 3px;
-    $transition-speed: .2s;
 
     text-align: center;
     padding: .5rem 1rem;
 
-    border: 1px solid r-lighten($color-primary, 75%);
-    border-radius: 5px;
+    border: 1px solid $control-color-border;
+    border-radius: $control-border-radius;
 
     display: inline-block;
 
     margin: .25rem .25rem .5rem .25rem;
 
-    &, &:hover, &:active, &.active, &:focus {
-        background-color: r-lighten($color-primary, 95%);
+    background-color: $control-color-background-locked;
 
-        transition: $transition-speed all;
+    &, &:hover, &:active, &.active, &:focus {
+        transition: $control-transition-time all;
         outline: 0;
         text-decoration: none;
 
@@ -23,7 +22,11 @@
     }
 
     &:hover, &:focus, &:active, &.active {
-        background-color: r-lighten($color-primary, 90%);
+        background-color: $control-color-background-hover;
+    }
+
+    &:active {
+        transform: translate(0, 1px);
     }
 
     &.btn-primary {
@@ -47,7 +50,7 @@
         padding: .5rem 1.25rem;
         margin: 0 .1rem;
         border-radius: 4px;
-        transition: $transition-speed all;
+        transition: $control-transition-time all;
         box-shadow: none;
         border: 0;
         

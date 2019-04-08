@@ -22,7 +22,9 @@
 
     .dialog-inner {
         background: #fff;
-        border: 0;
+        border: 1px solid $themePrimary;
+        border-radius: 5px;
+        overflow: hidden;
         box-shadow: 0 10px 40px rgba(#000, .3);
         width: 80%;
         max-width: 600px;

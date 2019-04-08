@@ -60,7 +60,7 @@
         &.panel-primary {
             box-shadow: 0 0 10px 2px rgba(#000, .2);
             margin-bottom: 30px;
-            background: #fff linear-gradient(r-lighten($color-primary, 30%), rgba(#fff, 0));
+            background: #fff linear-gradient(r-lighten($color-primary, 50%), rgba(#fff, 0));
 
             &>.panel-heading {
                 background: transparent;

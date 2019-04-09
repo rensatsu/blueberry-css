@@ -4,7 +4,7 @@
 @import 'components/play-button';
 
 .twitter {
-    $colorTweetText: #234;
+    $colorTweetText: $color-text;
 
     &.no-scroll {
         overflow: hidden;

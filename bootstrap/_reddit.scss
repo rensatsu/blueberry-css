@@ -96,15 +96,21 @@
                             margin-top: calc(-1rem - #{$overflow-height});
                         }
 
+                        &::after {
+                            content: '⮟';
+                            padding: 0 0 0 1rem;
+                            text-decoration: none;
+                            display: inline-block;
+                        }
+
                         position: absolute;
                         width: 100%;
                         left: 0;
                         bottom: 0;
-                        text-align: center;
                         background: #fff;
                         color: $themePrimary;
                         cursor: pointer;
-                        padding: 1rem 0;
+                        padding: 1rem 0 0 0;
                     }
                 }
 

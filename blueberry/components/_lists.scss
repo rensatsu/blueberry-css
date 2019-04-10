@@ -21,7 +21,7 @@ dl {
         display: block;
         text-decoration: none;
         padding: 1rem;
-        border: 1px solid r-lighten($color-primary, .5);
+        border: 1px solid $control-color-border;
 
         margin: -1px 0 0 0;
 
@@ -34,7 +34,7 @@ dl {
         }
         
         &:hover, &:focus {
-            background: r-lighten($color-primary, .75);
+            background: $control-color-background-hover;
         }
         
         & > h4 {

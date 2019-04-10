@@ -1,12 +1,12 @@
 // Blueberry CSS Core
 @import
+    'blueberry/core/utils',
     'blueberry/override',
     'fonts/scada',
     'blueberry/core/variables',
     'blueberry/core/functions',
 
-    'blueberry/core/core',
-    'blueberry/core/utils'
+    'blueberry/core/core'
 ;
 
 // Additional Components

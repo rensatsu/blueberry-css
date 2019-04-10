@@ -3,6 +3,8 @@
     background-color: #fff;
     border: 1px solid transparent;
     box-shadow: 3px 2px 2px 0 rgba(#000, .2);
+    border-radius: $control-border-radius;
+    overflow: hidden;
 
     & > .panel-heading {
         padding: .75rem 1.25rem;
@@ -15,6 +17,20 @@
     & > .panel-footer {
         padding: .75rem 1.25rem;
         background-color: r-lighten($color-primary, 90%);
+    }
+
+    &.panel-default {
+        border-color: $control-color-border;
+        box-shadow: none;
+
+        & > .panel-heading {
+            color: $color-primary;
+            background-color: $control-color-background-locked;
+        }
+
+        & > .panel-footer {
+            background-color: $control-color-background-locked;
+        }
     }
 
     &.panel-primary {

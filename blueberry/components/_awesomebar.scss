@@ -10,7 +10,7 @@ nav.awesome-bar {
     display: flex;
     justify-content: center;
     z-index: $navbar-z-index;
-    box-shadow: 3px 2px 2px 0 rgba(#000, .2);
+    box-shadow: 0 2px 2px 0 rgba(#000, .2);
     will-change: transform;
     color: $navbar-text-color;
 

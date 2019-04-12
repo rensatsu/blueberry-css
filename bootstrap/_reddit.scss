@@ -22,8 +22,26 @@
         border-radius: 5px;
         overflow: hidden;
 
+        position: relative;
+
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &.reddit-post-nsfw {
+            border-color: $themeDanger;
+
+            &::after {
+                content: 'NSFW';
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 3px 5px;
+                color: #fff;
+                background-color: $themeDanger;
+                font-size: .75rem;
+                border-radius: 0 0 0 5px;
+            }
         }
 
         .reddit-post-header {

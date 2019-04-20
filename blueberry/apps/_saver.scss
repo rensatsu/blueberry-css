@@ -2,7 +2,7 @@
     .post {
         background: #fff;
         width: 500px;
-        box-shadow: 1px 1px 5px rgba(#000, .5);
+        box-shadow: 5px 5px 10px rgba(#000, .25);
         position: relative;
         overflow: hidden;
 
@@ -12,24 +12,33 @@
         display: inline-block;
         margin: 15px 25px;
 
+        border: 1px solid $control-color-border;
+        border-radius: $control-border-radius;
+        overflow: hidden;
+
         @media all and (max-width: $breakpoint-mobile) {
             margin: 5px auto;
+            box-shadow: none;
         }
 
         & > .title {
-            background: $color-primary;
-            color: #fff;
+            background: linear-gradient(rgba($color-primary, .75), rgba($color-primary, 0));
             padding: 5px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
 
             & > .name {
-                font-size: 1.25rem;
                 text-decoration: none;
                 margin-top: 5px;
-                color: #fff;
-                
+                color: inherit;
+                text-shadow: 1px 1px 3px $color-primary;
+
                 &::after {
                     content: '';
                 }
@@ -41,9 +50,9 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: rgba(#000, .6);
+            background: rgba($color-primary, .75);
             padding: 3px 3px 0;
-            text-shadow: 1px 1px 1px #000;
+            text-shadow: 1px 1px 1px $color-primary;
 
             opacity: 0;
             transform: translate(0, 100%);

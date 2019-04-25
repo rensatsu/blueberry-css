@@ -14,7 +14,6 @@
 
         border: 1px solid $control-color-border;
         border-radius: $control-border-radius;
-        overflow: hidden;
 
         @media all and (max-width: $breakpoint-mobile) {
             margin: 5px auto;
@@ -22,13 +21,13 @@
         }
 
         & > .title {
-            background: linear-gradient(rgba($color-primary, .75), rgba($color-primary, 0));
+            background: rgba($color-primary, .75);
             padding: 5px;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
             color: #fff;
@@ -43,55 +42,30 @@
                     content: '';
                 }
             }
-        }
 
-        & > .subtitle {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba($color-primary, .75);
-            padding: 3px 3px 0;
-            text-shadow: 1px 1px 1px $color-primary;
+            & > .subtitle {
+                text-shadow: 1px 1px 1px $color-primary;
+                font-size: .8rem;
+                opacity: .75;
 
-            opacity: 0;
-            transform: translate(0, 100%);
-            transition: .1s .25s;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
 
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            
-            @media all and (max-width: $breakpoint-mobile) {
-                transform: none;
-                opacity: 1;
-            }
+                & > span + span {
+                    margin-left: 5px;
 
-            & > span {
-                margin-left: 5px;
+                    &::before {
+                        content: '•';
+                        margin-right: 5px;
+                    }
+                }
 
-                &::before {
-                    content: '•';
-                    margin-right: 5px;
+                &, a {
+                    color: #fff;
+                    text-decoration-color: #fff;
                 }
             }
-
-            & > span:first-child {
-                margin-left: 0;
-                
-                &::before {
-                    content: '';
-                }
-            }
-
-            &, a {
-                color: #fff;
-            }
-        }
-
-        &:hover > .subtitle {
-            opacity: 1;
-            transform: none;
         }
 
         .attach {
@@ -261,6 +235,9 @@
             justify-content: center;
             align-items: center;
             user-select: none;
+            width: 100%;
+            height: 100%;
+            position: absolute;
 
             img {
                 max-height: 100%;

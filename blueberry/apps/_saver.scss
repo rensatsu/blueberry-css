@@ -9,11 +9,8 @@
         position: relative;
         overflow: hidden;
 
-        text-align: left;
-        vertical-align: top;
-        max-width: 100%;
         display: inline-block;
-        margin: 15px 25px;
+        margin: 20px;
 
         border: 1px solid $control-color-border;
         border-radius: $control-border-radius;
@@ -87,7 +84,6 @@
     .paginator {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
         justify-content: center;
 
         clear: both;
@@ -96,8 +92,11 @@
     }
 
     main {
-        text-align: center;
         margin: 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
 
         @media all and (max-width: $breakpoint-mobile) {
             margin: 0;
@@ -139,7 +138,7 @@
 
             top: unset !important; // override js
         }
-        
+
         &>li>a {
             text-decoration: none;
             padding: 5px 20px;
@@ -168,7 +167,10 @@
 
     /* Search */
     #search-form {
-        &>#search-field {
+        display: flex;
+        justify-content: center;
+
+        & > #search-field {
             max-width: $preview-width;
             width: 80%;
         }
@@ -176,7 +178,7 @@
 
     &.image-preview-open {
         overflow: hidden;
-        
+
         main {
             filter: blur(5px);
         }
@@ -196,7 +198,7 @@
         display: grid;
         grid-template-columns: auto $navbar-height;
         grid-template-rows: $navbar-height auto;
-        overflow: hidden;  
+        overflow: hidden;
 
         h1 {
             background: $color-primary;

@@ -1,7 +1,10 @@
 .app-web-archive {
+    $preview-width: 500px;
+    $preview-height: 350px;
+
     .post {
         background: #fff;
-        width: 500px;
+        width: $preview-width;
         box-shadow: 5px 5px 10px rgba(#000, .25);
         position: relative;
         overflow: hidden;
@@ -68,31 +71,16 @@
             }
         }
 
-        .attach {
-            margin: 3px 0;
-            min-height: 32px;
-
-            &:first-child {
-                margin-top: 0;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
         .photo {
-            max-height: 100%;
-            overflow-y: hidden;
-
             & > a > img {
-                max-width: 100%;
+                width: $preview-width;
+                min-height: $preview-height;
+                display: block;
             }
         }
 
         .attachments {
-            max-height: 350px;
-            overflow-y: hidden;
+            max-height: $preview-height;
         }
     }
 
@@ -181,7 +169,7 @@
     /* Search */
     #search-form {
         &>#search-field {
-            max-width: 500px;
+            max-width: $preview-width;
             width: 80%;
         }
     }

@@ -15,6 +15,7 @@ const sassFiles = [
 
 const rsyncConfig = {
     root: 'dist/',
+    username: 'rensatsu',
     hostname: 'zumfut.rencloud.xyz',
     destination: '/var/www/sites/static/css/',
     archive: true,

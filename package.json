@@ -1,0 +1,25 @@
+{
+  "name": "scss",
+  "version": "1.0.0",
+  "description": "SCSS Styles Collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/rensatsu/scss-collection.git"
+  },
+  "author": "Rensatsu",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://gitlab.com/rensatsu/scss-collection/issues"
+  },
+  "homepage": "https://gitlab.com/rensatsu/scss-collection#readme",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-rsync": "0.0.8",
+    "gulp-sass": "^4.0.2"
+  }
+}

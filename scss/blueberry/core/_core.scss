@@ -1,3 +1,14 @@
+:root {
+    --color-background: #{$color-background};
+    --color-primary: #{$color-primary};
+    --color-alternative: #{$color-alternative};
+    --color-danger: #{$color-danger};
+    --color-success: #{$color-success};
+    --color-warning: #{$color-warning};
+    --color-text: #{$color-text};
+    --color-muted: #{$color-muted};
+}
+
 html {
     -webkit-tap-highlight-color: rgba(#000, 0);
     text-size-adjust: 100%;

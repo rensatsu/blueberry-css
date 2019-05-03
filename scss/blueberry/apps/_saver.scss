@@ -70,14 +70,11 @@
 
         .photo {
             & > a > img {
-                width: $preview-width;
-                min-height: $preview-height;
+                width: 100%;
+                min-height: $preview-height / 2;
                 display: block;
+                object-fit: contain;
             }
-        }
-
-        .attachments {
-            max-height: $preview-height;
         }
     }
 

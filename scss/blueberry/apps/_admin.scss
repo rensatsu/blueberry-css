@@ -260,23 +260,13 @@
             }
         }
     }
-}
 
-.admin-auth, .admin {
     footer {
         color: r-lighten($color-text, 25%);
         text-decoration: none;
         text-align: center;
         mix-blend-mode: screen;
     }
-}
-
-.admin-auth footer {
-    animation: .4s admin-auth-generic-fadein;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-delay: .4s;
-    opacity: 0;
 }
 
 .flex-right {

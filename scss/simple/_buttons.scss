@@ -17,7 +17,6 @@
 .btn-toolbar {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 
     @media all and (max-width: $viewport-width-tablet) {
         &>.btn {

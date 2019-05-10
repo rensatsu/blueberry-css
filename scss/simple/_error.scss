@@ -15,12 +15,27 @@
 
 body.error-page {
     padding: $content-margin;
-    background: $theme-main url('#{$static}/img/bg-dots.svg') no-repeat 50% 50%;
+    background: $color-background-page;
     background-size: cover;
+
+    .wallpaper {
+        --height: 800px;
+
+        position: fixed;
+        background: radial-gradient(mix(#fff, $theme-main, 30%), $theme-main) 50% 50%;
+        background-size: cover;
+
+        clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
+
+        width: 100%;
+        left: 0;
+        top: calc(var(--height) / 2 * -1);
+        height: var(--height);
+    }
 
     h1 {
         padding: 0;
-        
+
         &::before {
             content: "";
             display: none;
@@ -31,8 +46,10 @@ body.error-page {
         padding: 2rem;
         background: #fff;
         border: 1px solid $theme-main;
+        border-radius: 5px;
+
         box-shadow: 0 0 10px 2px rgba(#000, .2);
-        background: #fff linear-gradient(lighten($theme-main, 30%), rgba(#fff, 0));
+        background: #fff linear-gradient(mix(#fff, $theme-main, 50%), rgba(#fff, 0));
 
         @include animation('error-message-fadein linear .5s forwards');
         @include css3('animation-iteration-count', '1');

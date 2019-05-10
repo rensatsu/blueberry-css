@@ -30,7 +30,7 @@ $svg-arrow-right:
 </svg>";
 $svg-arrow-right: "data:image/svg+xml;charset=utf8," + url-encode($svg-arrow-right);
 
-.hidden {
+.hidden, [hidden] {
     display: none;
 }
 

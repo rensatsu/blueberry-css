@@ -37,11 +37,6 @@ body {
     }
 }
 
-
-h1, h2, h3, b, strong {
-    color: darken($color-text, 20%);
-}
-
 a, .menu h3 {
     color: $color-link;
 }

@@ -1,10 +1,10 @@
 /* Variables */
-$theme-main                : #352c58;
-$theme-alt                 : #1e182c;
+$theme-main                : #423672 !default;
+$theme-alt                 : mix(#fff, $theme-main, 15%) !default;
 
-$color-text                : #262626;
+$color-text                : mix(#000, $theme-main, 30%) !default;
 $color-link                : saturate($theme-main, 30%);
-$color-background-page     : #fcfcfc;
+$color-background-page     : #f8f8f8;
 $color-background-alt      : $color-background-page;
 $color-shadow              : #999;
 

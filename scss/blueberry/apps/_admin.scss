@@ -4,7 +4,7 @@
         opacity: 0;
         transform: translateY(5%);
     }
-    
+
     100% {
         opacity: 1;
         transform: none;
@@ -28,7 +28,6 @@
         --height: 800px;
 
         position: fixed;
-        z-index: -1;
         background: radial-gradient(r-lighten($color-primary, 30%), $color-primary) 50% 50%;
         background-size: cover;
 
@@ -103,7 +102,7 @@
     .img-graph {
         margin: 0 auto;
     }
-    
+
     .table-scripts {
         margin: 0;
         list-style-type: none;
@@ -128,7 +127,7 @@
             &:nth-child(2n) {
                 background: rgba($color-primary, .025);
             }
-            
+
             & > a, & > div {
                 padding: .75rem;
                 white-space: nowrap;
@@ -268,6 +267,7 @@
         color: r-lighten($color-text, 25%);
         text-decoration: none;
         text-align: center;
+        mix-blend-mode: screen;
     }
 }
 

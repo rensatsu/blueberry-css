@@ -7,10 +7,7 @@ const rsync = require('gulp-rsync');
 const sassFiles = [
     'app-engine-blueberry.scss',
     'blueberry.scss',
-    'cv.scss',
-    'simple.scss',
     'simple-error.scss',
-    'simple-landing.scss'
 ];
 
 const rsyncConfig = {
@@ -23,11 +20,6 @@ const rsyncConfig = {
     compress: true,
     port: 19348,
     clean: true,
-    // progress: true,
-    // verbose: true,
-    // command: true,
-    // recursive: false,
-    // chmod: "ugo=rwX", // for windows
 };
 
 async function styles() {

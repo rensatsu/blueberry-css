@@ -69,6 +69,9 @@
         }
 
         .photo {
+            max-width: $preview-width;
+            max-height: $preview-height;
+
             & > a > img {
                 width: 100%;
                 min-height: $preview-height / 2;

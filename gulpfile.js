@@ -21,7 +21,7 @@ const rsyncConfig = {
     archive: true,
     silent: false,
     compress: true,
-    port: 17803,
+    port: 19348,
     clean: true,
     // progress: true,
     // verbose: true,

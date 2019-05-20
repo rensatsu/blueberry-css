@@ -54,7 +54,7 @@ body.error-page {
         @include animation('error-message-fadein linear .5s forwards');
         @include css3('animation-iteration-count', '1');
         transform-origin: 50% 50%;
-        will-change: transform, filter;
+        will-change: opacity, transform, filter;
 
         .error-page-flex {
             display: flex;

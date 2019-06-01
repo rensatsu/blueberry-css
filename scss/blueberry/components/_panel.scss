@@ -2,7 +2,6 @@
     margin-bottom: 1rem;
     background-color: #fff;
     border: 1px solid transparent;
-    box-shadow: 3px 2px 2px 0 rgba(#000, .2);
     border-radius: $control-border-radius;
     overflow: hidden;
 
@@ -21,7 +20,6 @@
 
     &.panel-default {
         border-color: $control-color-border;
-        box-shadow: none;
 
         & > .panel-heading {
             color: $color-primary;
@@ -45,7 +43,7 @@
     &.panel-danger {
         border-color: $color-danger;
 
-        & > .panel-heading {
+        & > .panel-heading, & > .panel-footer {
             background-color: r-lighten($color-danger, 90%);
             color: $color-danger;
         }
@@ -54,7 +52,7 @@
     &.panel-success {
         border-color: $color-success;
 
-        &>.panel-heading {
+        &>.panel-heading, & > .panel-footer {
             background-color: r-lighten($color-success, 90%);
             color: $color-success;
         }
@@ -63,7 +61,7 @@
     &.panel-warning {
         border-color: $color-warning;
 
-        &>.panel-heading {
+        &>.panel-heading, & > .panel-footer {
             background-color: r-lighten($color-warning, 90%);
             color: $color-warning;
         }

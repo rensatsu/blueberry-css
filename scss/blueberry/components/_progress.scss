@@ -16,4 +16,16 @@
 
         background-color: $color-primary;
     }
+
+    &.progress-danger .progress-bar {
+        background-color: $color-danger;
+    }
+
+    &.progress-warning .progress-bar {
+        background-color: $color-warning;
+    }
+
+    &.progress-success .progress-bar {
+        background-color: $color-success;
+    }
 }

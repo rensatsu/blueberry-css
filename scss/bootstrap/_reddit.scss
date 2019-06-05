@@ -54,9 +54,18 @@
                 display: block;
             }
 
-            .reddit-post-header-subreddit, .reddit-post-header-subreddit > a, .reddit-post-header-subreddit > span {
+            .reddit-post-header-subreddit {
                 font-size: .9em;
                 color: r-lighten($themePrimary, 60%);
+
+                span, a {
+                    color: inherit;
+                }
+
+                span + span::before {
+                    content: "•";
+                    padding: 0 5px;
+                }
             }
         }
 

@@ -44,8 +44,8 @@
                     color: rgba($colorTweetText, .5);
                 }
 
-                .tweet-retweet-author {
-                    padding-right: .5ch;
+                .tweet-retweet-author::after {
+                    content: " ";
                 }
             }
 

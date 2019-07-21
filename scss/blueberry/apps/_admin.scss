@@ -1,3 +1,5 @@
+@import '../components/text';
+
 /* Admin Panel */
 @keyframes admin-auth-panel-fadein {
     0% {
@@ -272,4 +274,65 @@
 .flex-right {
     display: flex;
     justify-content: flex-end;
+}
+
+.notifications {
+    .notification {
+        &[data-status="default"] {
+            --notification-icon-color: #{r-lighten($color-primary, 10%)};
+            --notification-icon-background: #{r-lighten($color-primary, 85%)};
+        }
+
+        &[data-status="warning"] {
+            --notification-icon-color: #{$color-warning};
+            --notification-icon-background: #{r-lighten($color-warning, 85%)};
+        }
+
+        &[data-status="danger"] {
+            --notification-icon-color: #{$color-danger};
+            --notification-icon-background: #{r-lighten($color-danger, 85%)};
+        }
+
+        &[data-status="success"] {
+            --notification-icon-color: #{$color-success};
+            --notification-icon-background: #{r-lighten($color-success, 85%)};
+        }
+
+        $notification-icon-size: 48px;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-areas: "icon title" "icon message" "icon time";
+
+        .notification-icon {
+            grid-area: icon;
+            display: flex;
+            width: $notification-icon-size;
+            height: $notification-icon-size;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: var(--notification-icon-color);
+            background-color: var(--notification-icon-background);
+            margin: 1rem;
+        }
+
+        h3 {
+            grid-area: title;
+            margin: .25rem 0 0 0;
+            font-size: 1.1rem;
+        }
+
+        p {
+            grid-area: message;
+            margin: 0;
+        }
+
+        .notification-timestamp {
+            grid-area: time;
+            @extend .text-muted;
+            font-size: .9rem;
+        }
+    }
 }

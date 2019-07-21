@@ -57,15 +57,16 @@ h5, h6 {
 }
 
 .bg-warning {
-    background-color: lighten($color-warning, 40%);
+    background-color: r-lighten($color-warning, 85%);
 }
 
 .bg-danger {
-    background-color: lighten($color-danger, 40%);
+    background-color: r-lighten($color-danger, 85%);
 }
 
 .bg-success {
-    background-color: lighten($color-success, 40%);
+    background-color: r-lighten($color-success, 85%);
+    color: $color-success;
 }
 
 pre, code {
@@ -108,6 +109,7 @@ pre {
     background: r-lighten($color-primary, 75%);
     border: 1px solid r-lighten($color-primary, 50%);
     color: $color-text;
+    white-space: nowrap;
 }
 
 hr {

@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rsync = require('gulp-rsync');
+const touch = require('gulp-touch-cmd');
 
 const sassFiles = [
     'app-engine-blueberry.scss',
@@ -13,7 +14,7 @@ const sassFiles = [
 const rsyncConfig = {
     root: 'dist/',
     username: 'rensatsu',
-    hostname: 'zumfut.rencloud.xyz',
+    hostname: 'granzam.rencloud.xyz',
     destination: '/var/www/sites/static/css/',
     archive: true,
     silent: false,
@@ -28,7 +29,8 @@ async function styles() {
             .pipe(sass({
                 outputStyle: 'compressed'
             }).on('error', sass.logError))
-            .pipe(gulp.dest('dist/'));
+            .pipe(gulp.dest('dist/'))
+            .pipe(touch()) /* fix to update modified time */
     });
 };
 

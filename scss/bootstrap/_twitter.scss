@@ -81,7 +81,7 @@
                 }
             }
 
-            .tweet-text, .tweet-translate, .tweet-translate-offer {
+            .tweet-text, .tweet-translate, .tweet-translate-offer, .tweet-clickable-links {
                 font-size: 1.2rem;
                 padding: .75rem;
                 overflow: hidden;
@@ -110,6 +110,23 @@
                 a {
                     text-decoration: none;
                     color: $themePrimary;
+                }
+            }
+
+            .tweet-clickable-links {
+                padding-top: 0;
+
+                a {
+                    text-decoration: none;
+                    display: inline-flex;
+                    padding: 0 2px 0 0;
+
+                    .label {
+                        font-size: .8rem;
+                        background: none;
+                        color: $colorTweetText;
+                        border-color: rgba($themePrimary, .2);
+                    }
                 }
             }
 

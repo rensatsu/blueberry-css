@@ -96,11 +96,6 @@
         display: none;
     }
 
-    .page {
-        will-change: opacity, display;
-        display: none;
-    }
-
     .img-graph {
         margin: 0 auto;
     }
@@ -327,6 +322,7 @@
         p {
             grid-area: message;
             margin: 0;
+            white-space: pre-wrap;
         }
 
         .notification-timestamp {

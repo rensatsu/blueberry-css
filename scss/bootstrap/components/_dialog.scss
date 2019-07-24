@@ -61,6 +61,10 @@
                 display: grid;
                 grid-template-columns: 1fr 2fr;
                 grid-auto-rows: auto;
+
+                @media screen and (max-width: $breakpoint-mobile) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             label {

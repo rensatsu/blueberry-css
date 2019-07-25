@@ -125,10 +125,10 @@ nav.awesome-bar {
             }
 
             .awesome-bar-profile {
-                display: block;
+                display: flex;
                 height: $navbar-height;
                 text-decoration: none;
-                padding: 0 1rem;
+                padding: 0 .5rem;
                 transition: .1s background-color;
 
                 &:hover {
@@ -136,13 +136,13 @@ nav.awesome-bar {
                 }
 
                 &>img {
-                    $padding: 3px;
+                    $padding: 5px;
                     $size: ($navbar-height - 2 * $padding);
 
                     width: $size;
                     height: $size;
                     border-radius: 50%;
-                    margin: 0 $padding $padding $padding;
+                    margin: $padding;
                     vertical-align: middle;
                 }
 
@@ -154,6 +154,12 @@ nav.awesome-bar {
 
                     &.awesome-bar-signin {
                         grid-area: 1/1/1/3;
+                    }
+
+                    @media screen and (max-width: $breakpoint-mobile) {
+                        &:not(.awesome-bar-signin) {
+                            display: none;
+                        }
                     }
                 }
             }

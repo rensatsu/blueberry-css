@@ -12,9 +12,10 @@ $color-muted        : mix(#fff, $color-text, 30%) !default;
 $uri-static         : 'https://kyrios.rencloud.xyz' !default;
 
 // Breakpoints
-$breakpoint-mobile  : 980px !default;
-$breakpoint-desktop : 1170px !default;
-$breakpoint-narrow  : 560px !default;
+$breakpoint-mobile  : 720px !default;
+$breakpoint-desktop : 1080px !default;
+
+$width-narrow       : 540px !default;
 
 // Navbar
 $navbar-height      : 42px !default;

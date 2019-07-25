@@ -61,10 +61,6 @@
                 outline: none;
                 transition: .1s background-color;
 
-                @media screen and (min-width: $breakpoint-narrow) {
-                    min-width: 5rem;
-                }
-
                 @media screen and (min-width: $breakpoint-mobile) {
                     min-width: 10rem;
                 }
@@ -72,7 +68,7 @@
                 &:hover, &:active, &:focus {
                     background: rgba($color-primary, .1);
                 }
-                
+
                 &:active {
                     background: rgba($color-primary, .3);
                 }

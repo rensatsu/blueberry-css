@@ -115,6 +115,16 @@
 
 
     /* popup menu */
+    #popup-menu-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        z-index: 1000;
+    }
+
     #popup-menu {
         display: none;
         position: fixed;
@@ -126,7 +136,7 @@
         box-shadow: 2px 2px 4px 0px rgba(#000, .4);
         border: 1px solid $color-alternative;
         min-width: 200px;
-        z-index: 1;
+        z-index: 1001;
 
         @media all and (max-width: $breakpoint-mobile) {
             width: 100%;
@@ -172,66 +182,6 @@
         & > #search-field {
             max-width: $preview-width;
             width: 80%;
-        }
-    }
-
-    &.image-preview-open {
-        overflow: hidden;
-
-        main {
-            filter: blur(5px);
-        }
-    }
-
-    .image-preview-wrapper[open] {
-        border: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(#000, .8);
-        z-index: 1000;
-        opacity: 1;
-        padding: 0;
-        display: grid;
-        grid-template-columns: auto $navbar-height;
-        grid-template-rows: $navbar-height auto;
-        overflow: hidden;
-
-        h1 {
-            background: $color-primary;
-            color: $navbar-text-color;
-            padding: 0 1rem;
-            margin: 0;
-            line-height: $navbar-height;
-            font-size: 1.5rem;
-            font-weight: normal;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        button {
-            background: $color-danger;
-            color: $navbar-text-color;
-            border: 0;
-        }
-
-        .image-preview-body {
-            grid-area: 2 / 1 / 2 / 3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            user-select: none;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-
-            img {
-                max-height: 100%;
-                max-width: 100%;
-            }
         }
     }
 }

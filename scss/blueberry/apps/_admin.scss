@@ -14,6 +14,10 @@
 }
 
 @keyframes admin-auth-generic-fadein {
+    0% {
+        opacity: 0;
+    }
+
     100% {
         opacity: 1;
     }
@@ -71,8 +75,14 @@
         }
     }
 
-    .login-form .btn-primary {
-        font-weight: bold;
+    .login-form {
+        .form-group {
+            label {
+                text-transform: uppercase;
+                font-size: .9rem;
+                font-weight: normal;
+            }
+        }
     }
 
     .login-avatar-container {
@@ -198,72 +208,14 @@
         }
     }
 
-    .panel-vpn {
-        .panel-user-vpn {
-            display: flex;
-
-            & > .panel-vpn-user-wrapper {
-                display: flex;
-                width: 100%;
-                border-bottom: 1px solid r-lighten($color-primary, 75%);
-                padding: 5px;
-
-                & > .panel-user-vpn-image {
-                    display: flex;
-                    justify-items: center;
-                    align-items: center;
-                    margin: 5px;
-
-                    & > img, & > svg {
-                        border-radius: 50%;
-                    }
-
-                    &, & > img, & > svg {
-                        width: 50px;
-                    }
-                }
-
-                & > .panel-user-vpn-data {
-                    margin: 10px;
-                    width: 100%;
-                    display: grid;
-                    grid-template: auto auto / 1fr 1fr;
-
-                    @media screen and (max-width: $breakpoint-mobile) {
-                        grid-template: auto auto auto auto / 1fr;
-                    }
-
-                    & > h4 {
-                        margin-top: 0;
-                        margin-bottom: 5px;
-                        text-transform: capitalize;
-                    }
-
-                    & > div {
-                        opacity: .8;
-
-                        &.panel-user-vpn-traffic {
-                            &>span:first-child {
-                                margin-right: 5px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &:last-child {
-            & > .panel-vpn-user-wrapper {
-                border-bottom: 0;
-            }
-        }
-    }
-
     footer {
         color: r-lighten($color-text, 25%);
         text-decoration: none;
         text-align: center;
         mix-blend-mode: screen;
+        opacity: 0;
+        animation: 1s .5s admin-auth-generic-fadein;
+        animation-fill-mode: forwards;
     }
 }
 

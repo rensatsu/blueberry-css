@@ -1,8 +1,16 @@
 @font-face {
     font-family: 'Source Sans Pro';
-    src: url('../fonts/source/SourceSansPro-Regular.ttf.woff2') format('woff2'),
+    src: url('../fonts/source/SourceSansPro-Regular.otf.woff2') format('woff2'),
          url('../fonts/source/SourceSansPro-Regular.otf.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../fonts/source/SourceSansPro-Bold.otf.woff2') format('woff2'),
+         url('../fonts/source/SourceSansPro-Bold.otf.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
 }
 

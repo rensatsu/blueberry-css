@@ -6,5 +6,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Scada';
+    src: url('../fonts/scada/Scada_bold.woff2') format('woff2'),
+         url('../fonts/scada/Scada_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 $custom-font: 'Scada';
 $font-family-sans: 'Scada';

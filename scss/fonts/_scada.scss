@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'Scada';
-    src: url('../fonts/scada/Scada.woff2') format('woff2'),
+    src: local('Scada'),
+         url('../fonts/scada/Scada.woff2') format('woff2'),
          url('../fonts/scada/Scada.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -8,7 +9,8 @@
 
 @font-face {
     font-family: 'Scada';
-    src: url('../fonts/scada/Scada_bold.woff2') format('woff2'),
+    src: local('Scada Bold'),
+         url('../fonts/scada/Scada_bold.woff2') format('woff2'),
          url('../fonts/scada/Scada_bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;

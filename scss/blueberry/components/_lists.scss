@@ -38,17 +38,21 @@ dl {
         & > h4 {
             margin: 0 0 .5rem 0;
         }
-        
+
         & > p {
             margin: 0;
         }
 
-        &, & > h4, & > p {
+        &, & > h4 {
             color: $color-primary;
+        }
+
+        & > div, & > p {
+            color: $color-muted;
         }
     }
 
-    
+
     &:not(#{$this}--no-hover) > #{$this}-item {
         &:hover, &:focus {
             background: $control-color-background-hover;

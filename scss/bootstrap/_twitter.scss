@@ -135,12 +135,14 @@
                         }
 
                         & > img {
-                            display: none;
+                            opacity: 0;
                         }
                     }
 
                     & > img {
                         width: 100%;
+                        height: auto;
+                        opacity: 1;
                     }
 
                     &.tweet-type-video::before {

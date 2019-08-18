@@ -4,7 +4,8 @@
   "description": "SCSS Styles Collection",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp watch"
+    "watch": "gulp default && gulp watch",
+    "build": "gulp default"
   },
   "repository": {
     "type": "git",

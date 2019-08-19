@@ -8,7 +8,6 @@ const touch = require('gulp-touch-cmd');
 const sassFiles = [
     'app-engine-blueberry.scss',
     'blueberry.scss',
-    'simple-error.scss',
 ];
 
 const rsyncConfig = {

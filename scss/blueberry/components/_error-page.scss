@@ -1,29 +1,4 @@
 .error-page {
-    $color-alt-error: #8b5da2;
-
-    .wallpaper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: -1;
-
-        svg {
-            width: 100%;
-            height: 200px;
-
-            #tb-grd1 {
-                stop:nth-child(1) {
-                    stop-color: rgba($color-primary, .9);
-                }
-
-                stop:nth-child(2) {
-                    stop-color: rgba($color-alt-error, .9);
-                }
-            }
-        }
-    }
-
     & > .container {
         margin-top: 50px;
     }

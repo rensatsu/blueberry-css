@@ -1,0 +1,23 @@
+.page-wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    svg {
+        width: 100%;
+        height: 200px;
+        opacity: .9;
+
+        #tb-grd1 {
+            stop:nth-child(1) {
+                stop-color: $color-wallpaper-gradient-start;
+            }
+
+            stop:nth-child(2) {
+                stop-color: $color-wallpaper-gradient-end;
+            }
+        }
+    }
+}

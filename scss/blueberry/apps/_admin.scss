@@ -30,26 +30,6 @@
         max-width: 40rem;
     }
 
-    .wallpaper {
-        --height: 800px;
-
-        position: fixed;
-        background: radial-gradient(r-lighten($color-primary, 30%), $color-primary) 50% 50%;
-        background-size: cover;
-
-        animation: .5s admin-auth-generic-fadein;
-        animation-fill-mode: forwards;
-        animation-iteration-count: 1;
-        opacity: 0;
-
-        clip-path: polygon(0 0, 100% 0, 100% 65%, 0% 100%);
-
-        width: 100%;
-        left: 0;
-        top: calc(var(--height) / 2 * -1);
-        height: var(--height);
-    }
-
     .logo-container {
         margin: 15px auto 30px;
         text-align: center;

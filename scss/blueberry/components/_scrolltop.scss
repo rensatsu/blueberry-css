@@ -8,7 +8,7 @@
     height: 3rem;
 
     border: 0;
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     box-shadow: 1px 1px 5px rgba(#000, .5);
 
     transition: .3s background-color, .3s box-shadow;
@@ -21,7 +21,7 @@
     z-index: 1;
 
     &:hover {
-        background-color: $color-alternative;
+        background-color: var(--color-alternative);
         box-shadow: 1px 1px 6px rgba(#000, .6);
     }
 

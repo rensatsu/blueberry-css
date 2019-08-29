@@ -8,15 +8,14 @@
     svg {
         width: 100%;
         height: 200px;
-        opacity: .9;
 
         #tb-grd1 {
             stop:nth-child(1) {
-                stop-color: $color-wallpaper-gradient-start;
+                stop-color: var(--color-wallpaper-gradient-start);
             }
 
             stop:nth-child(2) {
-                stop-color: $color-wallpaper-gradient-end;
+                stop-color: var(--color-wallpaper-gradient-end);
             }
         }
     }

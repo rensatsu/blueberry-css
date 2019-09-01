@@ -9,9 +9,11 @@
 
     display: inline-block;
 
-    margin: .25rem .25rem .5rem .25rem;
-
     background-color: $control-color-background-locked;
+
+    & + & {
+        margin: .25rem .25rem .5rem .25rem;
+    }
 
     &, &:hover, &:active, &.active, &:focus {
         transition: $control-transition-time all;
@@ -53,11 +55,11 @@
         transition: $control-transition-time all;
         box-shadow: none;
         border: 0;
-        
+
         &, &:active, &:focus, &:hover {
             text-decoration: none;
         }
-        
+
         &:focus, &:hover {
             background-color: r-lighten($color-primary, 20%);
             color: #fff;
@@ -72,7 +74,7 @@
         padding: 1rem 3rem;
     }
 
-    
+
     &.disabled, &[disabled] {
         opacity: .75;
         pointer-events: none;

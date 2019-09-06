@@ -187,16 +187,6 @@
             margin-bottom: 0;
         }
     }
-
-    footer {
-        color: r-lighten($color-text, 25%);
-        text-decoration: none;
-        text-align: center;
-        mix-blend-mode: screen;
-        opacity: 0;
-        animation: 1s .5s admin-auth-generic-fadein;
-        animation-fill-mode: forwards;
-    }
 }
 
 .flex-right {

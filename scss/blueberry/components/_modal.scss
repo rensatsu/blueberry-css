@@ -66,11 +66,11 @@
                 }
 
                 &:hover, &:active, &:focus {
-                    background: rgba($color-primary, .1);
+                    background: r-lighten($color-primary, 80%);
                 }
 
                 &:active {
-                    background: rgba($color-primary, .3);
+                    background: r-lighten($color-primary, 60%);
                 }
             }
         }

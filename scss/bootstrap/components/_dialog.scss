@@ -81,7 +81,7 @@
             font-size: 1.25rem;
             display: flex;
             justify-content: flex-end;
-            background: rgba($themePrimary, .1);
+            background: r-lighten($themePrimary, 90%);
             padding: $dialog-padding;
 
             & > button {

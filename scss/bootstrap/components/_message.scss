@@ -3,10 +3,10 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    
+
     .message {
         background: $themePrimary;
-        border: 1px solid rgba($themePrimary, .1);
+        border-top: 1px solid r-lighten($themePrimary, 10%);
         border-width: 1px 0;
         padding: .5rem;
         color: #fff;

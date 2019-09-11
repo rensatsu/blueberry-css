@@ -93,8 +93,8 @@ nav.awesome-bar {
                         }
 
                         &.active > a {
-                            background-color: rgba($navbar-text-color, .8);
-                            color: rgba($color-alternative, .9);
+                            background-color: mix($color-primary, $navbar-text-color, 10%);
+                            color: $color-alternative;
                         }
                     }
                 }

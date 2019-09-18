@@ -13,7 +13,7 @@ const sassFiles = [
 const rsyncConfig = {
     root: 'dist/',
     username: 'rensatsu',
-    hostname: 'granzam.rencloud.xyz',
+    hostname: 'granzam.srv.rensatsu.xyz',
     destination: '/var/www/sites/static/css/',
     archive: true,
     silent: false,

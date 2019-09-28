@@ -14,12 +14,13 @@
     }
 
     .reddit-post {
+        $post-border-color: r-lighten($themePrimary, 80%);
         padding: 0;
         background-color: #fff;
 
         margin-bottom: 2rem;
 
-        border: 1px solid r-lighten($themePrimary, 80%);
+        border: 1px solid $post-border-color;
         border-radius: 5px;
         overflow: hidden;
 
@@ -30,33 +31,44 @@
         }
 
         &.reddit-post-nsfw {
-            border-color: $themeDanger;
-
             &::after {
                 content: 'NSFW';
                 position: absolute;
                 top: 0;
                 right: 0;
                 padding: 3px 5px;
-                color: #fff;
-                background-color: $themeDanger;
+                color: $themeDanger;
+                background-color: $post-border-color;
                 font-size: .75rem;
                 border-radius: 0 0 0 5px;
             }
         }
 
         .reddit-post-header {
-            padding: 1rem;
             display: block;
 
             .reddit-post-header-title {
                 font-size: 1.25em;
                 display: block;
+                padding: 1rem 1rem 0 1rem;
+                color: $themePrimary;
+
+                &:hover {
+                    background: r-lighten($themePrimary, 97%);
+                    text-decoration: none;
+                    color: $themePrimary;
+
+                    & + .reddit-post-header-subreddit {
+                        background: r-lighten($themePrimary, 97%);
+                    }
+                }
             }
 
             .reddit-post-header-subreddit {
                 font-size: .9em;
                 color: r-lighten($themePrimary, 60%);
+                padding: 0 1rem .5rem 1rem;
+                margin: 0 0 .5rem 0;
 
                 span, a {
                     color: inherit;

@@ -89,12 +89,12 @@
 
                 a {
                     text-decoration: underline;
-                    text-decoration-color: r-lighten($themePrimary, 70%);
-                    color: r-lighten($themePrimary, 20%);
+                    text-decoration-color: r-lighten($themePrimary, 65%);
+                    color: r-lighten($themePrimary, 15%);
 
                     &:hover, &:active {
-                        color: r-darken($themePrimary, 20%);
-                        text-decoration-color: r-darken($themePrimary, 70%);
+                        color: r-darken($themePrimary, 15%);
+                        text-decoration-color: r-darken($themePrimary, 65%);
                     }
                 }
             }
@@ -166,7 +166,7 @@
 
             .tweet-data {
                 padding: .5rem;
-                background-color: r-lighten($themePrimary, 95%);
+                background-color: r-lighten($themePrimary, 97%);
                 display: flex;
                 justify-content: space-between;
 
@@ -175,7 +175,7 @@
                         padding: 0 .5rem;
 
                         &, a {
-                            color: r-lighten($themePrimary, 50%);
+                            color: r-lighten($themePrimary, 60%);
                         }
 
                         &.tweet-data-right {

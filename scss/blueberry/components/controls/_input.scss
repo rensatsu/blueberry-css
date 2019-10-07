@@ -73,15 +73,3 @@ select {
         box-shadow: none;
     }
 }
-
-input.input-range-hint::after {
-    content: attr(data-value);
-    display: inline-flex;
-    min-width: 2rem;
-    justify-content: center;
-    background: r-lighten($color-primary, 90%);
-    margin-left: 1rem;
-    border-radius: 3px;
-    border: 1px solid $color-primary;
-    color: $color-primary;
-}

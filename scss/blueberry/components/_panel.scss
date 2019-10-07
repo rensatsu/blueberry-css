@@ -1,7 +1,11 @@
 .panel {
+    --panel-color-border: #{$control-color-border};
+    --panel-color-text: var(--color-information);
+    --panel-color-bg: #{$control-color-background-locked};
+
     margin-bottom: 1rem;
     background-color: #fff;
-    border: 1px solid transparent;
+    border: 1px solid var(--panel-color-border);
     border-radius: $control-border-radius;
     overflow: hidden;
 
@@ -15,55 +19,39 @@
 
     & > .panel-footer {
         padding: .75rem 1.25rem;
-        background-color: r-lighten($color-primary, 90%);
+        background-color: var(--panel-color-bg);
     }
 
-    &.panel-default {
-        border-color: $control-color-border;
+    & > .panel-heading {
+        color: var(--panel-color-text);
+        background-color: var(--panel-color-bg);
+    }
 
-        & > .panel-heading {
-            color: $color-primary;
-            background-color: $control-color-background-locked;
-        }
-
-        & > .panel-footer {
-            background-color: $control-color-background-locked;
-        }
+    & > .panel-footer {
+        background-color: var(--panel-color-bg);
     }
 
     &.panel-primary {
-        border-color: $color-primary;
-
-        & > .panel-heading {
-            color: $color-primary;
-            background-color: r-lighten($color-primary, 90%);
-        }
+        --panel-color-border: var(--color-information);
+        --panel-color-text: var(--color-information);
+        --panel-color-bg: var(--color-information-bg);
     }
 
     &.panel-danger {
-        border-color: $color-danger;
-
-        & > .panel-heading, & > .panel-footer {
-            background-color: r-lighten($color-danger, 90%);
-            color: $color-danger;
-        }
+        --panel-color-border: var(--color-danger);
+        --panel-color-text: var(--color-danger);
+        --panel-color-bg: var(--color-danger-bg);
     }
 
     &.panel-success {
-        border-color: $color-success;
-
-        &>.panel-heading, & > .panel-footer {
-            background-color: r-lighten($color-success, 90%);
-            color: $color-success;
-        }
+        --panel-color-border: var(--color-success);
+        --panel-color-text: var(--color-success);
+        --panel-color-bg: var(--color-success-bg);
     }
 
     &.panel-warning {
-        border-color: $color-warning;
-
-        &>.panel-heading, & > .panel-footer {
-            background-color: r-lighten($color-warning, 90%);
-            color: $color-warning;
-        }
+        --panel-color-border: var(--color-warning);
+        --panel-color-text: var(--color-warning);
+        --panel-color-bg: var(--color-warning-bg);
     }
 }

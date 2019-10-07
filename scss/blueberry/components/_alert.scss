@@ -1,9 +1,9 @@
 .alert {
     padding: 1rem;
     margin: 1rem 0;
-    border: 1px solid $color-primary;
-    background-color: r-lighten($color-primary, 80%);
-    color: $color-primary;
+    border: 1px solid var(--color-information);
+    background-color: var(--color-information-bg);
+    color: var(--color-information);
 
     & > * {
         color: inherit;
@@ -14,20 +14,20 @@
     }
 
     &.alert-success {
-        border-color: $color-success;
-        background-color: r-lighten($color-success, 80%);
-        color: r-darken($color-success, 40%);
+        border-color: var(--color-success);
+        background-color: var(--color-success-bg);
+        color: var(--color-success);
     }
 
     &.alert-warning {
-        border-color: $color-warning;
-        background-color: r-lighten($color-warning, 80%);
-        color: r-darken($color-warning, 40%);
+        border-color: var(--color-warning);
+        background-color: var(--color-warning-bg);
+        color: var(--color-warning);
     }
 
     &.alert-danger {
-        border-color: $color-danger;
-        background-color: r-lighten($color-danger, 80%);
-        color: r-darken($color-danger, 40%);
+        border-color: var(--color-danger);
+        background-color: var(--color-danger-bg);
+        color: var(--color-danger);
     }
 }

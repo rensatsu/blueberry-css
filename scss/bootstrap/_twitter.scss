@@ -5,8 +5,6 @@
 @import 'components/spinner';
 
 .twitter {
-    $colorTweetText: $color-text;
-
     &.no-scroll {
         overflow: hidden;
     }
@@ -41,7 +39,7 @@
                 padding: .5rem;
 
                 &, & > a {
-                    color: r-lighten($colorTweetText, 50%);
+                    color: r-lighten($color-text, 50%);
                 }
 
                 .tweet-retweet-author::after {
@@ -52,11 +50,12 @@
             .tweet-header {
                 display: grid;
                 grid-template: auto auto / 54px auto;
+                grid-template-areas: "avatar author" "avatar screen-name";
                 padding: .5rem;
                 border-bottom: 1px solid r-lighten($themePrimary, 90%);
 
                 .tweet-avatar {
-                    grid-area: 1 / 1 / 3 / 1;
+                    grid-area: avatar;
 
                     img {
                         width: 48px;
@@ -66,7 +65,7 @@
                 }
 
                 .tweet-author {
-                    grid-area: 1 / 2 / 1 / 2;
+                    grid-area: author;
                     margin: 0;
                     font-weight: bold;
                     text-overflow: ellipsis;
@@ -75,7 +74,7 @@
                 }
 
                 .tweet-screen-name {
-                    grid-area: 2 / 2 / 2 / 2;
+                    grid-area: screen-name;
                     margin: 0;
                     color: r-lighten($themePrimary, 50%);
                 }
@@ -85,7 +84,6 @@
                 font-size: 1.2rem;
                 padding: .75rem;
                 overflow: hidden;
-                color: $colorTweetText;
 
                 a {
                     text-decoration: underline;

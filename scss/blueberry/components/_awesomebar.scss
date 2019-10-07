@@ -1,7 +1,7 @@
 $navbar-z-index: 1000;
 
 nav.awesome-bar {
-    background-color: $color-primary;
+    background-color: var(--color-primary);
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@ nav.awesome-bar {
     z-index: $navbar-z-index;
     box-shadow: 0 2px 2px 0 rgba(#000, .2);
     will-change: transform;
-    color: $navbar-text-color;
+    color: var(--color-primary-text);
 
     .awesome-bar-class-menu {
         &.open .awesome-bar-icon-close {
@@ -47,7 +47,7 @@ nav.awesome-bar {
                 & > button, & > .awesome-bar-home {
                     background: transparent;
                     border: 0;
-                    color: $navbar-text-color;
+                    color: var(--color-primary-text);
                     line-height: $navbar-height;
                     padding: 0 1rem;
                     transition: .1s background-color;
@@ -57,7 +57,7 @@ nav.awesome-bar {
                 }
 
                 &.open, &:hover {
-                    background-color: $color-alternative;
+                    background-color: var(--color-alternative);
                 }
 
                 &.open {
@@ -72,15 +72,15 @@ nav.awesome-bar {
                     display: none;
                     list-style-type: none;
                     padding: 0;
-                    background-color: $color-alternative;
-                    border: 1px solid $color-alternative;
+                    background-color: var(--color-alternative);
+                    border: 1px solid var(--color-alternative);
                     box-shadow: 1px 3px 1px 0px rgba(#000, .3);
                     min-width: 200px;
                     z-index: ($navbar-z-index + 1);
 
                     & > li {
                         & > a {
-                            color: $navbar-text-color;
+                            color: var(--color-primary-text);
                             display: block;
                             padding: .5em 3em .5em 1em;
                             text-decoration: none;
@@ -88,13 +88,13 @@ nav.awesome-bar {
                         }
 
                         &:hover > a, &.active:hover > a {
-                            background-color: $navbar-text-color;
-                            color: $color-alternative;
+                            background-color: var(--color-primary-text);
+                            color: var(--color-alternative);
                         }
 
                         &.active > a {
-                            background-color: mix($color-primary, $navbar-text-color, 10%);
-                            color: $color-alternative;
+                            background-color: var(--color-primary-text);
+                            color: var(--color-alternative);
                         }
                     }
                 }
@@ -102,7 +102,7 @@ nav.awesome-bar {
 
             & > .awesome-bar-title {
                 text-align: center;
-                color: $navbar-text-color;
+                color: var(--color-primary-text);
                 line-height: $navbar-height;
                 font-weight: bold;
                 font-size: 1.2rem;
@@ -111,7 +111,7 @@ nav.awesome-bar {
                 transition: .1s background-color;
 
                 &:hover {
-                    background-color: $color-alternative;
+                    background-color: var(--color-alternative);
                 }
             }
         }
@@ -121,7 +121,7 @@ nav.awesome-bar {
             justify-content: flex-end;
 
             &.open > .awesome-bar-profile {
-                background-color: $color-alternative;
+                background-color: var(--color-alternative);
             }
 
             .awesome-bar-profile {
@@ -132,7 +132,7 @@ nav.awesome-bar {
                 transition: .1s background-color;
 
                 &:hover {
-                    background-color: $color-alternative;
+                    background-color: var(--color-alternative);
                 }
 
                 &>img {
@@ -147,7 +147,7 @@ nav.awesome-bar {
                 }
 
                 &>span {
-                    color: $navbar-text-color;
+                    color: var(--color-primary-text);
                     line-height: $navbar-height;
                     text-align: right;
                     padding: 0 1rem;
@@ -174,7 +174,7 @@ nav.awesome-bar {
 /* Profile panel */
 .popup-profile {
     position: fixed;
-    background-color: $color-alternative;
+    background-color: var(--color-alternative);
     color: #fff;
     display: none;
     top: $navbar-height;
@@ -222,14 +222,14 @@ nav.awesome-bar {
 
         > .popup-profile-actions > a {
             display: block;
-            color: $navbar-text-color;
+            color: var(--color-primary-text);
             padding: 5px;
             text-decoration: none;
             transition: .1s color, .1s background-color;
 
             &:hover {
                 background-color: #fff;
-                color: $color-alternative;
+                color: var(--color-alternative);
             }
         }
     }

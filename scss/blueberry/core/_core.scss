@@ -2,13 +2,23 @@
     --color-background: #{$color-background};
     --color-primary: #{$color-primary};
     --color-alternative: #{$color-alternative};
+
+    --color-information: var(--color-primary);
     --color-danger: #{$color-danger};
     --color-success: #{$color-success};
     --color-warning: #{$color-warning};
+
+    --color-information-bg: #{$color-information-bg};
+    --color-danger-bg: #{$color-danger-bg};
+    --color-success-bg: #{$color-success-bg};
+    --color-warning-bg: #{$color-warning-bg};
+
     --color-text: #{$color-text};
     --color-muted: #{$color-muted};
 
-    --color-wallpaper-gradient-start: #{$color-wallpaper-gradient-start};
+    --color-primary-text: #{$color-primary-text};
+
+    --color-wallpaper-gradient-start: var(--color-primary);
     --color-wallpaper-gradient-end: #{$color-wallpaper-gradient-end};
 }
 
@@ -20,8 +30,8 @@ html {
 
 body {
     line-height: 1.5;
-    background-color: $color-background;
-    color: $color-text;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 *, *:before, *:after {
@@ -40,13 +50,13 @@ a {
     text-decoration: none;
 
     &, &:visited {
-        color: $color-primary;
+        color: var(--color-primary);
     }
 
     &:hover, &:focus, &:active {
-        color: r-lighten($color-primary, 40%);
+        color: var(--color-alternative);
         text-decoration: underline;
-        text-decoration-color: r-lighten($color-primary, 50%);
+        text-decoration-color: var(--color-alternative);
     }
 }
 

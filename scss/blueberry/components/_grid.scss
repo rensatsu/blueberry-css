@@ -12,7 +12,7 @@
     }
 
     &.container-navbar {
-        margin: max(($navbar-height + 10px), floor($navbar-height + ($navbar-height  * .3))) auto 20px auto;
+        margin: max(($navbar-height + 10px), floor($navbar-height + ($navbar-height * .3))) auto 20px auto;
     }
 }
 

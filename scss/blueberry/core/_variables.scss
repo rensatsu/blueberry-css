@@ -1,15 +1,24 @@
 // Main colors
-$color-background   : #f8f8f8 !default;
-$color-primary      : #574b90 !default;
-$color-alternative  : mix(#fff, $color-primary, 15%) !default;
-$color-danger       : #e91e63 !default;
-$color-success      : #009688 !default;
-$color-warning      : #ff9800 !default;
-$color-text         : mix(#000, $color-primary, 40%) !default;
-$color-muted        : mix(#fff, $color-text, 30%) !default;
+$color-background     : #f8f8f8 !default;
+$color-primary        : #574b90 !default;
+$color-alternative    : mix(#fff, $color-primary, 20%) !default;
+
+$color-information    : $color-primary !default; // change also in `core.scss` !
+$color-danger         : #e91e63 !default;
+$color-success        : #00796b !default;
+$color-warning        : #ef6c00 !default;
+$color-information-bg : mix(#fff, $color-information, 90%) !default;
+$color-danger-bg      : mix(#fff, $color-danger, 90%) !default;
+$color-success-bg     : mix(#fff, $color-success, 90%) !default;
+$color-warning-bg     : mix(#fff, $color-warning, 90%) !default;
+
+$color-text           : mix(#000, $color-primary, 40%) !default;
+$color-muted          : mix(#fff, $color-text, 30%) !default;
+
+$color-primary-text: #ffffff !default;
 
 // Wallpaper gradient colors
-$color-wallpaper-gradient-start : $color-primary !default;
+$color-wallpaper-gradient-start : $color-primary !default; // change also in `core.scss` !
 $color-wallpaper-gradient-end   : #9971a8 !default;
 
 // Static URI path
@@ -23,7 +32,6 @@ $width-narrow       : 560px !default;
 
 // Navbar
 $navbar-height      : 42px !default;
-$navbar-text-color  : #ffffff !default;
 
 // Fonts
 $font-family-sans   : null !default;

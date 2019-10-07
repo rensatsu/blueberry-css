@@ -57,16 +57,16 @@ h5, h6 {
 }
 
 .bg-warning {
-    background-color: r-lighten($color-warning, 85%);
+    background-color: var(--color-warning-bg);
 }
 
 .bg-danger {
-    background-color: r-lighten($color-danger, 85%);
+    background-color: var(--color-danger-bg);
 }
 
 .bg-success {
-    background-color: r-lighten($color-success, 85%);
-    color: $color-success;
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
 }
 
 pre, code {

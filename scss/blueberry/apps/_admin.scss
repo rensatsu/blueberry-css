@@ -197,23 +197,23 @@
 .notifications {
     .notification {
         &[data-status="default"] {
-            --notification-icon-color: #{r-lighten($color-primary, 10%)};
-            --notification-icon-background: #{r-lighten($color-primary, 85%)};
+            --notification-icon-color: var(--color-information);
+            --notification-icon-background: var(--color-information-bg);
         }
 
         &[data-status="warning"] {
-            --notification-icon-color: #{$color-warning};
-            --notification-icon-background: #{r-lighten($color-warning, 85%)};
+            --notification-icon-color: var(--color-warning);
+            --notification-icon-background: var(--color-warning-bg);
         }
 
         &[data-status="danger"] {
-            --notification-icon-color: #{$color-danger};
-            --notification-icon-background: #{r-lighten($color-danger, 85%)};
+            --notification-icon-color: var(--color-danger);
+            --notification-icon-background: var(--color-danger-bg);
         }
 
         &[data-status="success"] {
-            --notification-icon-color: #{$color-success};
-            --notification-icon-background: #{r-lighten($color-success, 85%)};
+            --notification-icon-color: var(--color-success);
+            --notification-icon-background: var(--color-success-bg);
         }
 
         $notification-icon-size: 48px;

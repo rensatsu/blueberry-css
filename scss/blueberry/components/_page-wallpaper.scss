@@ -11,11 +11,13 @@
 
         #tb-grd1 {
             stop:nth-child(1) {
-                stop-color: var(--color-wallpaper-gradient-start);
+                // using scss vars to fix chrome's svg rendering bug
+                stop-color: $color-wallpaper-gradient-start;
             }
 
             stop:nth-child(2) {
-                stop-color: var(--color-wallpaper-gradient-end);
+                // using scss vars to fix chrome's svg rendering bug
+                stop-color: $color-wallpaper-gradient-end;
             }
         }
     }

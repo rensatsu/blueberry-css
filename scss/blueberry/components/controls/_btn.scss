@@ -35,11 +35,11 @@
     }
 
     &.btn-primary {
-        background-color: $color-primary;
+        background-color: var(--color-primary);
         color: #fff;
 
         &:hover, &:focus, &:active, &.active {
-            background-color: $color-alternative;
+            background-color: var(--color-alternative);
         }
     }
 
@@ -50,7 +50,7 @@
     }
 
     &.btn-flat {
-        color: $color-primary;
+        color: var(--color-primary);
         background: none;
         padding: .5rem 1.25rem;
         margin: 0 .1rem;
@@ -64,7 +64,7 @@
         }
 
         &:focus, &:hover {
-            background-color: r-lighten($color-primary, 20%);
+            background-color: var(--color-primary);
             color: #fff;
         }
     }

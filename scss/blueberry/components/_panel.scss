@@ -1,7 +1,7 @@
 .panel {
     --panel-color-border: #{$control-color-border};
     --panel-color-text: var(--color-information);
-    --panel-color-bg: #{$control-color-background-locked};
+    --panel-color-bg: var(--color-information-bg);
 
     margin-bottom: 1rem;
     background-color: #fff;

@@ -1,26 +1,21 @@
 // Blueberry CSS Core
-@import
-    'blueberry/core/utils',
-    'blueberry/override',
-    'fonts/source',
-    'blueberry/core/variables',
-    'blueberry/core/functions',
-
-    'blueberry/core/core'
-;
+@import 'blueberry/core/utils';
+@import 'blueberry/override';
+@import 'fonts/ptsans';
+@import 'blueberry/core/variables';
+@import 'blueberry/core/functions';
+@import 'blueberry/core/core';
 
 // Additional Components
-@import
-    'blueberry/components/alert',
-    'blueberry/components/awesomebar',
-    'blueberry/components/controls',
-    'blueberry/components/error-page',
-    'blueberry/components/grid',
-    'blueberry/components/lists',
-    'blueberry/components/modal',
-    'blueberry/components/page-wallpaper',
-    'blueberry/components/panel',
-    'blueberry/components/progress',
-    'blueberry/components/scrolltop',
-    'blueberry/components/text'
-;
+@import 'blueberry/components/alert';
+@import 'blueberry/components/awesomebar';
+@import 'blueberry/components/controls';
+@import 'blueberry/components/error-page';
+@import 'blueberry/components/grid';
+@import 'blueberry/components/lists';
+@import 'blueberry/components/modal';
+@import 'blueberry/components/page-wallpaper';
+@import 'blueberry/components/panel';
+@import 'blueberry/components/progress';
+@import 'blueberry/components/scrolltop';
+@import 'blueberry/components/text';

@@ -1,20 +1,14 @@
 // Legacy parts
-@import
-    'bootstrap/variables',
-    'bootstrap/twitter',
-    'bootstrap/reddit'
-;
+@import 'bootstrap/variables';
+@import 'bootstrap/twitter';
+@import 'bootstrap/reddit';
 
 // Blueberry core
-@import
-    'blueberry/core/variables',
-    'blueberry/override',
-    'blueberry/core/functions'
-;
+@import 'blueberry/core/variables';
+@import 'blueberry/override';
+@import 'blueberry/core/functions';
 
 // Optional Apps
-@import
-    'blueberry/apps/admin',
-    'blueberry/apps/music-player',
-    'blueberry/apps/saver'
-;
+@import 'blueberry/apps/admin';
+@import 'blueberry/apps/music-player';
+@import 'blueberry/apps/saver';

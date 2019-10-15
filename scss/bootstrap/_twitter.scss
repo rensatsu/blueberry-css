@@ -55,6 +55,8 @@
                 border-bottom: 1px solid r-lighten($themePrimary, 90%);
 
                 .tweet-avatar {
+                    display: flex;
+                    align-items: center;
                     grid-area: avatar;
 
                     img {

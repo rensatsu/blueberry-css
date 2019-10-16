@@ -46,11 +46,15 @@
             & > .subtitle {
                 text-shadow: 1px 1px 1px $color-primary;
                 font-size: .8rem;
-                opacity: .75;
 
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                display: flex;
+
+                & > span {
+                    display: inline-flex;
+                }
 
                 & > span + span {
                     margin-left: 5px;
@@ -62,8 +66,8 @@
                 }
 
                 &, a {
-                    color: #fff;
-                    text-decoration-color: #fff;
+                    color: rgba(#fff, .75);
+                    text-decoration-color: rgba(#fff, .75);
                 }
             }
         }

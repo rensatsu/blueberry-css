@@ -4,7 +4,7 @@
 
     .post {
         width: $preview-width;
-        margin: 20px;
+        margin: 10px auto 15px auto;
 
         @media all and (max-width: $breakpoint-mobile) {
             margin: 5px auto;

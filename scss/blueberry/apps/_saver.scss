@@ -100,7 +100,7 @@
     }
 
     /* popup menu */
-    #popup-menu-backdrop {
+    #popup-menu-backdrop:not([hidden]) {
         position: fixed;
         top: 0;
         left: 0;
@@ -110,8 +110,8 @@
         z-index: 1000;
     }
 
-    #popup-menu {
-        display: none;
+    #popup-menu:not([hidden]) {
+        display: block;
         position: fixed;
         background: $control-color-background-normal;
         padding: 5px;
@@ -122,15 +122,17 @@
         border: 1px solid $control-color-border;
         min-width: 200px;
         z-index: 1001;
+        width: auto;
+        left: var(--left);
+        top: var(--top);
 
         @media all and (max-width: $breakpoint-mobile) {
             width: 100%;
             left: 0;
-            border-radius: 0;
-            border: 0;
             bottom: 0;
-
-            top: unset !important; // override js
+            border: 0;
+            border-radius: $control-border-radius $control-border-radius 0 0;
+            top: unset;
         }
 
         & > li > a {

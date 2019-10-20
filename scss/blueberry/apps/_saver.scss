@@ -113,13 +113,13 @@
     #popup-menu {
         display: none;
         position: fixed;
-        background: #fff;
-        padding: 5px 0;
+        background: $control-color-background-normal;
+        padding: 5px;
         margin: 0;
         list-style-type: none;
-        border-radius: 5px;
+        border-radius: $control-border-radius;
         box-shadow: 2px 2px 4px 0px rgba(#000, 0.4);
-        border: 1px solid $color-alternative;
+        border: 1px solid $control-color-border;
         min-width: 200px;
         z-index: 1001;
 
@@ -138,7 +138,7 @@
             padding: 5px 20px;
             display: block;
             color: $color-text;
-            transition: 0.1s color, 0.1s background-color;
+            border-radius: $control-border-radius;
 
             @media all and (max-width: $breakpoint-mobile) {
                 padding: 10px 20px;

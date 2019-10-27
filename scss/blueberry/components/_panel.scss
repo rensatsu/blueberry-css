@@ -1,16 +1,18 @@
 .panel {
     --panel-color-border: #{$control-color-border};
     --panel-color-text: var(--color-information);
-    --panel-color-bg: var(--color-information-bg);
+    --panel-color-bg: transparent;
 
     margin-bottom: 1rem;
-    background-color: #fff;
+    background-color: var(--control-color-background-normal);
     border: 1px solid var(--panel-color-border);
     border-radius: $control-border-radius;
     overflow: hidden;
 
     & > .panel-heading {
         padding: .75rem 1.25rem;
+        color: var(--panel-color-text);
+        background-color: var(--panel-color-bg);
     }
 
     & > .panel-body {
@@ -19,15 +21,6 @@
 
     & > .panel-footer {
         padding: .75rem 1.25rem;
-        background-color: var(--panel-color-bg);
-    }
-
-    & > .panel-heading {
-        color: var(--panel-color-text);
-        background-color: var(--panel-color-bg);
-    }
-
-    & > .panel-footer {
         background-color: var(--panel-color-bg);
     }
 

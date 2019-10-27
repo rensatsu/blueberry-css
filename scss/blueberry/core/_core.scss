@@ -16,10 +16,21 @@
     --color-text: #{$color-text};
     --color-muted: #{$color-muted};
 
-    --color-primary-text: #{$color-primary-text};
+    --color-link-normal: var(--color-primary);
+    --color-link-active: #{$color-link-active};
 
     --color-wallpaper-gradient-start: var(--color-primary);
     --color-wallpaper-gradient-end: #{$color-wallpaper-gradient-end};
+
+    --control-color-border: #{$control-color-border};
+    --control-color-background-normal: #{$control-color-background-normal};
+    --control-color-background-locked: #{$control-color-background-locked};
+    --control-color-background-hover: #{$control-color-background-hover};
+
+    --navbar-height: #{$navbar-height};
+    --navbar-color-bg-normal: var(--control-color-background-normal);
+    --navbar-color-bg-active: #{$navbar-color-bg-active};
+    --navbar-color-text: var(--color-primary);
 }
 
 html {
@@ -50,13 +61,13 @@ a {
     text-decoration: none;
 
     &, &:visited {
-        color: var(--color-primary);
+        color: var(--color-link-normal);
     }
 
     &:hover, &:focus, &:active {
-        color: var(--color-alternative);
+        color: var(--color-link-active);
         text-decoration: underline;
-        text-decoration-color: var(--color-alternative);
+        text-decoration-color: var(--color-link-active);
     }
 }
 

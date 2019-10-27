@@ -6,7 +6,6 @@ const rsync = require('gulp-rsync');
 const touch = require('gulp-touch-cmd');
 
 const sassFiles = [
-    'app-engine-blueberry.scss',
     'blueberry.scss',
 ];
 

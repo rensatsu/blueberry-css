@@ -29,17 +29,17 @@
 
         .tweet {
             margin: 1.5rem 0;
-            background: #fff;
-            border: 1px solid r-lighten($themePrimary, 80%);
+            background: var(--control-color-background-normal);
+            border: 1px solid var(--control-color-border);
             border-radius: 5px;
             overflow: hidden;
 
             .tweet-retweet {
-                border-bottom: 1px solid r-lighten($themePrimary, 90%);
+                border-bottom: 1px solid var(--control-color-border);
                 padding: .5rem;
 
                 &, & > a {
-                    color: r-lighten($color-text, 50%);
+                    color: var(--color-muted);
                 }
 
                 .tweet-retweet-author::after {
@@ -52,7 +52,6 @@
                 grid-template: auto auto / 54px auto;
                 grid-template-areas: "avatar author" "avatar screen-name";
                 padding: .5rem;
-                border-bottom: 1px solid r-lighten($themePrimary, 90%);
 
                 .tweet-avatar {
                     display: flex;
@@ -78,7 +77,7 @@
                 .tweet-screen-name {
                     grid-area: screen-name;
                     margin: 0;
-                    color: r-lighten($themePrimary, 50%);
+                    color: var(--color-muted);
                 }
             }
 
@@ -86,30 +85,18 @@
                 font-size: 1.25rem;
                 padding: .75rem;
                 overflow: hidden;
-
-                a {
-                    text-decoration: underline;
-                    text-decoration-color: r-lighten($themePrimary, 65%);
-                    color: r-lighten($themePrimary, 15%);
-
-                    &:hover, &:active {
-                        color: r-darken($themePrimary, 15%);
-                        text-decoration-color: r-darken($themePrimary, 65%);
-                    }
-                }
             }
 
             .tweet-translate {
-                border-top: 1px solid r-lighten($themePrimary, 90%);
+                border-top: 1px solid var(--control-color-border);
             }
 
             .tweet-translate-offer {
                 padding-top: 0;
-                opacity: .5;
 
                 a {
                     text-decoration: none;
-                    color: $themePrimary;
+                    color: var(--color-primary);
                 }
             }
 
@@ -123,7 +110,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: rgba($themePrimary, .4);
+                    background: var(--color-information-bg);
                     position: relative;
 
                     &.tweet-media-loading {
@@ -166,7 +153,6 @@
 
             .tweet-data {
                 padding: .5rem;
-                background-color: r-lighten($themePrimary, 97%);
                 display: flex;
                 justify-content: space-between;
 
@@ -175,12 +161,8 @@
                         padding: 0 .5rem;
 
                         &, a {
-                            color: r-lighten($themePrimary, 60%);
-                            text-decoration-color: r-lighten($themePrimary, 65%);
-                        }
-
-                        &.tweet-data-right {
-                            text-align: right;
+                            color: var(--color-muted);
+                            text-decoration-color: var(--color-muted);
                         }
                     }
                 }

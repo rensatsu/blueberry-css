@@ -19,3 +19,13 @@
 @import 'blueberry/components/progress';
 @import 'blueberry/components/scrolltop';
 @import 'blueberry/components/text';
+
+// Legacy parts
+@import 'bootstrap/variables';
+@import 'bootstrap/twitter';
+@import 'bootstrap/reddit';
+
+// Optional Apps
+@import 'blueberry/apps/admin';
+@import 'blueberry/apps/music-player';
+@import 'blueberry/apps/saver';

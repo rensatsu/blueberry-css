@@ -1,28 +1,26 @@
 // Main colors
-$color-background     : #f8f8f8 !default;
-$color-primary        : #574b90 !default;
+$color-background     : #f6f7fb !default;
+$color-primary        : #665eba !default;
 $color-alternative    : mix(#fff, $color-primary, 20%) !default;
 
 $color-information    : $color-primary !default; // change also in `core.scss` !
 $color-danger         : #e91e63 !default;
 $color-success        : #00796b !default;
 $color-warning        : #ef6c00 !default;
-$color-information-bg : mix(#fff, $color-information, 92%) !default;
-$color-danger-bg      : mix(#fff, $color-danger, 92%) !default;
-$color-success-bg     : mix(#fff, $color-success, 92%) !default;
-$color-warning-bg     : mix(#fff, $color-warning, 92%) !default;
+$color-information-bg : mix(#fff, $color-information, 90%) !default;
+$color-danger-bg      : mix(#fff, $color-danger, 90%) !default;
+$color-success-bg     : mix(#fff, $color-success, 90%) !default;
+$color-warning-bg     : mix(#fff, $color-warning, 90%) !default;
 
-$color-text           : mix(#000, $color-primary, 40%) !default;
-$color-muted          : mix(#fff, $color-text, 30%) !default;
+$color-text           : #19334d !default;
+$color-muted          : mix(#fff, $color-text, 60%) !default;
 
-$color-primary-text: #ffffff !default;
+$color-link-normal: $color-primary !default; // change also in `core.scss` !
+$color-link-active: #c639a3 !default; // $color-alternative !default;
 
 // Wallpaper gradient colors
 $color-wallpaper-gradient-start : $color-primary !default; // change also in `core.scss` !
 $color-wallpaper-gradient-end   : #9971a8 !default;
-
-// Static URI path
-$uri-static         : 'https://shigure.rensatsu.xyz' !default;
 
 // Breakpoints
 $breakpoint-mobile  : 720px !default;
@@ -30,17 +28,20 @@ $breakpoint-desktop : 1080px !default;
 
 $width-narrow       : 560px !default;
 
-// Navbar
-$navbar-height      : 42px !default;
-
 // Fonts
 $font-family-sans   : null !default;
 $font-family-mono   : monospace !default;
 
 // Controls constants
-$control-color-border            : mix(#fff, $color-primary, 70%) !default;
+$control-color-border            : mix(#fff, $color-primary, 80%) !default;
 $control-color-background-normal : #fff !default;
 $control-color-background-locked : mix(#fff, $color-primary, 95%) !default;
 $control-color-background-hover  : mix(#fff, $color-primary, 90%) !default;
 $control-border-radius           : 5px !default;
 $control-transition-time         : .2s !default;
+
+// Navbar
+$navbar-height      : 40px !default;
+$navbar-color-bg-normal: $control-color-background-normal !default; // change also in `core.scss` !
+$navbar-color-bg-active: mix(#fff, $color-primary, 85%) !default; // change also in `core.scss` !
+$navbar-color-text: $color-primary !default; // change also in `core.scss` !

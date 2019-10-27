@@ -1,7 +1,7 @@
 $navbar-z-index: 1000;
 
 nav.awesome-bar {
-    background-color: var(--color-primary);
+    background-color: var(--navbar-color-bg-normal);
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@ nav.awesome-bar {
     z-index: $navbar-z-index;
     box-shadow: 0 2px 2px 0 rgba(#000, .2);
     will-change: transform;
-    color: var(--color-primary-text);
+    color: var(--navbar-color-text);
 
     .awesome-bar-class-menu {
         &.open .awesome-bar-icon-close {
@@ -47,7 +47,7 @@ nav.awesome-bar {
                 & > button, & > .awesome-bar-home {
                     background: transparent;
                     border: 0;
-                    color: var(--color-primary-text);
+                    color: var(--navbar-color-text);
                     line-height: $navbar-height;
                     padding: 0 1rem;
                     transition: .1s background-color;
@@ -57,7 +57,7 @@ nav.awesome-bar {
                 }
 
                 &.open, &:hover {
-                    background-color: var(--color-alternative);
+                    background-color: var(--navbar-color-bg-active);
                 }
 
                 &.open {
@@ -71,30 +71,31 @@ nav.awesome-bar {
                     top: $navbar-height;
                     display: none;
                     list-style-type: none;
-                    padding: 0;
-                    background-color: var(--color-alternative);
-                    border: 1px solid var(--color-alternative);
-                    box-shadow: 1px 3px 1px 0px rgba(#000, .3);
+                    padding: $control-border-radius;
+                    background-color: var(--navbar-color-bg-active);
+                    border: 1px solid var(--navbar-color-bg-active);
+                    box-shadow: 2px 2px 2px rgba(#000, .2);
                     min-width: 200px;
                     z-index: ($navbar-z-index + 1);
 
                     & > li {
                         & > a {
-                            color: var(--color-primary-text);
+                            color: var(--navbar-color-text);
                             display: block;
-                            padding: .5em 3em .5em 1em;
+                            padding: .5rem 3rem .5rem 1rem;
                             text-decoration: none;
                             transition: .1s color, .1s background-color;
+                            border-radius: $control-border-radius;
                         }
 
                         &:hover > a, &.active:hover > a {
-                            background-color: var(--color-primary-text);
-                            color: var(--color-alternative);
+                            background-color: var(--navbar-color-text);
+                            color: var(--navbar-color-bg-active);
                         }
 
                         &.active > a {
-                            background-color: var(--color-primary-text);
-                            color: var(--color-alternative);
+                            background-color: var(--navbar-color-text);
+                            color: var(--navbar-color-bg-active);
                         }
                     }
                 }
@@ -102,7 +103,7 @@ nav.awesome-bar {
 
             & > .awesome-bar-title {
                 text-align: center;
-                color: var(--color-primary-text);
+                color: var(--navbar-color-text);
                 line-height: $navbar-height;
                 font-weight: bold;
                 font-size: 1.2rem;
@@ -111,7 +112,7 @@ nav.awesome-bar {
                 transition: .1s background-color;
 
                 &:hover {
-                    background-color: var(--color-alternative);
+                    background-color: var(--navbar-color-bg-active);
                 }
             }
         }
@@ -121,7 +122,7 @@ nav.awesome-bar {
             justify-content: flex-end;
 
             &.open > .awesome-bar-profile {
-                background-color: var(--color-alternative);
+                background-color: var(--navbar-color-bg-active);
             }
 
             .awesome-bar-profile {
@@ -132,7 +133,7 @@ nav.awesome-bar {
                 transition: .1s background-color;
 
                 &:hover {
-                    background-color: var(--color-alternative);
+                    background-color: var(--navbar-color-bg-active);
                 }
 
                 &>img {
@@ -147,7 +148,7 @@ nav.awesome-bar {
                 }
 
                 &>span {
-                    color: var(--color-primary-text);
+                    color: var(--navbar-color-text);
                     line-height: $navbar-height;
                     text-align: right;
                     padding: 0 1rem;
@@ -174,20 +175,24 @@ nav.awesome-bar {
 /* Profile panel */
 .popup-profile {
     position: fixed;
-    background-color: var(--color-alternative);
-    color: #fff;
+    background-color: var(--navbar-color-bg-active);
+    color: var(--navbar-color-text);
     display: none;
     top: $navbar-height;
-    box-shadow: 1px 3px 1px 0px rgba(#000, .3);
+    box-shadow: 2px 2px 2px rgba(#000, .2);
     z-index: ($navbar-z-index + 1);
     will-change: transform, filter, opacity;
+    max-width: 100%;
+    width: 500px;
 
     @media screen and (max-width: $breakpoint-mobile) {
         width: 100%;
     }
 
-    grid: auto / 128px 1fr;
-    grid-column-gap: 1.5em;
+    grid-template: auto / 128px 1fr;
+    grid-template-areas: "avatar username" "avatar menu";
+    grid-column-gap: 1rem;
+    padding: .5rem 1rem;
 
     .open > & {
         display: grid;
@@ -196,11 +201,10 @@ nav.awesome-bar {
     > .popup-profile-avatar {
         flex: 1;
         overflow: hidden;
-        width: 128px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: .5em;
+        grid-area: avatar;
 
         > img {
             width: 100%;
@@ -208,29 +212,24 @@ nav.awesome-bar {
         }
     }
 
-    > .popup-profile-data {
-        margin: .5em;
-        min-width: 20em;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
+    > h3 {
+        margin: 0 0 .5em 0;
+        padding: 0 5px;
+        grid-area: username;
+    }
 
-        > h3 {
-            margin: 0 0 .5em 0;
-            padding: 0 5px;
-        }
+    > .popup-profile-actions > a {
+        display: block;
+        color: var(--color-link-normal);
+        padding: 5px;
+        text-decoration: none;
+        transition: .1s color, .1s background-color;
+        border-radius: $control-border-radius;
+        grid-area: menu;
 
-        > .popup-profile-actions > a {
-            display: block;
-            color: var(--color-primary-text);
-            padding: 5px;
-            text-decoration: none;
-            transition: .1s color, .1s background-color;
-
-            &:hover {
-                background-color: #fff;
-                color: var(--color-alternative);
-            }
+        &:hover {
+            background-color: var(--color-information);
+            color: var(--color-information-bg);
         }
     }
 }

@@ -48,8 +48,7 @@
 
         #music-player-controls {
             display: flex;
-            border-bottom: 1px solid $color-primary;
-            background-color: r-lighten($color-primary, 90%);
+            border-bottom: 1px solid var(--panel-color-border);
 
             button, input[type="range"] {
                 background-color: transparent;
@@ -124,7 +123,7 @@
 
     #music-player-equalizer {
         .player-eq-fieldset {
-            border: 1px solid r-lighten($color-primary, 80%);
+            border: 1px solid var(--panel-color-border);
             padding: 10px;
             margin: 0 0 5px 0;
 

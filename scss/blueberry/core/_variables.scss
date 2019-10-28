@@ -43,5 +43,5 @@ $control-transition-time         : .2s !default;
 // Navbar
 $navbar-height      : 40px !default;
 $navbar-color-bg-normal: $control-color-background-normal !default; // change also in `core.scss` !
-$navbar-color-bg-active: mix(#fff, $color-primary, 85%) !default; // change also in `core.scss` !
+$navbar-color-bg-active: mix(#fff, $color-primary, 80%) !default;
 $navbar-color-text: $color-primary !default; // change also in `core.scss` !

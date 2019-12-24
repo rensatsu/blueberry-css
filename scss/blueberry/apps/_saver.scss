@@ -63,12 +63,6 @@
             @media all and (max-width: $breakpoint-mobile) {
                 box-shadow: none;
             }
-
-            & > a > img {
-                width: 100%;
-                min-height: $preview-height / 2;
-                display: block;
-            }
         }
     }
 

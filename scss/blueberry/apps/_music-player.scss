@@ -2,6 +2,7 @@
     input[type="range"] {
         -webkit-appearance: none;
         appearance: none;
+        background: none;
 
         &[data-action="volume"] {
             width: 120px;

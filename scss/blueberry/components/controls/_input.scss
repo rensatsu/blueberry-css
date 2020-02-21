@@ -36,9 +36,9 @@ select,
 textarea {
     height: 2.25rem;
     padding: .5rem 1rem;
-    color: $color-text;
-    background-color: $control-color-background-normal;
-    border: 1px solid $control-color-border;
+    color: var(--color-text);
+    background-color: var(--control-color-background-normal);
+    border: 1px solid var(--control-color-border);
     border-radius: $control-border-radius;
     transition: border-color .25s, box-shadow .25s;
 

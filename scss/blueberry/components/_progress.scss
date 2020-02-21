@@ -1,7 +1,7 @@
 .progress {
     overflow: hidden;
     height: 1.25rem;
-    background-color: r-lighten($color-primary, 90%);
+    background-color: var(--control-color-border);
 
     .progress-bar {
         float: left;

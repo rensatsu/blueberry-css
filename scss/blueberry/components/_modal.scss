@@ -22,7 +22,7 @@
         width: 90%;
         max-width: 700px;
         min-height: 100px;
-        background: #fff;
+        background: var(--control-color-background-normal);
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(#000, .1);
         padding: 1rem;
@@ -55,22 +55,9 @@
             button {
                 padding: .5rem 2rem;
                 font-weight: bold;
-                border: 0;
-                background: none;
-                color: $color-primary;
-                outline: none;
-                transition: .1s background-color;
 
                 @media screen and (min-width: $breakpoint-mobile) {
                     min-width: 10rem;
-                }
-
-                &:hover, &:active, &:focus {
-                    background: r-lighten($color-primary, 80%);
-                }
-
-                &:active {
-                    background: r-lighten($color-primary, 60%);
                 }
             }
         }

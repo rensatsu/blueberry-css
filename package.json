@@ -18,7 +18,7 @@
   },
   "homepage": "https://gitlab.com/rensatsu/scss-collection#readme",
   "devDependencies": {
-    "gulp": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-rsync": "0.0.8",
     "gulp-sass": "^4.0.2",

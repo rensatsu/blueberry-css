@@ -132,6 +132,8 @@ nav.awesome-bar {
                 text-decoration: none;
                 padding: 0 .5rem;
                 transition: .1s background-color;
+                border: 0;
+                background: none;
 
                 &:hover {
                     background-color: var(--navbar-color-bg-active);

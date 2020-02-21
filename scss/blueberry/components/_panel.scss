@@ -1,5 +1,5 @@
 .panel {
-    --panel-color-border: #{$control-color-border};
+    --panel-color-border: var(--control-color-border);
     --panel-color-text: var(--color-information);
     --panel-color-bg: transparent;
 

@@ -62,14 +62,9 @@ textarea {
 
 select {
     cursor: pointer;
-    background-color: $control-color-background-locked;
-    color: $color-primary;
     transition: $control-transition-time all;
 
     &:hover, &:focus, &:active, &.active {
-        transition: $control-transition-time all;
-        border-color: $control-color-border;
-        background-color: $control-color-background-hover;
-        box-shadow: none;
+        background-color: var(--control-color-background-hover);
     }
 }

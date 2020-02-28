@@ -9,5 +9,15 @@
         --control-color-background-locked: hsl(230, 20%, 20%);
         --control-color-background-hover: hsl(230, 20%, 20%);
         --navbar-color-bg-active: hsl(230, 20%, 30%);
+
+        --color-information-bg: var(--color-primary);
+        --color-danger-bg: #{$color-danger};
+        --color-success-bg: #{$color-success};
+        --color-warning-bg: #{$color-warning};
+
+        --color-information: #{$color-information-bg};
+        --color-danger: #{$color-danger-bg};
+        --color-success: #{$color-success-bg};
+        --color-warning: #{$color-warning-bg};
     }
 }

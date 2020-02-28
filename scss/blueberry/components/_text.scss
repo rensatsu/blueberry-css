@@ -32,24 +32,24 @@ h4, h5, h6 {
 }
 
 h5, h6 {
-    color: $color-muted;
+    color: var(--color-muted);
 }
 
 .text-muted {
-    color: $color-muted;
+    color: var(--color-muted);
     opacity: .75;
 }
 
 .text-warning {
-    color: $color-warning;
+    color: var(--color-warning);
 }
 
 .text-danger {
-    color: $color-danger;
+    color: var(--color-danger);
 }
 
 .text-success {
-    color: $color-success;
+    color: var(--color-success);
 }
 
 .text-center {
@@ -58,10 +58,12 @@ h5, h6 {
 
 .bg-warning {
     background-color: var(--color-warning-bg);
+    color: var(--color-warning);
 }
 
 .bg-danger {
     background-color: var(--color-danger-bg);
+    color: var(--color-danger);
 }
 
 .bg-success {
@@ -69,7 +71,7 @@ h5, h6 {
     color: var(--color-success);
 }
 
-pre, code {
+pre, code, kbd {
     font-family: $font-family-mono;
 }
 
@@ -80,39 +82,18 @@ pre {
     &.with-wrap {
         white-space: pre-wrap;
     }
-
-    &.line-numbers {
-        counter-reset: line;
-        white-space: pre-wrap;
-
-        & > code {
-            display: block;
-
-            &::before {
-                counter-increment: line;
-                content: counter(line);
-                display: inline-block;
-                border-right: 1px solid r-lighten($color-primary, 90%);
-                padding: 0 .5em;
-                margin-right: .5em;
-                color: r-lighten($color-primary, 50%);
-                width: 2rem;
-                text-align: right;
-            }
-        }
-    }
 }
 
 .label {
     padding: .25rem .5rem;
     font-size: .75rem;
-    background: r-lighten($color-primary, 75%);
-    border: 1px solid r-lighten($color-primary, 50%);
-    color: $color-text;
+    background: var(--color-information-bg);
+    border: 1px solid var(--color-information);
+    color: var(--color-information);
     white-space: nowrap;
 }
 
 hr {
     border: 0;
-    background: $color-primary;
+    background: var(--color-primary);
 }

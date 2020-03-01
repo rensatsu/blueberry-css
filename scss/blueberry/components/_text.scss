@@ -56,21 +56,6 @@ h5, h6 {
     text-align: center;
 }
 
-.bg-warning {
-    background-color: var(--color-warning-bg);
-    color: var(--color-warning);
-}
-
-.bg-danger {
-    background-color: var(--color-danger-bg);
-    color: var(--color-danger);
-}
-
-.bg-success {
-    background-color: var(--color-success-bg);
-    color: var(--color-success);
-}
-
 pre, code, kbd {
     font-family: $font-family-mono;
 }

@@ -233,6 +233,8 @@
         }
 
         .notification-dismiss {
+            border: 0;
+            background: none;
             color: $color-muted;
             grid-area: dismiss;
             display: flex;

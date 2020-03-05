@@ -127,36 +127,6 @@
                     padding: .25rem 1rem;
                 }
             }
-
-            .table-scripts-icon-fav {
-                text-align: center;
-            }
-        }
-
-        &.table-scripts-full {
-            & > li {
-                grid-template-columns: auto 1fr 3fr;
-                grid-template-rows: 1fr;
-                grid-template-areas: "icon link description";
-
-                @media screen and (max-width: $breakpoint-mobile) {
-                    grid-template-columns: auto 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    grid-template-areas: "icon link" "icon description";
-                }
-            }
-        }
-
-        .icon-fav-empty {
-            color: $color-primary;
-        }
-
-        .icon-fav-checked {
-            color: $color-warning;
-        }
-
-        .table-scripts-icon-fav {
-            grid-area: icon;
         }
 
         .table-scripts-link {

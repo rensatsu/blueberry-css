@@ -15,15 +15,25 @@ dl {
 }
 
 .list-group {
+    --list-border-width: 1px;
+    --list-padding: 1rem;
     overflow: hidden;
     padding: 0;
     $this: &;
 
+    &#{$this}--borderless {
+        --list-border-width: 0;
+    }
+
+    &#{$this}--in-panel {
+        --list-padding: 1rem 1rem 1rem 1.25rem;
+    }
+
     & > #{$this}-item {
         display: block;
         text-decoration: none;
-        padding: 1rem;
-        border: 1px solid var(--control-color-border);
+        padding: var(--list-padding);
+        border: var(--list-border-width) solid var(--control-color-border);
 
         margin: -1px 0 0 0;
 
@@ -43,8 +53,13 @@ dl {
             margin: 0;
         }
 
-        &, & > h4 {
+        &, & > h4, & > h5 {
             color: var(--color-primary);
+        }
+
+        & > h5 {
+            font-size: 1rem;
+            margin: 0;
         }
 
         & > div, & > p {

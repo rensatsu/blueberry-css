@@ -68,9 +68,11 @@ dl {
     }
 
 
-    &:not(#{$this}--no-hover) > #{$this}-item {
-        &:hover, &:focus {
-            background: var(--control-color-background-hover);
+    @media (hover: hover) {
+        &:not(#{$this}--no-hover) > #{$this}-item {
+            &:hover {
+                background: var(--control-color-background-hover);
+            }
         }
     }
 }

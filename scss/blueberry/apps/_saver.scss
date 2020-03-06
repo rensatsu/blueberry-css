@@ -56,12 +56,27 @@
             box-shadow: 5px 5px 10px rgba(#000, 0.25);
             overflow: hidden;
             display: block;
+            position: relative;
 
             max-width: $preview-width;
             max-height: $preview-height;
 
             @media all and (max-width: $breakpoint-mobile) {
                 box-shadow: none;
+            }
+
+            img {
+                z-index: 1;
+                pointer-events: none;
+            }
+
+            .photo-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
             }
         }
     }

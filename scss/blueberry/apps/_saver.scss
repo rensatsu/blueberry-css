@@ -209,6 +209,7 @@
         background-color: var(--control-color-background-normal);
         border: 1px solid var(--control-color-border);
         border-radius: $control-border-radius;
+        z-index: 4;
 
         h2 {
             font-size: 1.1rem;

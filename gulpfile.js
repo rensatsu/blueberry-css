@@ -13,12 +13,12 @@ const sassFiles = [
 const rsyncConfig = {
     root: 'dist/',
     username: 'rensatsu',
-    hostname: 'granzam.srv.rensatsu.xyz',
+    hostname: 'zuikaku.srv.rensatsu.xyz',
     destination: '/var/www/sites/static/css/',
     archive: true,
     silent: false,
     compress: true,
-    port: 19348,
+    port: 22,
     clean: true,
 };
 

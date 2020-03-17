@@ -3,6 +3,7 @@
     --preview-height: 350px;
     --post-margin: 15px;
     --container-margin: 50px;
+    --header-margin: var(--container-margin);
 
     @media all and (max-width: $breakpoint-mobile) {
         --container-margin: 0px;
@@ -76,15 +77,6 @@
                 z-index: 1;
                 pointer-events: none;
             }
-
-            .photo-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 2;
-            }
         }
     }
 
@@ -99,7 +91,7 @@
     }
 
     header {
-        margin: 0 calc(var(--post-margin) + var(--container-margin));
+        margin: 0 var(--header-margin, var(--container-margin));
 
         h1 {
             display: flex;
@@ -108,6 +100,7 @@
             a {
                 display: inline-flex;
                 margin: 0 1rem 0 0;
+                text-decoration: none;
 
                 span {
                     border: 1px solid var(--control-color-border);
@@ -276,6 +269,7 @@
     /* Tag Cloud */
     .tag-cloud {
         display: flex;
+        flex-wrap: wrap;
 
         .tag {
             background-color: var(--control-color-background-normal);

@@ -20,6 +20,8 @@
 
     main {
         .tweet {
+            --tweet-padding: 0.75rem;
+
             margin: 1.5rem 0;
             background: var(--control-color-background-normal);
             border: 1px solid var(--control-color-border);
@@ -75,7 +77,7 @@
 
             .tweet-text, .tweet-translate, .tweet-translate-offer {
                 font-size: 1.25rem;
-                padding: .75rem;
+                padding: var(--tweet-padding);
                 overflow: hidden;
             }
 
@@ -140,6 +142,43 @@
                         width: 100%;
                         height: 100%;
                     }
+                }
+            }
+
+            .tweet-snippet {
+                display: grid;
+                margin: var(--tweet-padding);
+                border: 1px solid var(--control-color-border);
+                grid-template: auto auto auto auto / 1fr;
+                grid-template-areas:
+                    "image"
+                    "title"
+                    "description"
+                    "url";
+
+                .tweet-meta-title {
+                    grid-area: title;
+                    padding: var(--tweet-padding);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                .tweet-meta-description {
+                    grid-area: description;
+                }
+
+                .tweet-meta-url {
+                    grid-area: url;
+                }
+
+                .tweet-meta-description, .tweet-meta-url {
+                    padding: 0 var(--tweet-padding) var(--tweet-padding) var(--tweet-padding);
+                    color: var(--color-muted);
+                }
+
+                img.tweet-meta-image {
+                    grid-area: image;
                 }
             }
 

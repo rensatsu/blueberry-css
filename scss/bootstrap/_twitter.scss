@@ -20,12 +20,13 @@
 
     main {
         .tweet {
+            --tweet-border-radius: 5px;
             --tweet-padding: 0.75rem;
 
             margin: 1.5rem 0;
             background: var(--control-color-background-normal);
             border: 1px solid var(--control-color-border);
-            border-radius: 5px;
+            border-radius: var(--tweet-border-radius);
             overflow: hidden;
 
             .tweet-retweet {
@@ -149,6 +150,7 @@
                 display: grid;
                 margin: var(--tweet-padding);
                 border: 1px solid var(--control-color-border);
+                border-radius: var(--tweet-border-radius);
                 grid-template: auto auto auto auto / 1fr;
                 grid-template-areas:
                     "image"

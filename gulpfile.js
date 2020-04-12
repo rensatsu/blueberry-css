@@ -28,13 +28,13 @@ async function styles() {
             .pipe(sass({
                 outputStyle: 'compressed'
             }).on('error', sass.logError))
-            .pipe(gulp.dest('dist/'))
+            .pipe(gulp.dest('css/'))
             .pipe(touch()) /* fix to update modified time */
     });
 };
 
 async function deploy() {
-    await gulp.src('dist/**')
+    await gulp.src('css/**')
         .pipe(rsync(rsyncConfig));
     console.log('Deploy finished');
 };

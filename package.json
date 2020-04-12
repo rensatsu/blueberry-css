@@ -1,22 +1,28 @@
 {
-  "name": "scss",
+  "name": "@rensatsu/blueberry-css",
   "version": "1.0.0",
-  "description": "SCSS Styles Collection",
+  "description": "Blueberry CSS Stylesheet",
   "main": "index.js",
   "scripts": {
     "watch": "gulp default && gulp watch",
-    "build": "gulp default"
+    "build": "gulp default",
+    "test": "echo 'No tests'"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/rensatsu/scss-collection.git"
+    "url": "git+ssh://git@github.com/rensatsu/scss-collection.git"
   },
   "author": "Rensatsu",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://gitlab.com/rensatsu/scss-collection/issues"
+    "url": "https://github.com/rensatsu/scss-collection/issues"
   },
-  "homepage": "https://gitlab.com/rensatsu/scss-collection#readme",
+  "homepage": "https://github.com/rensatsu/scss-collection#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "files": [
+    "css/**",
+    "scss/**"
+  ],
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",

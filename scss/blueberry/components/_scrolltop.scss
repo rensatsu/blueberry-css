@@ -19,11 +19,11 @@ button.btn-fab {
     align-items: center;
     cursor: pointer;
     z-index: 1;
+    color: #fff;
 
     &:hover {
         background-color: var(--color-alternative);
         box-shadow: 1px 1px 6px rgba(#000, .6);
-        color: #fff;
     }
 
     /*

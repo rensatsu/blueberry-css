@@ -1,6 +1,6 @@
 .app-web-archive {
     --preview-width: 500px;
-    --preview-height: 350px;
+    --preview-height: 420px;
     --post-margin: 15px;
     --container-margin: 50px;
     --header-margin: var(--container-margin);
@@ -277,6 +277,7 @@
             padding: .25rem .75rem;
             margin: 0 5px 5px 0;
             border-radius: 4px;
+            text-decoration: none;
 
             span {
                 margin-right: 1ch;
@@ -287,7 +288,6 @@
             }
 
             &:hover {
-                text-decoration: none;
                 background-color: var(--control-color-background-hover);
             }
         }

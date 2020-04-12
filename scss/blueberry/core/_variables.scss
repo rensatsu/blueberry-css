@@ -33,10 +33,10 @@ $font-family-sans   : null !default;
 $font-family-mono   : monospace !default;
 
 // Controls constants
-$control-color-border            : mix(#fff, $color-primary, 80%) !default;
+$control-color-border            : mix(#fff, $color-primary, 75%) !default;
 $control-color-background-normal : #fff !default;
-$control-color-background-locked : mix(#fff, $color-primary, 95%) !default;
-$control-color-background-hover  : mix(#fff, $color-primary, 90%) !default;
+$control-color-background-locked : mix(#fff, $color-primary, 90%) !default;
+$control-color-background-hover  : mix(#fff, $color-primary, 85%) !default;
 $control-border-radius           : 5px !default;
 $control-transition-time         : .2s !default;
 

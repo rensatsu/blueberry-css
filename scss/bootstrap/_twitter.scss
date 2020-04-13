@@ -147,6 +147,10 @@
             }
 
             .tweet-snippet {
+                --tweet-meta-description-lines: 2;
+                --tweet-meta-description-font-size: 1em;
+                --tweet-meta-description-line-height: 1.5;
+
                 display: grid;
                 margin: var(--tweet-padding);
                 border: 1px solid var(--control-color-border);
@@ -169,6 +173,18 @@
 
                 .tweet-meta-description {
                     grid-area: description;
+
+                    max-height: calc(
+                        var(--tweet-meta-description-lines) *
+                        var(--tweet-meta-description-font-size) *
+                        var(--tweet-meta-description-line-height)
+                    );
+
+                    line-height: var(--tweet-meta-description-line-height);
+                    font-size: var(--tweet-meta-description-font-szie);
+
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
 
                 .tweet-meta-url {

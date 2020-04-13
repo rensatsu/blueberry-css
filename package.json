@@ -4,8 +4,10 @@
   "description": "Blueberry CSS Stylesheet",
   "main": "index.js",
   "scripts": {
+    "prepublishOnly": "npm run build",
     "watch": "gulp default && gulp watch",
-    "build": "gulp default",
+    "deploy": "gulp default",
+    "build": "gulp styles",
     "test": "echo 'No tests'"
   },
   "repository": {

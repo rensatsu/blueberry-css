@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/rensatsu/scss-collection.git"
+    "url": "git+ssh://git@github.com/rensatsu/blueberry-css.git"
   },
   "author": "Rensatsu",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/rensatsu/scss-collection/issues"
+    "url": "https://github.com/rensatsu/blueberry-css/issues"
   },
-  "homepage": "https://github.com/rensatsu/scss-collection#readme",
+  "homepage": "https://github.com/rensatsu/blueberry-css#readme",
   "files": [
     "css/**",
     "scss/**"

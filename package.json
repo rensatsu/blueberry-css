@@ -28,7 +28,7 @@
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-rsync": "0.0.8",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "gulp-touch-cmd": "0.0.1"
   }
 }

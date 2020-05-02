@@ -25,14 +25,4 @@ button.btn-fab {
         background-color: var(--color-alternative);
         box-shadow: 1px 1px 6px rgba(#000, .6);
     }
-
-    /*
-    &.fab--scroll-top::after {
-        content: '';
-        background: transparent url('../img/icon-scroll-top.svg') no-repeat 50% 50%;
-        width: 1.25rem;
-        height: .75rem;
-        display: inline-block;
-    }
-    */
 }

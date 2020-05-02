@@ -2,25 +2,12 @@
 
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const rsync = require('gulp-rsync');
 const touch = require('gulp-touch-cmd');
 
 const sassFiles = [
     'blueberry.scss',
     'twitter.scss',
 ];
-
-const rsyncConfig = {
-    root: 'dist/',
-    username: 'rensatsu',
-    hostname: 'zuikaku.srv.rensatsu.xyz',
-    destination: '/var/www/sites/static/css/',
-    archive: true,
-    silent: false,
-    compress: true,
-    port: 22,
-    clean: true,
-};
 
 async function styles() {
     await sassFiles.forEach(async (src) => {
@@ -33,18 +20,11 @@ async function styles() {
     });
 };
 
-async function deploy() {
-    await gulp.src('css/**')
-        .pipe(rsync(rsyncConfig));
-    console.log('Deploy finished');
-};
-
 async function watch() {
-    await gulp.series('styles', 'deploy');
-    await gulp.watch('./scss/**/*.scss', gulp.series(styles, deploy));
+    await gulp.series('styles');
+    await gulp.watch('./scss/**/*.scss', gulp.series(styles));
 };
 
 exports.watch = watch;
-exports.deploy = deploy;
 exports.styles = styles;
-exports.default = gulp.series(styles, deploy);
+exports.default = gulp.series(styles);

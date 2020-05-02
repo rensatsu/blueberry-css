@@ -38,7 +38,18 @@
 
 */
 @function r-font-family-sans($custom-font: null) {
-    $system-list: system-ui;
+    $system-list:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
 
     $new-list: if($custom-font == null, $system-list, ($custom-font, $system-list));
 

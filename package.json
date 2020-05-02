@@ -20,9 +20,6 @@
     "url": "https://github.com/rensatsu/scss-collection/issues"
   },
   "homepage": "https://github.com/rensatsu/scss-collection#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "files": [
     "css/**",
     "scss/**"

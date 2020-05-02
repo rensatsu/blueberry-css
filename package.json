@@ -1,6 +1,6 @@
 {
   "name": "@rensatsu/blueberry-css",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Blueberry CSS Stylesheet",
   "main": "index.js",
   "scripts": {

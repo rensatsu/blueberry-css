@@ -208,7 +208,6 @@
         grid-template-areas: "input submit";
         grid-gap: .25rem;
         width: var(--preview-width);
-        // margin: 0 auto;
         max-width: 100%;
 
         @media all and (max-width: $breakpoint-mobile) {
@@ -217,7 +216,6 @@
         }
 
         & > #search-field {
-            margin: .25rem 0;
             grid-area: input;
         }
 

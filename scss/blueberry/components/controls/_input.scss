@@ -34,7 +34,7 @@ input[type="url"],
 input[type="text"],
 select,
 textarea {
-    height: 2.25rem;
+    min-height: 2.25rem;
     padding: .5rem 1rem;
     color: var(--color-text);
     background-color: var(--control-color-background-normal);

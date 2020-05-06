@@ -91,7 +91,7 @@
     }
 
     header {
-        margin: 0 var(--header-margin, var(--container-margin));
+        margin: 0 calc(var(--container-margin) + var(--post-margin));
 
         h1 {
             display: flex;
@@ -129,7 +129,7 @@
     main {
         margin: 0 var(--container-margin);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
     }

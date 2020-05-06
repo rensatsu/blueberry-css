@@ -6,7 +6,7 @@ dl {
     margin: 0;
 
     dt {
-        font-weight: bold;
+        font-weight: 600;
     }
 
     dd {
@@ -34,7 +34,7 @@ dl {
         text-decoration: none;
         padding: var(--list-padding);
         border: var(--list-border-width) solid var(--control-color-border);
-
+        color: var(--color-text);
         margin: -1px 0 0 0;
 
         &:first-child {
@@ -53,17 +53,14 @@ dl {
             margin: 0;
         }
 
-        &, & > h4, & > h5 {
+        & > h4, & > h5 {
             color: var(--color-primary);
+            font-weight: 600;
         }
 
         & > h5 {
             font-size: 1rem;
             margin: 0;
-        }
-
-        & > div, & > p {
-            color: var(--color-muted);
         }
     }
 

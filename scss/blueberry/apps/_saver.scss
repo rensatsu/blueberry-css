@@ -125,12 +125,11 @@
         margin: var(--post-margin) calc(var(--container-margin) + var(--post-margin));
         display: grid;
         justify-content: space-between;
-        grid-template-columns: repeat(auto-fit, var(--preview-width));
+        grid-template-columns: repeat(auto-fit, minmax(0, var(--preview-width)));
         grid-gap: var(--post-margin);
 
         @media all and (max-width: $breakpoint-mobile) {
             justify-content: center;
-            grid-template-columns: 1fr;
         }
     }
 

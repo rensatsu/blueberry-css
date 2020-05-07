@@ -10,12 +10,7 @@
     }
 
     .post {
-        width: var(--preview-width);
-        // margin: 10px auto 15px auto;
-        margin: var(--post-margin);
-
         @media all and (max-width: $breakpoint-mobile) {
-            // margin: 5px auto;
             max-width: 100%;
         }
 
@@ -127,11 +122,16 @@
     }
 
     main {
-        margin: 0 var(--container-margin);
-        display: flex;
+        margin: var(--post-margin) calc(var(--container-margin) + var(--post-margin));
+        display: grid;
         justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fit, var(--preview-width));
+        grid-gap: var(--post-margin);
+
+        @media all and (max-width: $breakpoint-mobile) {
+            justify-content: center;
+            grid-template-columns: 1fr;
+        }
     }
 
     .container-navbar {
@@ -211,8 +211,7 @@
         max-width: 100%;
 
         @media all and (max-width: $breakpoint-mobile) {
-            grid-template: auto auto / 1fr;
-            grid-template-areas: "input" "submit";
+            width: 100%;
         }
 
         & > #search-field {

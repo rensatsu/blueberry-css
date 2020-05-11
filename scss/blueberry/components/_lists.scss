@@ -17,6 +17,7 @@ dl {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-auto-rows: auto;
+        grid-gap: 1px 1ch;
     }
 }
 

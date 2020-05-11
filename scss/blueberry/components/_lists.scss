@@ -12,6 +12,12 @@ dl {
     dd {
         margin: 0;
     }
+
+    &.is-horizontal {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-auto-rows: auto;
+    }
 }
 
 .list-group {

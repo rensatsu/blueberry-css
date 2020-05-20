@@ -56,7 +56,16 @@
         .photo {
             border-radius: $control-border-radius;
             background: #fff;
-            box-shadow: 5px 5px 10px rgba(#000, 0.25);
+
+            // generated with
+            // https://brumm.af/shadows
+            box-shadow:
+                0 0.3px 0.7px rgba(#000, 0.063),
+                0 0.9px 1.7px rgba(#000, 0.079),
+                0 1.8px 3.5px rgba(#000, 0.091),
+                0 3.7px 7.3px rgba(#000, 0.104),
+                0 10px 20px rgba(#000, 0.15);
+
             overflow: hidden;
             display: block;
             position: relative;

@@ -27,8 +27,7 @@
             --modal-padding-vertical: 1.5rem;
         }
 
-        width: 90%;
-        max-width: 700px;
+        width: min(90vw, 700px);
         min-height: 100px;
         background: var(--control-color-background-normal);
         border-radius: 5px;
@@ -37,6 +36,7 @@
         h1 {
             margin: 0;
             padding: var(--modal-padding-vertical) var(--modal-padding-horizontal);
+            border-bottom: 1px solid var(--control-color-border);
         }
 
         .modal-buttons, .modal-entries {

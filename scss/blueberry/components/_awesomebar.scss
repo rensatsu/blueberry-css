@@ -29,7 +29,7 @@ nav.awesome-bar {
     }
 
     & > .awesome-bar-wrapper {
-        max-width: min(100vw, $breakpoint-desktop);
+        max-width: #{'min(100vw, ' + $breakpoint-desktop + ')'};
         display: flex;
         justify-content: space-between;
 

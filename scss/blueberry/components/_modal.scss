@@ -54,6 +54,10 @@
             }
         }
 
+        .modal-text {
+            padding: var(--modal-padding-vertical) var(--modal-padding-horizontal);
+        }
+
         .modal-buttons {
             border-top: 1px solid var(--control-color-border);
             padding: var(--modal-padding-vertical);

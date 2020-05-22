@@ -27,7 +27,7 @@
             --modal-padding-vertical: 1.5rem;
         }
 
-        width: min(90vw, 700px);
+        width: #{'min(90vw, 700px)'};
         min-height: 100px;
         background: var(--control-color-background-normal);
         border-radius: 5px;

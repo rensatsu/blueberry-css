@@ -184,7 +184,7 @@ nav.awesome-bar {
     box-shadow: 2px 2px 2px rgba(#000, .2);
     z-index: ($navbar-z-index + 1);
     will-change: transform, filter, opacity;
-    width: min(500px, 100%);
+    width: #{'min(500px, 100vw)'};
     transform-origin: 0 0;
 
     @media screen and (max-width: $breakpoint-mobile) {

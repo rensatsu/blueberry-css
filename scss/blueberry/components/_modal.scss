@@ -19,32 +19,24 @@
     align-items: center;
 
     .modal-window {
+        --modal-padding-horizontal: 1.25rem;
+        --modal-padding-vertical: 1rem;
+
+        @media screen and (min-width: $breakpoint-mobile) {
+            --modal-padding-horizontal: 2rem;
+            --modal-padding-vertical: 1.5rem;
+        }
+
         width: 90%;
         max-width: 700px;
         min-height: 100px;
         background: var(--control-color-background-normal);
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(#000, .1);
-        padding: 1rem;
-
-        @media screen and (min-width: $breakpoint-mobile) {
-            padding: 1.5rem;
-        }
 
         h1 {
-            margin: 0 0 .5rem 0;
-
-            @media screen and (min-width: $breakpoint-mobile) {
-                padding: 0 0 1rem 0;
-            }
-        }
-
-        div {
-            margin: 0 0 .5rem 0;
-
-            @media screen and (min-width: $breakpoint-mobile) {
-                padding: 0 0 1rem 0;
-            }
+            margin: 0;
+            padding: var(--modal-padding-vertical) var(--modal-padding-horizontal);
         }
 
         .modal-buttons, .modal-entries {
@@ -62,13 +54,19 @@
             }
         }
 
+        .modal-buttons {
+            border-top: 1px solid var(--control-color-border);
+            padding: var(--modal-padding-vertical);
+        }
+
         .modal-entries {
-            display: block;
+            flex-direction: column;
 
             button {
-                padding: 1rem 2rem;
-                width: 100%;
+                padding: var(--modal-padding-vertical) var(--modal-padding-horizontal);
                 text-align: left;
+                margin: 0;
+                border-radius: 0;
             }
         }
     }

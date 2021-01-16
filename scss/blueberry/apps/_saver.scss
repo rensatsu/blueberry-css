@@ -253,21 +253,59 @@
             justify-content: space-between;
         }
 
-        .search-helper-item {
-            display: grid;
-            grid-template: auto auto auto / 1fr;
-            grid-gap: 5px;
+        .filter {
             margin: 5px;
+            padding: 0 0 5px 0;
+            border-bottom: 1px dashed var(--control-color-border);
+            display: grid;
+            grid-template: auto / 150px auto;
 
-            button {
-                margin: 0;
+            &:last-child {
+                border-bottom: 0;
+                padding: 0;
+            }
+
+            & > label {
+                display: flex;
+                place-items: center;
+            }
+
+            .filter-input {
+                display: grid;
+                grid-template: auto / 2fr 1fr 2fr;
+                gap: 0 1ch;
+
+                input {
+                    width: 100%;
+                }
+
+                label {
+                    display: flex;
+                    place-content: center;
+                    place-items: center;
+                }
+            }
+
+            .filter-radio label {
+                display: block;
             }
         }
 
-        .search-helper-item-options > div {
-            display: grid;
-            grid-template: auto / 1fr 2fr;
-            grid-gap: 5px;
+        .btn-checkbox > input[type=checkbox] {
+            position: fixed;
+            top: -10px;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+            user-select: none;
+
+            &:checked ~ .btn-checkbox--unchecked {
+                display: none;
+            }
+
+            &:not(:checked) ~ .btn-checkbox--checked {
+                display: none;
+            }
         }
     }
 

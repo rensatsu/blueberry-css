@@ -1,6 +1,10 @@
 .app-web-archive {
-    --preview-width: 500px;
-    --preview-height: 420px;
+    --preview-width-unitless: 500px;
+    --preview-height-unitless: 420px;
+
+    --preview-width: calc(var(--preview-width-unitless) * 1px);
+    --preview-height: calc(var(--preview-height-unitless) * 1px);
+
     --post-margin: 15px;
     --container-margin: 50px;
     --header-margin: var(--container-margin);
@@ -70,8 +74,7 @@
             display: block;
             position: relative;
 
-            max-width: var(--preview-width);
-            max-height: var(--preview-height);
+            aspect-ratio: var(--preview-width-unitless) / var(--preview-height-unitless);
 
             @media all and (max-width: $breakpoint-mobile) {
                 box-shadow: none;

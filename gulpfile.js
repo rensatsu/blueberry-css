@@ -6,7 +6,6 @@ const touch = require('gulp-touch-cmd');
 
 const sassFiles = [
     'blueberry.scss',
-    'twitter.scss',
 ];
 
 async function styles() {

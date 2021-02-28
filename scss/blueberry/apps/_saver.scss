@@ -1,6 +1,6 @@
 .app-web-archive {
-    --preview-width-unitless: 500px;
-    --preview-height-unitless: 420px;
+    --preview-width-unitless: 500;
+    --preview-height-unitless: 420;
 
     --preview-width: calc(var(--preview-width-unitless) * 1px);
     --preview-height: calc(var(--preview-height-unitless) * 1px);

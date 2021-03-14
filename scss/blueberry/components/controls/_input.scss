@@ -44,19 +44,20 @@ textarea {
 
     &:hover {
         border-color: r-lighten($color-primary, 30%);
-        box-shadow: inset 0 1px 1px rgba(#000, .1),
-                    0 0 4px rgba($color-primary, .2);
     }
 
     &:focus {
         border-color: r-lighten($color-primary, 20%);
         outline: 0;
-        box-shadow: inset 0 1px 1px rgba(#000, .1),
-                    0 0 0 3px rgba($color-primary, .25);
+        box-shadow: 0 0 0 3px rgba($color-primary, .25);
     }
 
     &[disabled], &[readonly] {
         background-color: var(--control-color-background-locked);
+    }
+
+    &::placeholder {
+        color: var(--color-muted);
     }
 }
 

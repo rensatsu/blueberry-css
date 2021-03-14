@@ -8,8 +8,8 @@
     "watch": "gulp default && gulp watch",
     "deploy": "gulp default",
     "build": "gulp styles",
-    "tag:patch": "npm tag patch",
-    "tag:minor": "npm tag minor",
+    "tag:patch": "npm version patch",
+    "tag:minor": "npm version minor",
     "test": "echo 'No tests'"
   },
   "repository": {

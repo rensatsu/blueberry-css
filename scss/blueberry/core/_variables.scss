@@ -45,3 +45,17 @@ $navbar-height      : 40px !default;
 $navbar-color-bg-normal: $control-color-background-normal !default; // change also in `core.scss` !
 $navbar-color-bg-active: mix(#fff, $color-primary, 80%) !default;
 $navbar-color-text: $color-primary !default; // change also in `core.scss` !
+
+// Grid sizes
+$grid-sizes: (
+    "1": 1fr,
+    "1-1": 1fr 1fr,
+    "1-1-1": 1fr 1fr 1fr,
+    "1-1-1-1": 1fr 1fr 1fr 1fr,
+    "1-2": 1fr 2fr,
+    "1-2-1": 1fr 2fr 1fr,
+    "1-3": 1fr 3fr,
+    "1-3-1": 1fr 3fr 1fr,
+    "2-1": 2fr 1fr,
+    "3-1": 3fr 1fr,
+);

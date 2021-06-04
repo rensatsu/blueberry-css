@@ -26,14 +26,14 @@ label[for] {
 }
 
 input:not([type]),
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-input[type="text"],
-input[type="search"],
-input[type="file"],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=tel],
+input[type=url],
+input[type=text],
+input[type=search],
+input[type=file],
 select,
 textarea {
     min-height: 2.25rem;

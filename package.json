@@ -10,6 +10,7 @@
     "build": "gulp styles",
     "tag:patch": "npm version patch",
     "tag:minor": "npm version minor",
+    "format": "prettier --write \"scss/**/*.{css,scss}\" package.json .prettierrc.json",
     "test": "echo 'No tests'"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-sass": "^4.1.0",
-    "gulp-touch-cmd": "0.0.1"
+    "gulp-touch-cmd": "0.0.1",
+    "prettier": "^2.3.0"
   }
 }

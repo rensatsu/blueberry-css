@@ -1,83 +1,95 @@
-h1, h2, h3, h4, p {
-    margin-top: .25rem;
-    margin-bottom: 1rem;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.75rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
-h5, h6 {
-    font-size: 1rem;
+h5,
+h6 {
+  font-size: 1rem;
 }
 
-h1, h2, h3 {
-    font-weight: bold;
+h1,
+h2,
+h3 {
+  font-weight: bold;
 }
 
-h4, h5, h6 {
-    font-weight: normal;
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
 
-h5, h6 {
-    color: var(--color-muted);
+h5,
+h6 {
+  color: var(--color-muted);
 }
 
 .text-muted {
-    color: var(--color-muted);
+  color: var(--color-muted);
 }
 
 .text-warning {
-    color: var(--color-warning);
+  color: var(--color-warning);
 }
 
 .text-danger {
-    color: var(--color-danger);
+  color: var(--color-danger);
 }
 
 .text-success {
-    color: var(--color-success);
+  color: var(--color-success);
 }
 
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
-pre, code, kbd {
-    font-family: $font-family-mono;
+pre,
+code,
+kbd {
+  font-family: $font-family-mono;
 }
 
 pre {
-    margin: 0;
-    overflow: auto;
+  margin: 0;
+  overflow: auto;
 
-    &.with-wrap {
-        white-space: pre-wrap;
-    }
+  &.with-wrap {
+    white-space: pre-wrap;
+  }
 }
 
 .label {
-    padding: .25rem .5rem;
-    font-size: .75rem;
-    background: var(--color-information-bg);
-    border: 1px solid var(--color-information);
-    color: var(--color-information);
-    white-space: nowrap;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  background: var(--color-information-bg);
+  border: 1px solid var(--color-information);
+  color: var(--color-information);
+  white-space: nowrap;
 }
 
 hr {
-    border: 0;
-    background: var(--color-primary);
+  border: 0;
+  background: var(--color-primary);
 }

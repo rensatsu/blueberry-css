@@ -1,61 +1,61 @@
 // Main colors
-$color-background     : #f6f7fb !default;
-$color-primary        : #665eba !default;
-$color-alternative    : mix(#fff, $color-primary, 20%) !default;
+$color-background: #f6f7fb !default;
+$color-primary: #665eba !default;
+$color-alternative: mix(#fff, $color-primary, 20%) !default;
 
-$color-information    : $color-primary !default; // change also in `core.scss` !
-$color-danger         : #e91e63 !default;
-$color-success        : #00796b !default;
-$color-warning        : #ef6c00 !default;
-$color-information-bg : mix(#fff, $color-information, 90%) !default;
-$color-danger-bg      : mix(#fff, $color-danger, 90%) !default;
-$color-success-bg     : mix(#fff, $color-success, 90%) !default;
-$color-warning-bg     : mix(#fff, $color-warning, 90%) !default;
+$color-information: $color-primary !default; // change also in `core.scss` !
+$color-danger: #e91e63 !default;
+$color-success: #00796b !default;
+$color-warning: #ef6c00 !default;
+$color-information-bg: mix(#fff, $color-information, 90%) !default;
+$color-danger-bg: mix(#fff, $color-danger, 90%) !default;
+$color-success-bg: mix(#fff, $color-success, 90%) !default;
+$color-warning-bg: mix(#fff, $color-warning, 90%) !default;
 
-$color-text           : #19334d !default;
-$color-muted          : mix(#fff, $color-text, 60%) !default;
+$color-text: #19334d !default;
+$color-muted: mix(#fff, $color-text, 60%) !default;
 
 $color-link-normal: $color-primary !default; // change also in `core.scss` !
 $color-link-active: #c639a3 !default; // $color-alternative !default;
 
 // Wallpaper gradient colors
-$color-wallpaper-gradient-start : $color-primary !default; // change also in `core.scss` !
-$color-wallpaper-gradient-end   : #9971a8 !default;
+$color-wallpaper-gradient-start: $color-primary !default; // change also in `core.scss` !
+$color-wallpaper-gradient-end: #9971a8 !default;
 
 // Breakpoints
-$breakpoint-mobile  : 720px !default;
-$breakpoint-desktop : 1080px !default;
+$breakpoint-mobile: 720px !default;
+$breakpoint-desktop: 1080px !default;
 
-$width-narrow       : 560px !default;
+$width-narrow: 560px !default;
 
 // Fonts
-$font-family-sans   : null !default;
-$font-family-mono   : monospace !default;
+$font-family-sans: null !default;
+$font-family-mono: monospace !default;
 
 // Controls constants
-$control-color-border            : mix(#fff, $color-primary, 75%) !default;
-$control-color-background-normal : #fff !default;
-$control-color-background-locked : mix(#fff, $color-primary, 90%) !default;
-$control-color-background-hover  : mix(#fff, $color-primary, 85%) !default;
-$control-border-radius           : 5px !default;
-$control-transition-time         : .2s !default;
+$control-color-border: mix(#fff, $color-primary, 75%) !default;
+$control-color-background-normal: #fff !default;
+$control-color-background-locked: mix(#fff, $color-primary, 90%) !default;
+$control-color-background-hover: mix(#fff, $color-primary, 85%) !default;
+$control-border-radius: 5px !default;
+$control-transition-time: 0.2s !default;
 
 // Navbar
-$navbar-height      : 40px !default;
+$navbar-height: 40px !default;
 $navbar-color-bg-normal: $control-color-background-normal !default; // change also in `core.scss` !
 $navbar-color-bg-active: mix(#fff, $color-primary, 80%) !default;
 $navbar-color-text: $color-primary !default; // change also in `core.scss` !
 
 // Grid sizes
 $grid-sizes: (
-    "1": 1fr,
-    "1-1": 1fr 1fr,
-    "1-1-1": 1fr 1fr 1fr,
-    "1-1-1-1": 1fr 1fr 1fr 1fr,
-    "1-2": 1fr 2fr,
-    "1-2-1": 1fr 2fr 1fr,
-    "1-3": 1fr 3fr,
-    "1-3-1": 1fr 3fr 1fr,
-    "2-1": 2fr 1fr,
-    "3-1": 3fr 1fr,
+  "1": 1fr,
+  "1-1": 1fr 1fr,
+  "1-1-1": 1fr 1fr 1fr,
+  "1-1-1-1": 1fr 1fr 1fr 1fr,
+  "1-2": 1fr 2fr,
+  "1-2-1": 1fr 2fr 1fr,
+  "1-3": 1fr 3fr,
+  "1-3-1": 1fr 3fr 1fr,
+  "2-1": 2fr 1fr,
+  "3-1": 3fr 1fr,
 );

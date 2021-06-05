@@ -1,33 +1,33 @@
 .alert {
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 1px solid var(--color-information);
-    background-color: var(--color-information-bg);
-    color: var(--color-information);
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--color-information);
+  background-color: var(--color-information-bg);
+  color: var(--color-information);
 
-    & > * {
-        color: inherit;
-    }
+  & > * {
+    color: inherit;
+  }
 
-    p {
-        margin: 0;
-    }
+  p {
+    margin: 0;
+  }
 
-    &.alert-success {
-        border-color: var(--color-success);
-        background-color: var(--color-success-bg);
-        color: var(--color-success);
-    }
+  &.alert-success {
+    border-color: var(--color-success);
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+  }
 
-    &.alert-warning {
-        border-color: var(--color-warning);
-        background-color: var(--color-warning-bg);
-        color: var(--color-warning);
-    }
+  &.alert-warning {
+    border-color: var(--color-warning);
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning);
+  }
 
-    &.alert-danger {
-        border-color: var(--color-danger);
-        background-color: var(--color-danger-bg);
-        color: var(--color-danger);
-    }
+  &.alert-danger {
+    border-color: var(--color-danger);
+    background-color: var(--color-danger-bg);
+    color: var(--color-danger);
+  }
 }

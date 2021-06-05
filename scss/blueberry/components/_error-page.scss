@@ -1,16 +1,16 @@
 .error-page {
-    & > .container {
-        margin-top: 50px;
-    }
+  & > .container {
+    margin-top: 50px;
+  }
 
-    .error-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  .error-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        svg {
-            width: 100px;
-            height: 100px;
-        }
+    svg {
+      width: 100px;
+      height: 100px;
     }
+  }
 }

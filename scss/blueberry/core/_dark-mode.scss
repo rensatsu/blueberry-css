@@ -1,23 +1,23 @@
 @media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: hsl(245, 20%, 20%);
-        --color-primary: hsl(245, 40%, 65%);
-        --color-text: hsl(245, 20%, 60%);
-        --color-link-active: hsl(315, 55%, 70%);
-        --control-color-border: hsl(245, 20%, 35%);
-        --control-color-background-normal: hsl(245, 20%, 15%);
-        --control-color-background-locked: hsl(245, 20%, 20%);
-        --control-color-background-hover: hsl(245, 20%, 20%);
-        --navbar-color-bg-active: hsl(245, 20%, 30%);
+  :root {
+    --color-background: hsl(245, 20%, 20%);
+    --color-primary: hsl(245, 40%, 65%);
+    --color-text: hsl(245, 20%, 60%);
+    --color-link-active: hsl(315, 55%, 70%);
+    --control-color-border: hsl(245, 20%, 35%);
+    --control-color-background-normal: hsl(245, 20%, 15%);
+    --control-color-background-locked: hsl(245, 20%, 20%);
+    --control-color-background-hover: hsl(245, 20%, 20%);
+    --navbar-color-bg-active: hsl(245, 20%, 30%);
 
-        --color-information-bg: var(--color-primary);
-        --color-danger-bg: #{$color-danger};
-        --color-success-bg: #{$color-success};
-        --color-warning-bg: #{$color-warning};
+    --color-information-bg: var(--color-primary);
+    --color-danger-bg: #{$color-danger};
+    --color-success-bg: #{$color-success};
+    --color-warning-bg: #{$color-warning};
 
-        --color-information: #{$color-information-bg};
-        --color-danger: #{$color-danger-bg};
-        --color-success: #{$color-success-bg};
-        --color-warning: #{$color-warning-bg};
-    }
+    --color-information: #{$color-information-bg};
+    --color-danger: #{$color-danger-bg};
+    --color-success: #{$color-success-bg};
+    --color-warning: #{$color-warning-bg};
+  }
 }

@@ -1,73 +1,80 @@
-input, textarea, select, button {
-    font-size: 1rem;
+input,
+textarea,
+select,
+button {
+  font-size: 1rem;
 }
 
 label[for] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 
-    &:last-child {
-        margin-bottom: 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-    label {
-        display: block;
-        margin-bottom: .25rem;
-        font-weight: bold;
-    }
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+  }
 
-    .form-control {
-        display: block;
-        width: 100%;
-    }
+  .form-control {
+    display: block;
+    width: 100%;
+  }
 }
 
 input:not([type]),
-input[type=email],
-input[type=number],
-input[type=password],
-input[type=tel],
-input[type=url],
-input[type=text],
-input[type=search],
-input[type=file],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="search"],
+input[type="file"],
 select,
 textarea {
-    min-height: 2.25rem;
-    padding: .5rem 1rem;
-    color: var(--color-text);
-    background-color: var(--control-color-background-normal);
-    border: 1px solid var(--control-color-border);
-    border-radius: $control-border-radius;
-    transition: border-color .25s, box-shadow .25s;
+  min-height: 2.25rem;
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+  background-color: var(--control-color-background-normal);
+  border: 1px solid var(--control-color-border);
+  border-radius: $control-border-radius;
+  transition: border-color 0.25s, box-shadow 0.25s;
 
-    &:hover {
-        border-color: r-lighten($color-primary, 30%);
-    }
+  &:hover {
+    border-color: r-lighten($color-primary, 30%);
+  }
 
-    &:focus {
-        border-color: r-lighten($color-primary, 20%);
-        outline: 0;
-        box-shadow: 0 0 0 3px rgba($color-primary, .25);
-    }
+  &:focus {
+    border-color: r-lighten($color-primary, 20%);
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($color-primary, 0.25);
+  }
 
-    &[disabled], &[readonly] {
-        background-color: var(--control-color-background-locked);
-    }
+  &[disabled],
+  &[readonly] {
+    background-color: var(--control-color-background-locked);
+  }
 
-    &::placeholder {
-        color: var(--color-muted);
-    }
+  &::placeholder {
+    color: var(--color-muted);
+  }
 }
 
 select {
-    cursor: pointer;
-    transition: $control-transition-time all;
+  cursor: pointer;
+  transition: $control-transition-time all;
 
-    &:hover, &:focus, &:active, &.active {
-        background-color: var(--control-color-background-hover);
-    }
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: var(--control-color-background-hover);
+  }
 }

@@ -1,68 +1,72 @@
 .container {
-    width: 100%;
-    max-width: $breakpoint-desktop;
-    margin: 0 auto;
+  width: 100%;
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
 
-    &.container-fluid {
-        max-width: 100%;
-    }
+  &.container-fluid {
+    max-width: 100%;
+  }
 
-    &.container-narrow {
-        max-width: $width-narrow;
-    }
+  &.container-narrow {
+    max-width: $width-narrow;
+  }
 
-    &.container-navbar {
-        margin: max(($navbar-height + 10px), floor($navbar-height + ($navbar-height * .3))) auto 20px auto;
-    }
+  &.container-navbar {
+    margin: max(
+        ($navbar-height + 10px),
+        floor($navbar-height + ($navbar-height * 0.3))
+      )
+      auto 20px auto;
+  }
 }
 
 .grid {
-    display: grid;
-    grid-gap: 1rem;
+  display: grid;
+  grid-gap: 1rem;
 
-    grid-auto-rows: auto;
+  grid-auto-rows: auto;
 
-    &.grid--no-gap {
-        grid-gap: 0;
+  &.grid--no-gap {
+    grid-gap: 0;
+  }
+
+  @each $key, $columns in $grid-sizes {
+    &.grid-mobile--#{$key} {
+      grid-template-columns: $columns;
     }
+  }
 
+  @media screen and (min-width: $breakpoint-mobile) {
     @each $key, $columns in $grid-sizes {
-        &.grid-mobile--#{$key} {
-            grid-template-columns: $columns;
-        }
+      &.grid-tablet--#{$key} {
+        grid-template-columns: $columns;
+      }
     }
+  }
 
-    @media screen and (min-width: $breakpoint-mobile) {
-        @each $key, $columns in $grid-sizes {
-            &.grid-tablet--#{$key} {
-                grid-template-columns: $columns;
-            }
-        }
+  @media screen and (min-width: $breakpoint-desktop) {
+    @each $key, $columns in $grid-sizes {
+      &.grid--#{$key} {
+        grid-template-columns: $columns;
+      }
     }
+  }
 
-    @media screen and (min-width: $breakpoint-desktop) {
-        @each $key, $columns in $grid-sizes {
-            &.grid--#{$key} {
-                grid-template-columns: $columns;
-            }
-        }
+  @media screen and (max-width: ($breakpoint-mobile - 1px)) {
+    .hidden-mobile {
+      display: none;
     }
+  }
 
-    @media screen and (max-width: ($breakpoint-mobile - 1px)) {
-        .hidden-mobile {
-            display: none;
-        }
+  @media screen and (min-width: $breakpoint-mobile) and (max-width: ($breakpoint-desktop - 1px)) {
+    .hidden-tablet {
+      display: none;
     }
+  }
 
-    @media screen and (min-width: $breakpoint-mobile) and (max-width: ($breakpoint-desktop - 1px)) {
-        .hidden-tablet {
-            display: none;
-        }
+  @media screen and (min-width: $breakpoint-desktop) {
+    .hidden-desktop {
+      display: none;
     }
-
-    @media screen and (min-width: $breakpoint-desktop) {
-        .hidden-desktop {
-            display: none;
-        }
-    }
+  }
 }

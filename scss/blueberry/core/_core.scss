@@ -1,89 +1,102 @@
 :root {
-    --color-background: #{$color-background};
-    --color-primary: #{$color-primary};
-    --color-alternative: #{$color-alternative};
+  --color-background: #{$color-background};
+  --color-primary: #{$color-primary};
+  --color-alternative: #{$color-alternative};
 
-    --color-information: var(--color-primary);
-    --color-danger: #{$color-danger};
-    --color-success: #{$color-success};
-    --color-warning: #{$color-warning};
+  --color-information: var(--color-primary);
+  --color-danger: #{$color-danger};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
 
-    --color-information-bg: #{$color-information-bg};
-    --color-danger-bg: #{$color-danger-bg};
-    --color-success-bg: #{$color-success-bg};
-    --color-warning-bg: #{$color-warning-bg};
+  --color-information-bg: #{$color-information-bg};
+  --color-danger-bg: #{$color-danger-bg};
+  --color-success-bg: #{$color-success-bg};
+  --color-warning-bg: #{$color-warning-bg};
 
-    --color-text: #{$color-text};
-    --color-muted: #{$color-muted};
+  --color-text: #{$color-text};
+  --color-muted: #{$color-muted};
 
-    --color-link-normal: var(--color-primary);
-    --color-link-active: #{$color-link-active};
+  --color-link-normal: var(--color-primary);
+  --color-link-active: #{$color-link-active};
 
-    --color-wallpaper-gradient-start: var(--color-primary);
-    --color-wallpaper-gradient-end: #{$color-wallpaper-gradient-end};
+  --color-wallpaper-gradient-start: var(--color-primary);
+  --color-wallpaper-gradient-end: #{$color-wallpaper-gradient-end};
 
-    --control-color-border: #{$control-color-border};
-    --control-color-background-normal: #{$control-color-background-normal};
-    --control-color-background-locked: #{$control-color-background-locked};
-    --control-color-background-hover: #{$control-color-background-hover};
+  --control-color-border: #{$control-color-border};
+  --control-color-background-normal: #{$control-color-background-normal};
+  --control-color-background-locked: #{$control-color-background-locked};
+  --control-color-background-hover: #{$control-color-background-hover};
 
-    --navbar-height: #{$navbar-height};
-    --navbar-color-bg-normal: var(--control-color-background-normal);
-    --navbar-color-bg-active: #{$navbar-color-bg-active};
-    --navbar-color-text: var(--color-primary);
+  --navbar-height: #{$navbar-height};
+  --navbar-color-bg-normal: var(--control-color-background-normal);
+  --navbar-color-bg-active: #{$navbar-color-bg-active};
+  --navbar-color-text: var(--color-primary);
 }
 
 html {
-    -webkit-tap-highlight-color: rgba(#000, 0);
-    text-size-adjust: 100%;
-    font-size: 16px;
+  -webkit-tap-highlight-color: rgba(#000, 0);
+  text-size-adjust: 100%;
+  font-size: 16px;
 }
 
 body {
-    line-height: 1.5;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    margin: 0;
+  line-height: 1.5;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-html, body {
-    min-height: 100%;
+html,
+body {
+  min-height: 100%;
 }
 
-body, input, textarea, button, select {
-    font-family: r-font-family-sans($font-family-sans);
+body,
+input,
+textarea,
+button,
+select {
+  font-family: r-font-family-sans($font-family-sans);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 
-    &, &:visited {
-        color: var(--color-link-normal);
-    }
+  &,
+  &:visited {
+    color: var(--color-link-normal);
+  }
 
-    &:hover, &:focus, &:active {
-        color: var(--color-link-active);
-        text-decoration: underline;
-        text-decoration-color: var(--color-link-active);
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-link-active);
+    text-decoration: underline;
+    text-decoration-color: var(--color-link-active);
+  }
 }
 
-a, input[type="button"], input[type="submit"], button {
-    outline: 0;
-    cursor: pointer;
+a,
+input[type="button"],
+input[type="submit"],
+button {
+  outline: 0;
+  cursor: pointer;
 }
 
 input[type="range"] {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 img {
-    vertical-align: middle;
-    border: 0;
-    max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  max-width: 100%;
 }

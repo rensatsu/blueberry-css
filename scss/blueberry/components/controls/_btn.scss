@@ -1,87 +1,103 @@
 .btn {
-    $shadow-size: 3px;
-    $margin-size: .25rem;
+  $shadow-size: 3px;
+  $margin-size: 0.25rem;
 
-    text-align: center;
-    padding: .5rem 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
 
-    border: 1px solid var(--control-color-border);
-    border-radius: $control-border-radius;
+  border: 1px solid var(--control-color-border);
+  border-radius: $control-border-radius;
 
-    display: inline-block;
+  display: inline-block;
 
-    background-color: var(--control-color-background-locked);
+  background-color: var(--control-color-background-locked);
 
-    margin: 0;
+  margin: 0;
 
-    & + & {
-        margin-left: $margin-size;
-        margin-right: $margin-size;
+  & + & {
+    margin-left: $margin-size;
+    margin-right: $margin-size;
+  }
+
+  &,
+  &:hover,
+  &:active,
+  &.active,
+  &:focus {
+    transition: $control-transition-time all;
+    outline: 0;
+    text-decoration: none;
+
+    color: $color-primary;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: var(--control-color-background-hover);
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(#000, 0.1),
+      0 0 0 3px rgba($color-primary, 0.25);
+  }
+
+  &.btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: var(--color-alternative);
+    }
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+  }
+
+  &.btn-flat {
+    color: var(--color-primary);
+    background: none;
+    padding: 0.5rem 1.25rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+    transition: $control-transition-time all;
+    box-shadow: none;
+    border: 0;
+
+    &,
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
     }
 
-    &, &:hover, &:active, &.active, &:focus {
-        transition: $control-transition-time all;
-        outline: 0;
-        text-decoration: none;
-
-        color: $color-primary;
+    &:focus,
+    &:hover {
+      background-color: var(--color-primary);
+      color: #fff;
     }
+  }
 
-    &:hover, &:focus, &:active, &.active {
-        background-color: var(--control-color-background-hover);
-    }
+  &.btn-small {
+    padding: 0.1rem 1rem;
+  }
 
-    &:active, &:focus {
-        outline: 0;
-        box-shadow: inset 0 1px 1px rgba(#000, .1),
-                0 0 0 3px rgba($color-primary, .25);
-    }
+  &.btn-large {
+    padding: 1rem 3rem;
+  }
 
-    &.btn-primary {
-        background-color: var(--color-primary);
-        color: #fff;
-
-        &:hover, &:focus, &:active, &.active {
-            background-color: var(--color-alternative);
-        }
-    }
-
-    &.btn-block {
-        display: block;
-        width: 100%;
-        margin: 0 0 .5rem 0;
-    }
-
-    &.btn-flat {
-        color: var(--color-primary);
-        background: none;
-        padding: .5rem 1.25rem;
-        margin: 0 .1rem;
-        border-radius: 4px;
-        transition: $control-transition-time all;
-        box-shadow: none;
-        border: 0;
-
-        &, &:active, &:focus, &:hover {
-            text-decoration: none;
-        }
-
-        &:focus, &:hover {
-            background-color: var(--color-primary);
-            color: #fff;
-        }
-    }
-
-    &.btn-small {
-        padding: .1rem 1rem;
-    }
-
-    &.btn-large {
-        padding: 1rem 3rem;
-    }
-
-    &.disabled, &[disabled] {
-        opacity: .75;
-        pointer-events: none;
-    }
+  &.disabled,
+  &[disabled] {
+    opacity: 0.75;
+    pointer-events: none;
+  }
 }

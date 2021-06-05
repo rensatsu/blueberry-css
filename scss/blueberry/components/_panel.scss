@@ -1,53 +1,53 @@
 .panel {
-    --panel-color-border: var(--control-color-border);
+  --panel-color-border: var(--control-color-border);
+  --panel-color-text: var(--color-information);
+  --panel-color-bg: transparent;
+
+  margin-bottom: 1rem;
+  background-color: var(--control-color-background-normal);
+  border: 1px solid var(--panel-color-border);
+  border-radius: $control-border-radius;
+  overflow: hidden;
+
+  & > .panel-heading {
+    padding: 0.75rem 1.25rem;
+    color: var(--panel-color-text);
+    background-color: var(--panel-color-bg);
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0;
+  }
+
+  & > .panel-body {
+    padding: 1.25rem;
+  }
+
+  & > .panel-footer {
+    padding: 0.75rem 1.25rem;
+    background-color: var(--panel-color-bg);
+  }
+
+  &.panel-primary {
+    --panel-color-border: var(--color-information);
     --panel-color-text: var(--color-information);
-    --panel-color-bg: transparent;
+    --panel-color-bg: var(--color-information-bg);
+  }
 
-    margin-bottom: 1rem;
-    background-color: var(--control-color-background-normal);
-    border: 1px solid var(--panel-color-border);
-    border-radius: $control-border-radius;
-    overflow: hidden;
+  &.panel-danger {
+    --panel-color-border: var(--color-danger);
+    --panel-color-text: var(--color-danger);
+    --panel-color-bg: var(--color-danger-bg);
+  }
 
-    & > .panel-heading {
-        padding: .75rem 1.25rem;
-        color: var(--panel-color-text);
-        background-color: var(--panel-color-bg);
-        font-weight: 600;
-        font-size: 1em;
-        margin: 0;
-    }
+  &.panel-success {
+    --panel-color-border: var(--color-success);
+    --panel-color-text: var(--color-success);
+    --panel-color-bg: var(--color-success-bg);
+  }
 
-    & > .panel-body {
-        padding: 1.25rem;
-    }
-
-    & > .panel-footer {
-        padding: .75rem 1.25rem;
-        background-color: var(--panel-color-bg);
-    }
-
-    &.panel-primary {
-        --panel-color-border: var(--color-information);
-        --panel-color-text: var(--color-information);
-        --panel-color-bg: var(--color-information-bg);
-    }
-
-    &.panel-danger {
-        --panel-color-border: var(--color-danger);
-        --panel-color-text: var(--color-danger);
-        --panel-color-bg: var(--color-danger-bg);
-    }
-
-    &.panel-success {
-        --panel-color-border: var(--color-success);
-        --panel-color-text: var(--color-success);
-        --panel-color-bg: var(--color-success-bg);
-    }
-
-    &.panel-warning {
-        --panel-color-border: var(--color-warning);
-        --panel-color-text: var(--color-warning);
-        --panel-color-bg: var(--color-warning-bg);
-    }
+  &.panel-warning {
+    --panel-color-border: var(--color-warning);
+    --panel-color-text: var(--color-warning);
+    --panel-color-bg: var(--color-warning-bg);
+  }
 }

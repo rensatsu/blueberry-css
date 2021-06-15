@@ -2,7 +2,7 @@
   "name": "@rensatsu/blueberry-css",
   "version": "1.4.1",
   "description": "Blueberry CSS Stylesheet",
-  "main": "index.js",
+  "main": "css/blueberry.css",
   "scripts": {
     "prepublishOnly": "npm run build",
     "watch": "gulp default && gulp watch",

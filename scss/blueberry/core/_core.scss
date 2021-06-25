@@ -26,11 +26,6 @@
   --control-color-background-normal: #{$control-color-background-normal};
   --control-color-background-locked: #{$control-color-background-locked};
   --control-color-background-hover: #{$control-color-background-hover};
-
-  --navbar-height: #{$navbar-height};
-  --navbar-color-bg-normal: var(--control-color-background-normal);
-  --navbar-color-bg-active: #{$navbar-color-bg-active};
-  --navbar-color-text: var(--color-primary);
 }
 
 html {

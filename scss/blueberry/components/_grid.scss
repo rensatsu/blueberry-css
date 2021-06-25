@@ -10,14 +10,6 @@
   &.container-narrow {
     max-width: $width-narrow;
   }
-
-  &.container-navbar {
-    margin: max(
-        ($navbar-height + 10px),
-        floor($navbar-height + ($navbar-height * 0.3))
-      )
-      auto 20px auto;
-  }
 }
 
 .grid {

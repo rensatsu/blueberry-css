@@ -40,12 +40,6 @@ $control-color-background-hover: mix(#fff, $color-primary, 85%) !default;
 $control-border-radius: 5px !default;
 $control-transition-time: 0.2s !default;
 
-// Navbar
-$navbar-height: 40px !default;
-$navbar-color-bg-normal: $control-color-background-normal !default; // change also in `core.scss` !
-$navbar-color-bg-active: mix(#fff, $color-primary, 80%) !default;
-$navbar-color-text: $color-primary !default; // change also in `core.scss` !
-
 // Grid sizes
 $grid-sizes: (
   "1": 1fr,

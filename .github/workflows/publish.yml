@@ -30,13 +30,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Print event type
-        run: echo ${{github.event_name}}
-
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1.1.4
-        if: github.event_name == 'tags'
+        if: github.event_name == 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:

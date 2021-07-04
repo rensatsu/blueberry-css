@@ -1,0 +1,46 @@
+name: Publish
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  pre-build:
+    runs-on: ubuntu-latest
+    name: Pre-build
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2.3.4
+
+      - name: Prepare Node
+        uses: actions/setup-node@v2.2.0
+        with:
+          node-version: '14'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Node packages
+        run: npm ci
+
+      - name: Run code linter
+        run: npm run format:check
+
+      - name: Publish to the registry
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Print event type
+        run: echo ${{github.event_name}}
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1.1.4
+        if: github.event_name == 'tags'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: ${{ contains(github.ref, 'alpha') || contains(github.ref, 'beta') }}

@@ -10,7 +10,8 @@
     "build": "gulp styles",
     "tag:patch": "npm version patch",
     "tag:minor": "npm version minor",
-    "format": "prettier --write \"scss/**/*.{css,scss}\" package.json .prettierrc.json",
+    "format": "prettier --write \"scss/**/*.{css,scss}\" gulpfile.js .prettierrc.json",
+    "format:check": "prettier --check \"scss/**/*.{css,scss}\" gulpfile.js .prettierrc.json",
     "test": "echo 'No tests'"
   },
   "repository": {

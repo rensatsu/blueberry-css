@@ -26,6 +26,8 @@
   --control-color-background-normal: #{$control-color-background-normal};
   --control-color-background-locked: #{$control-color-background-locked};
   --control-color-background-hover: #{$control-color-background-hover};
+  --control-border-radius: #{$control-border-radius};
+  --control-transition-time: #{$control-transition-time};
 }
 
 html {

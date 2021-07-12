@@ -6,7 +6,7 @@
   margin-bottom: 1rem;
   background-color: var(--control-color-background-normal);
   border: 1px solid var(--panel-color-border);
-  border-radius: $control-border-radius;
+  border-radius: var(--control-border-radius);
   overflow: hidden;
 
   & > .panel-heading {

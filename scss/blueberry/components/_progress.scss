@@ -1,29 +1,38 @@
-.progress {
-  overflow: hidden;
-  height: 1.25rem;
-  background-color: var(--control-color-border);
+@supports (-webkit-appearance: none) {
+  progress[value] {
+    --color-value: var(--color-primary);
 
-  .progress-bar {
-    float: left;
-    width: 0%;
-    height: 100%;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    color: var(--color-information-bg);
-    text-align: center;
-    transition: width 0.6s ease;
-    background-color: var(--color-primary);
+    -webkit-appearance: none;
+    overflow: hidden;
+    border-radius: var(--control-border-radius);
+
+    &.progress-danger {
+      --color-value: var(--color-danger);
+    }
+
+    &.progress-success {
+      --color-value: var(--color-success);
+    }
+
+    &.progress-warning {
+      --color-value: var(--color-warning);
+    }
+
+    // background
+    &::-webkit-progress-bar {
+      background-color: var(--control-color-border);
+    }
+
+    // bar color
+    &::-webkit-progress-value {
+      background-color: var(--color-value);
+    }
   }
+}
 
-  &.progress-danger .progress-bar {
-    background-color: var(--color-danger);
-  }
-
-  &.progress-warning .progress-bar {
-    background-color: var(--color-warning);
-  }
-
-  &.progress-success .progress-bar {
-    background-color: var(--color-success);
+progress[value] {
+  &.is-block {
+    display: block;
+    width: 100%;
   }
 }

@@ -6,7 +6,7 @@
   padding: 0.5rem 1rem;
 
   border: 1px solid var(--control-color-border);
-  border-radius: $control-border-radius;
+  border-radius: var(--control-border-radius);
 
   display: inline-block;
 
@@ -19,7 +19,7 @@
   &:active,
   &.active,
   &:focus {
-    transition: $control-transition-time all;
+    transition: var(--control-transition-time) all;
     outline: 0;
     text-decoration: none;
 
@@ -64,7 +64,7 @@
     padding: 0.5rem 1.25rem;
     margin: 0 0.1rem;
     border-radius: 4px;
-    transition: $control-transition-time all;
+    transition: var(--control-transition-time) all;
     box-shadow: none;
     border: 0;
 

@@ -44,7 +44,7 @@ textarea {
   color: var(--color-text);
   background-color: var(--control-color-background-normal);
   border: 1px solid var(--control-color-border);
-  border-radius: $control-border-radius;
+  border-radius: var(--control-border-radius);
   transition: border-color 0.25s, box-shadow 0.25s;
 
   &:hover {
@@ -69,7 +69,7 @@ textarea {
 
 select {
   cursor: pointer;
-  transition: $control-transition-time all;
+  transition: var(--control-transition-time) all;
 
   &:hover,
   &:focus,

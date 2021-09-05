@@ -1,20 +1,21 @@
 $container-width-normal: $breakpoint-desktop;
 $container-width-narrow: $width-narrow;
 $container-width-fluid: 100%;
+$container-padding: 1rem;
 
 .container {
   --container-width: #{$container-width-normal};
-  width: min(var(--container-width), 100%);
+  width: min(var(--container-width), 100% - #{$container-padding});
 
   margin-left: auto;
   margin-right: auto;
 
   &.container-fluid {
-    --container-width: $container-width-fluid;
+    --container-width: #{$container-width-fluid};
   }
 
   &.container-narrow {
-    --container-width: $container-width-narrow;
+    --container-width: #{$container-width-narrow};
   }
 }
 

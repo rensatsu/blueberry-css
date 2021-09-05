@@ -5,7 +5,8 @@ $container-padding: 1rem;
 
 .container {
   --container-width: #{$container-width-normal};
-  width: min(var(--container-width), 100% - #{$container-padding});
+  --container-padding: #{$container-padding};
+  width: min(var(--container-width), 100% - var(--container-padding));
 
   margin-left: auto;
   margin-right: auto;
@@ -16,6 +17,10 @@ $container-padding: 1rem;
 
   &.container-narrow {
     --container-width: #{$container-width-narrow};
+  }
+
+  &.container--no-padding {
+    --container-padding: 0px;
   }
 }
 

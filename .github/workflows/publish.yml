@@ -11,7 +11,7 @@ jobs:
     name: Publish
     steps:
       - name: Git checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v2.3.5
 
       - name: Prepare Node
         uses: actions/setup-node@v2.4.1

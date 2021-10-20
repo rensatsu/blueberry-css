@@ -14,6 +14,15 @@ updates:
     reviewers:
     - "rensatsu"
 
+  - package-ecosystem: "npm"
+    directory: "/docs/"
+    schedule:
+      interval: "weekly"
+      day: "saturday"
+      time: "11:00"
+    reviewers:
+    - "rensatsu"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

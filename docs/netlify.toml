@@ -1,0 +1,22 @@
+[build]
+  publish = "dist/"
+  command = "npm run build"
+
+[context]
+  environment = { NPM_VERSION = "8.1.0" }
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    Strict-Transport-Security = "max-age=31536000"
+    Permissions-Policy = "interest-cohort=()"
+    Content-Security-Policy = '''
+    default-src 'none';
+    base-uri 'self';
+    style-src 'self';
+    img-src 'self' data:;
+    '''

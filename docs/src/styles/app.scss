@@ -1,0 +1,14 @@
+@import url("../../node_modules/@rensatsu/blueberry-css/scss/blueberry.scss");
+
+.example-grid {
+    .grid > div {
+        border: 1px solid var(--control-color-border);
+        padding: 1rem;
+        background: var(--control-color-background-normal);
+    }
+}
+
+footer.container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

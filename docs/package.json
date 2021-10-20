@@ -1,0 +1,22 @@
+{
+  "name": "@rensatsu/blueberry-css-docs",
+  "version": "1.0.0",
+  "description": "Blueberry CSS - documentation and demo",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "Rensatsu",
+  "license": "MIT",
+  "browserslist": "last 2 Chrome versions",
+  "source": "src/index.html",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0",
+    "parcel": "^2.0.0"
+  },
+  "dependencies": {
+    "lorem-ipsum": "^2.0.4",
+    "@rensatsu/blueberry-css": "^1.8.4"
+  }
+}

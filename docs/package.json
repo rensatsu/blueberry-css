@@ -16,7 +16,7 @@
     "parcel": "^2.0.0"
   },
   "dependencies": {
-    "lorem-ipsum": "^2.0.4",
-    "@rensatsu/blueberry-css": "^1.8.4"
+    "@rensatsu/blueberry-css": "file:..",
+    "lorem-ipsum": "^2.0.4"
   }
 }

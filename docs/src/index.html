@@ -1,252 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Blueberry CSS Demo</title>
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="./favicon.ico" />
     <link rel="stylesheet" href="./styles/app.scss" />
     <script type="module" src="./js/app.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="container">
-        <h1>Blueberry CSS Demo</h1>
-        <p>
-            This is a demo page for
-            <a href="https://github.com/rensatsu/blueberry-css" target="_blank" rel="noopener">Blueberry CSS Framework</a>.
-        </p>
-        <p>
-            You can install an npm package to get both CSS and SCSS stylesheets for more advanced usage:
-            <pre><code>npm i @rensatsu/blueberry-css</code></pre>
-        </p>
+      <h1>Blueberry CSS Demo</h1>
+      <div class="header-section">
+        This is a demo page for
+        <a href="https://github.com/rensatsu/blueberry-css" target="_blank" rel="noopener"
+          >Blueberry CSS Framework</a
+        >.
+      </div>
+      <div class="header-section">
+        You can install an npm package to get both CSS and SCSS stylesheets for more advanced usage:
+        <pre><code>npm i @rensatsu/blueberry-css</code></pre>
+      </div>
     </header>
 
     <main class="container">
-        <section>
-            <h2>Buttons</h2>
-            <div class="grid grid-mobile--1-1-1">
-                <div>
-                    <p><button type="button" class="btn">Normal</button></p>
-                    <p><button type="button" class="btn" disabled>Normal, Disabled</button></p>
-                </div>
-                <div>
-                    <p><button type="button" class="btn btn-primary">Primary</button></p>
-                    <p><button type="button" class="btn btn-primary" disabled>Primary, Disabled</button></p>
-                </div>
-                <div>
-                    <p><button type="button" class="btn btn-flat">Flat</button></p>
-                    <p><button type="button" class="btn btn-flat" disabled>Flat, Disabled</button></p>
-                </div>
-            </div>
-            <div>
-                <p><button type="button" class="btn btn-block">Normal, Block level</button></p>
-                <p><button type="button" class="btn btn-block" disabled>Normal, Block level, Disabled</button></p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Forms</h2>
-            <form id="form">
-                <div class="form-group">
-                    <label for="inp-text">Text</label>
-                    <input type="text" id="inp-text" class="form-control" placeholder="Enter text" />
-                </div>
-                <div class="form-group">
-                    <label for="inp-number">Number</label>
-                    <input type="number" id="inp-number" class="form-control" placeholder="Enter number, 123"/>
-                </div>
-                <div class="form-group">
-                    <label for="inp-file">File</label>
-                    <input type="file" id="inp-file" class="form-control" />
-                </div>
-                <div class="form-group">
-                    <label for="inp-select">Select</label>
-                    <select id="inp-select" class="form-control">
-                        <option>Option A</option>
-                        <option selected>Option B</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="inp-textarea">Text Area</label>
-                    <textarea class="form-control" id="inp-textarea" placeholder="Enter multiline text">Test</textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
-        </section>
-
-        <section>
-            <h2>Alerts</h2>
-            <div class="alert">Default Alert</div>
-            <div class="alert alert-success">Successful Alert</div>
-            <div class="alert alert-warning">Warning Alert</div>
-            <div class="alert alert-danger">Danger Alert</div>
-            <div class="alert">
-                <h3>Alert title</h3>
-                <p>Alert with a title</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Lists</h2>
-            <h3>Description List</h3>
-            <dl>
-                <dt>Title A</dt>
-                <dd>Description A</dd>
-
-                <dt>Title B</dt>
-                <dd>Description B</dd>
-            </dl>
-
-            <h3>Horizontal Description List</h3>
-            <dl class="is-horizontal">
-                <dt>Title A</dt>
-                <dd>Description A</dd>
-
-                <dt>Title B</dt>
-                <dd>Description B</dd>
-            </dl>
-
-            <h3>List Group</h3>
-            <ul class="list-group">
-                <li class="list-group-item">Item 1</li>
-                <li class="list-group-item">Item 2</li>
-                <li class="list-group-item">
-                    <h4>Item 3</h4>
-                    <p>Item 3 - Description</p>
-                </li>
-            </ul>
-
-            <h3>List Group with Links</h3>
-            <div class="list-group">
-                <a href="#" class="list-group-item">Item 1</a>
-                <a href="#" class="list-group-item">Item 2</a>
-                <a href="#" class="list-group-item">
-                    <h4>Item 3</h4>
-                    <p>Item 3 - Description</p>
-                </a>
-            </div>
-        </section>
-
-        <section>
-            <h2>Panels</h2>
-            <div class="grid grid--1-1">
-                <div class="panel">
-                    <div class="panel-heading">Panel</div>
-                    <div class="panel-body">Normal Panel Body</div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-small">Footer Button, small</button>
-                    </div>
-                </div>
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading">Primary Panel</div>
-                    <div class="panel-body">Primary Panel Body</div>
-                    <div class="panel-footer">
-                        <button type="button" class="btn btn-small">Footer Button, small</button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid--1-1-1">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">Danger Panel</div>
-                    <div class="panel-body">Danger Panel Body</div>
-                </div>
-
-                <div class="panel panel-success">
-                    <div class="panel-heading">Success Panel</div>
-                    <div class="panel-body">Success Panel Body</div>
-                </div>
-
-                <div class="panel panel-warning">
-                    <div class="panel-heading">Warning Panel</div>
-                    <div class="panel-body">Warning Panel Body</div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Progress</h2>
+      <section>
+        <h2>Buttons</h2>
+        <div class="grid grid-mobile--1-1-1">
+          <div>
+            <p><button type="button" class="btn">Normal</button></p>
             <p>
-                <progress min="0" max="100" value="40" class="is-block"></progress>
+              <button type="button" class="btn" disabled>Normal, Disabled</button>
+            </p>
+          </div>
+          <div>
+            <p>
+              <button type="button" class="btn btn-primary">Primary</button>
             </p>
             <p>
-                <progress min="0" max="100" value="60" class="is-block progress-danger"></progress>
+              <button type="button" class="btn btn-primary" disabled>Primary, Disabled</button>
             </p>
+          </div>
+          <div>
+            <p><button type="button" class="btn btn-flat">Flat</button></p>
             <p>
-                <progress min="0" max="100" value="80" class="is-block progress-warning"></progress>
+              <button type="button" class="btn btn-flat" disabled>Flat, Disabled</button>
             </p>
-            <p>
-                <progress min="0" max="100" value="100" class="is-block progress-success"></progress>
-            </p>
-        </section>
+          </div>
+        </div>
+        <div>
+          <p>
+            <button type="button" class="btn btn-block">Normal, Block level</button>
+          </p>
+          <p>
+            <button type="button" class="btn btn-block" disabled>
+              Normal, Block level, Disabled
+            </button>
+          </p>
+        </div>
+      </section>
 
-        <section>
-            <h2>Typography</h2>
-            <h3>Code</h3>
-            <pre data-lorem><code>Enable JavaScript for better preview!</code></pre>
+      <section>
+        <h2>Forms</h2>
+        <form id="form">
+          <div class="form-group">
+            <label for="inp-text">Text</label>
+            <input type="text" id="inp-text" class="form-control" placeholder="Enter text" />
+          </div>
+          <div class="form-group">
+            <label for="inp-number">Number</label>
+            <input
+              type="number"
+              id="inp-number"
+              class="form-control"
+              placeholder="Enter number, 123"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inp-file">File</label>
+            <input type="file" id="inp-file" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="inp-select">Select</label>
+            <select id="inp-select" class="form-control">
+              <option>Option A</option>
+              <option selected>Option B</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inp-textarea">Text Area</label>
+            <textarea class="form-control" id="inp-textarea" placeholder="Enter multiline text">
+Test</textarea
+            >
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </section>
 
-            <h3>Code with Wrapping</h3>
-            <pre data-lorem class="with-wrap"><code>Enable JavaScript for better preview!</code></pre>
+      <section>
+        <h2>Alerts</h2>
+        <div class="alert">Default Alert</div>
+        <div class="alert alert-success">Successful Alert</div>
+        <div class="alert alert-warning">Warning Alert</div>
+        <div class="alert alert-danger">Danger Alert</div>
+        <div class="alert">
+          <h3>Alert title</h3>
+          <p>Alert with a title</p>
+        </div>
+      </section>
 
-            <h3>Labels</h3>
-            <p>Sample Text <span class="label">Label</span></p>
+      <section>
+        <h2>Lists</h2>
+        <h3>Description List</h3>
+        <dl>
+          <dt>Title A</dt>
+          <dd>Description A</dd>
 
-            <h3>Horizontal Ruler</h3>
-            <hr/>
+          <dt>Title B</dt>
+          <dd>Description B</dd>
+        </dl>
 
-            <h3>Text Colors</h3>
-            <p class="text-muted">Muted text</p>
-            <p class="text-warning">Warning text</p>
-            <p class="text-danger">Danger text</p>
-            <p class="text-success">Success text</p>
-            <p class="text-center">Centered text</p>
-        </section>
+        <h3>Horizontal Description List</h3>
+        <dl class="is-horizontal">
+          <dt>Title A</dt>
+          <dd>Description A</dd>
 
-        <section>
-            <h2>Grid</h2>
-            <p>
-                There is a fixed width container (<code>.container</code>)
-                and also a fluid container (<code>.container.container-fluid</code>).
-            </p>
-            <p>
-                Additional grid sizes are defined in <code>$grid-sizes</code> variable.
-            </p>
-            <div class="container container-fluid container--no-padding example-grid">
-                <div class="grid grid--1-2-1">
-                    <div>Cell 1 (<b>1</b>-2-1)</div>
-                    <div>Cell 2 (1-<b>2</b>-1)</div>
-                    <div>Cell 3 (1-2-<b>1</b>)</div>
-                </div>
+          <dt>Title B</dt>
+          <dd>Description B</dd>
+        </dl>
+
+        <h3>List Group</h3>
+        <ul class="list-group">
+          <li class="list-group-item">Item 1</li>
+          <li class="list-group-item">Item 2</li>
+          <li class="list-group-item">
+            <h4>Item 3</h4>
+            <p>Item 3 - Description</p>
+          </li>
+        </ul>
+
+        <h3>List Group with Links</h3>
+        <div class="list-group">
+          <a href="#" class="list-group-item">Item 1</a>
+          <a href="#" class="list-group-item">Item 2</a>
+          <a href="#" class="list-group-item">
+            <h4>Item 3</h4>
+            <p>Item 3 - Description</p>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Panels</h2>
+        <div class="grid grid--1-1">
+          <div class="panel">
+            <div class="panel-heading">Panel</div>
+            <div class="panel-body">Normal Panel Body</div>
+            <div class="panel-footer">
+              <button type="button" class="btn btn-small">Footer Button, small</button>
             </div>
+          </div>
 
-            <p>
-                You can define different grids on mobile, tablet and
-                desktop devices by combining <code>.grid-mobile--*</code>,
-                <code>.grid-tablet--*</code> and <code>.grid--*</code> classes.
-            </p>
-
-            <div class="container container-fluid container--no-padding example-grid">
-                <div class="grid grid-mobile--1-1">
-                    <div>Cell 1 (<b>1</b>-1)</div>
-                    <div>Cell 2 (1-<b>1</b>)</div>
-                </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">Primary Panel</div>
+            <div class="panel-body">Primary Panel Body</div>
+            <div class="panel-footer">
+              <button type="button" class="btn btn-small">Footer Button, small</button>
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="grid grid--1-1-1">
+          <div class="panel panel-danger">
+            <div class="panel-heading">Danger Panel</div>
+            <div class="panel-body">Danger Panel Body</div>
+          </div>
 
-        <section>
-            <h2>Dark Mode</h2>
-            <p>Dark mode can only be activated automatically by activating Dark Mode in your browser or system.</p>
-        </section>
+          <div class="panel panel-success">
+            <div class="panel-heading">Success Panel</div>
+            <div class="panel-body">Success Panel Body</div>
+          </div>
 
-        <section>
-            <button class="btn-fab" title="Floating Action Button">✨</button>
-        </section>
+          <div class="panel panel-warning">
+            <div class="panel-heading">Warning Panel</div>
+            <div class="panel-body">Warning Panel Body</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Progress</h2>
+        <p>
+          <progress min="0" max="100" value="40" class="is-block"></progress>
+        </p>
+        <p>
+          <progress min="0" max="100" value="60" class="is-block progress-danger"></progress>
+        </p>
+        <p>
+          <progress min="0" max="100" value="80" class="is-block progress-warning"></progress>
+        </p>
+        <p>
+          <progress min="0" max="100" value="100" class="is-block progress-success"></progress>
+        </p>
+      </section>
+
+      <section>
+        <h2>Typography</h2>
+        <h3>Code</h3>
+        <pre data-lorem><code>Enable JavaScript for better preview!</code></pre>
+
+        <h3>Code with Wrapping</h3>
+        <pre data-lorem class="with-wrap"><code>Enable JavaScript for better preview!</code></pre>
+
+        <h3>Labels</h3>
+        <p>Sample Text <span class="label">Label</span></p>
+
+        <h3>Horizontal Ruler</h3>
+        <hr />
+
+        <h3>Text Colors</h3>
+        <p class="text-muted">Muted text</p>
+        <p class="text-warning">Warning text</p>
+        <p class="text-danger">Danger text</p>
+        <p class="text-success">Success text</p>
+        <p class="text-center">Centered text</p>
+      </section>
+
+      <section>
+        <h2>Grid</h2>
+        <p>
+          There is a fixed width container (<code>.container</code>) and also a fluid container
+          (<code>.container.container-fluid</code>).
+        </p>
+        <p>
+          Additional grid sizes are defined in
+          <code>$grid-sizes</code> variable.
+        </p>
+        <div class="container container-fluid container--no-padding example-grid">
+          <div class="grid grid--1-2-1">
+            <div>Cell 1 (<b>1</b>-2-1)</div>
+            <div>Cell 2 (1-<b>2</b>-1)</div>
+            <div>Cell 3 (1-2-<b>1</b>)</div>
+          </div>
+        </div>
+
+        <p>
+          You can define different grids on mobile, tablet and desktop devices by combining
+          <code>.grid-mobile--*</code>, <code>.grid-tablet--*</code> and
+          <code>.grid--*</code> classes.
+        </p>
+
+        <div class="container container-fluid container--no-padding example-grid">
+          <div class="grid grid-mobile--1-1">
+            <div>Cell 1 (<b>1</b>-1)</div>
+            <div>Cell 2 (1-<b>1</b>)</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Dark Mode</h2>
+        <p>
+          Dark mode can only be activated automatically by activating Dark Mode in your browser or
+          system.
+        </p>
+      </section>
+
+      <section>
+        <button class="btn-fab" title="Floating Action Button">✨</button>
+      </section>
     </main>
 
-    <footer class="container">
-        &copy; 2021 Rensatsu.
-    </footer>
-</body>
+    <footer class="container">&copy; 2021 Rensatsu.</footer>
+  </body>
 </html>

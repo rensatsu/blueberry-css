@@ -1,5 +1,9 @@
 @import url("../../node_modules/@rensatsu/blueberry-css/scss/blueberry.scss");
 
+.header-section {
+    margin: 1rem 0;
+}
+
 .example-grid {
     .grid > div {
         border: 1px solid var(--control-color-border);

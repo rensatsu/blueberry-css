@@ -17,6 +17,7 @@
     Content-Security-Policy = '''
     default-src 'none';
     base-uri 'self';
+    script-src 'self';
     style-src 'self';
     img-src 'self' data:;
     '''

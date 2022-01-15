@@ -6,7 +6,7 @@
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "format": "prettier --write \"src/**/*.{s?css,js,html}\" .prettierrc.json",
-    "format:check": "prettier --check \"src/**/*.{css,scss}\" .prettierrc.json"
+    "format:check": "prettier --check \"src/**/*.{s?css,js,html}\" .prettierrc.json"
   },
   "keywords": [],
   "author": "Rensatsu",

@@ -39,6 +39,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-touch-cmd": "0.0.1",
     "prettier": "^2.5.1",
-    "sass": "^1.49.8"
+    "sass": "^1.49.9"
   }
 }

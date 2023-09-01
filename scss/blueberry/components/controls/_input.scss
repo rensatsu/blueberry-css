@@ -43,7 +43,9 @@ textarea {
   background-color: var(--control-color-background-normal);
   border: 1px solid var(--control-color-border);
   border-radius: var(--control-border-radius);
-  transition: border-color 0.25s, box-shadow 0.25s;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
 
   &:hover {
     border-color: r-lighten($color-primary, 30%);

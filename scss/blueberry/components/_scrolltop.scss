@@ -11,7 +11,9 @@ button.btn-fab {
   background-color: var(--color-primary);
   box-shadow: 1px 1px 5px rgba(#000, 0.5);
 
-  transition: 0.3s background-color, 0.3s box-shadow;
+  transition:
+    0.3s background-color,
+    0.3s box-shadow;
   border-radius: 50%;
 
   display: flex;

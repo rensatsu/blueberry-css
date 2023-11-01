@@ -14,8 +14,8 @@
   "browserslist": "last 2 Chrome versions",
   "source": "src/index.html",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.9.3",
-    "parcel": "^2.9.3",
+    "@parcel/transformer-sass": "^2.10.1",
+    "parcel": "^2.10.1",
     "process": "^0.11.10"
   },
   "dependencies": {
